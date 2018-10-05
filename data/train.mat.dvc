@@ -1,0 +1,11 @@
+cmd: python ../code/bin/split.py normal.mat train.mat -d train -c split.yml
+deps:
+- md5: 00b4becf9a243e50f47ed821a495bf9a
+  path: normal.mat
+- md5: 52fbcb2596866959a65c745313f9b8da
+  path: split.yml
+md5: c6ec2f5b42cbb324d706c06784444870
+outs:
+- cache: true
+  md5: 5d5e82c83a9988aa31366ccae839c15d
+  path: train.mat
