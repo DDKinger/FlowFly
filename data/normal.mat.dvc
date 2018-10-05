@@ -1,0 +1,11 @@
+cmd: python ../code/bin/normalization.py TrafficFlow_69.mat normal.mat normal.yml
+deps:
+- md5: 37fd9b2501aeac4dffc8bc2893ec2178
+  path: TrafficFlow_69.mat
+- md5: bc0e22ac53eaa3af823c276a94430ccc
+  path: normal.yml
+md5: 134b56e7a8e37002de0a5d6aec807e7c
+outs:
+- cache: true
+  md5: 00b4becf9a243e50f47ed821a495bf9a
+  path: normal.mat
