@@ -1,60 +1,35 @@
 import cntk
 
 class Model(object):
-  def __init__(self, config, is_training = True, loss_fct="softmax"):
+  def __init__(self, config):
     self.config = config
-    self.loss_fct = loss_fct
-    self.is_training = is_training
-
-    if self.config.bid==1:
-      self.output_hidden_size=config.hidden_size 
-    else:
-      self.output_hidden_size=config.hidden_size *2
-    self._build_model()
 
 
   def _build_model(self):
     hidden_size = self.hidden_size
+    output_size = self.output_size
     num_layers = self.num_layers
     keep_prob = self.keep_prob
 
-    inputs = cntk.sequence.input_variable((69), name='inputs')
-    targets = cntk.input_variable((69), name='targets')
+    inputs = cntk.sequence.input_variable((output_size), name='inputs')
+    target = cntk.input_variable((output_size), name='target')
 
     def lstm_cell():
-      if self.config.bid == 1:
-        _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='basic_lstm')
-      else:
-        _cell_creator = cntk.layers.Sequential([
-          (cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole)),
-          cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole), go_backwards=True)),
-          cntk.ops.splice], name='bidirect_lstm')
+      _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='basic_lstm')
       if self.params.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
       
     def gru_cell():
-      if self.config.bid == 1:
-        _cell_creator = cntk.layers.Recurrence(cntk.layers.GRU(hidden_size) , name='gru')
-      else:
-        _cell_creator = cntk.layers.Sequential([
-          (cntk.layers.Recurrence(cntk.layers.GRU(hidden_size)), 
-          cntk.layers.Recurrence(cntk.layers.GRU(hidden_size), go_backwards=True)), 
-          cntk.ops.splice], name='bidirect_gru')
+      _cell_creator = cntk.layers.Recurrence(cntk.layers.GRU(hidden_size) , name='gru')
       if self.params.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
     
     def cifg_cell():
-      if self.config.bid == 1:
-        _cell_creator = cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='cifg_lstm')
-      else:
-        _cell_creator = cntk.layers.Sequential([
-          (cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole)),
-          cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole), go_backwards=True)),
-          cntk.ops.splice], name='bidirect_cifg')
+      _cell_creator = cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='cifg_lstm')
       if self.params.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
@@ -69,7 +44,7 @@ class Model(object):
     else:
       raise ValueError("Unsupported cell type, choose from {'lstm', 'gru', 'cifg_lstm'}.")
 
-    if self.params.use_residual and self.config.bid==1:
+    if self.params.use_residual:
       print("  ** using residual **  ")
       _output = inputs
       for _ in range(num_layers):
@@ -79,19 +54,20 @@ class Model(object):
       cell = cntk.layers.For(range(num_layers), lambda:_cell_creator())
       _output = cell(inputs)
     
-    self.output = _output
-    self.loss = cntk.squared_error(targets, output)
-    # criterion = cntk.combine([loss, errs])
-    # self.criterion = criterion
-    cost = cntk.reduce_mean(loss, axis=cntk.Axis.all_axes()) 
-    cost_rmse = cntk.reduce_l2(loss, axis=cntk.Axis.all_axes())   
-    self.cost = cost
+    _output = cntk.sequence.last(_output)
+    output = cntk.layers.Dense(output_size)(_output)
+    self.output = output
+    self.loss = cntk.squared_error(output, target)
+    cost_mape = cntk.reduce_mean(cntk.abs(output-target)/target, axis=cntk.Axis.all_axes(), name='mape') 
+    cost_mae = cntk.reduce_mean(cntk.abs(output-target), axis=cntk.Axis.all_axes(), name='mae')
+    cost_rmse = cntk.reduce_l2((output-target), axis=cntk.Axis.all_axes(), name='rmse')  
+    self.cost = cntk.combine([cost_mape, cost_mae, cost_rmse])
+    self.criterion = cntk.combine([loss, cost_mape])
 
 
   @property
-  def batch_size(self):
-    return self.config.batch_size
-
+  def output_size(self):
+    return self.config.output_size
   
   @property
   def hidden_size(self):

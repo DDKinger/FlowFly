@@ -1,6 +1,9 @@
 import os
 import click
 import cntk
+from data_read import get_xy
+from model import Model
+from config import Config
 
 class Train:
     def __init__(self, params, configs):
@@ -8,12 +11,113 @@ class Train:
         self.config = config
         self._build_graph()
 
+
     def _load_data(self):
-        dataset = os.path.join(self.params.data_path, self.params.data_in)
-        if not os.path.exists(dataset+'.mat'):
-            raise ValueError("data path or filename is not valid")
-        if not os.path.exists(dataset+'_norm.mat'):
-            data_process.generate_data(dataset, self.params.data_shuffle, self.params.data_Gaussian, is_training=True)
+        data_dir = self.params.data_dir
+        dg = self.params.data_gaussian
+        df = self.params.data_shuffle
+        bs = self.config.batch_size
+        ts = self.config.time_step
+        self.x_train, self.y_train, self.vmax = get_xy(data_dir, is_training=True, dg, df, bs, ts)
+        self.x_valid, self.y_valid, _ = get_xy(data_dir, is_training=False, dg, df, bs, ts)
+
+
+    def _build_graph(self):
+        self.train_model = Model(self.config)
+
+
+    def _run(self):
+        m = self.train_model
+        config = self.config
+        params = self.params
+        vmax = self.vmax
+        output = m.output
+        _inputs = m.inputs
+        _target = m.target
+        criterion = m.criterion
+        cost = m.cost
+        lr = config.learning_rate
+        last_epoch = 0
+        last_step = 0
+        if not os.path.exists(params.model_dir):
+            os.makedirs(params.model_dir)
+        if not os.path.exists(params.log_dir):
+            os.makedirs(params.log_dir) 
+
+        def model_path(epoch):
+            model_path = os.path.join(params.model_dir, params.save_model_name) + ".cmf." + str(epoch)
+            return model_path
+
+        if params.continue_training:
+            load_model = os.path.join(params.load_model_dir, params.load_model_name)
+            if os.path.exists(load_model):   
+                last_epoch = int(params.load_model_name.split(".")[-1])
+                logits.restore(load_model)
+                print("[INFO] Restore from %s at Epoch %d" % (params.load_model_name, last_epoch))
+            else:
+                raise ValueError("'load model path' can't be found")
+
+        print()
+        print("_____________Starting training______________")
+        cntk.logging.log_number_of_parameters(logits)
+        print(output.parameters)
+        print()
+        # learner = cntk.learners.fsadagrad(
+        #     output.parameters,
+        #     lr = cntk.learners.learning_parameter_schedule_per_sample([lr]*2+[lr/2]*3+[lr/4], epoch_size=self.config.train_epoch),
+        #     momentum = cntk.learners.momentum_schedule_per_sample(0.9),
+        #     gradient_clipping_threshold_per_sample = config.grad_clip,
+        #     gradient_clipping_with_truncation = True
+        # )
+        learner = cntk.learners.adagrad(
+            output.parameters,
+            lr = cntk.learners.learning_parameter_schedule_per_sample([lr]*2+[lr/2]*3+[lr/4], epoch_size=self.config.train_epoch),
+            gradient_clipping_threshold_per_sample = config.grad_clip,
+            gradient_clipping_with_truncation = True
+        )
+        progress_log_file = os.path.join(params.model_dir, params.save_model_name) + ".txt"
+        progress_writer = cntk.logging.ProgressPrinter(freq=params.print_freq, tag='Training', log_to_file=progress_log_file)
+        tensorboard_writer = cntk.logging.TensorBoardProgressWriter(log_dir=params.log_dir, model=output)
+        trainer = cntk.Trainer(None, criterion, learner, progress_writers=tensorboard_writer)
+        start_time = time.time()
+        localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
+        print(localtime)
+
+        if last_epoch < config.train_epoch:
+            for epoch in range(last_epoch, config.train_epoch): 
+                print("---------------------------------") 
+                print("epoch ", epoch+1, " start")   
+                for step, (x, y) in enumerate(zip(self.x_train, self.y_train)):
+                    trainer.train_minibatch({_inputs: x, _targets: y})
+                    progress_writer.update_with_trainer(trainer, with_metric=True)
+                progress_writer.epoch_summary(with_metric=True)
+                output.save(model_path(epoch+1)
+                print("Saving model to '%s'" % model_path(epoch+1))
+                
+                costs = {'mape':[], 'mae':[], 'rmse:',[]}
+                _costs = cost.eval({_inputs:x_v, _targets:y_v})
+                for key in _costs:
+                    if key_name = 'mape'
+                        costs[key.name].append(_costs[key])   
+                    else:
+                        costs[key.name].append(_costs[key]*vmax)            
+                print("valid_mape:", costs['mape'][-1])
+                print("valid_mae:", costs['mae'][-1])
+                print("valid_rmse:", costs['rmse'][-1]))
+                
+            print()
+            print("train time:", time.time()-start_time)
+            localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
+            print(localtime)
+
+            y_predict = output.eval({_inputs:x_v, _targets:y_v})
+            fileout = os.path.join(params.model_dir, 'results.txt')
+            sio.savemat(fileout, {'y_predict':y_predict, 'costs':costs})
+
+        else:
+            print("the loaded model has been trained equal to or more than max_max_epoch")
+
+
 
 @click.command()
 
@@ -22,21 +126,13 @@ class Train:
 @click.option('--save_model_name', default=None, type=str)
 @click.option('--load_model_dir', default=None, type=str)
 @click.option('--load_model_name', default=None, type=str)
-@click.option('--data_path', default=None, type=str, help="Where the training/test data is stored.")
-@click.option('--data_in', default=None, type=str, help='name of the input file')
-@click.option('--data_out', default=None, type=str, help='name of the output file')
+@click.option('--data_dir', default=None, type=str, help="Where the training/test data is stored.")
 @click.option('--log_dir', default=None, type=str, help="Where is the TensorBoard log data")
-@click.option('--print_freq', default=500, type=int, help="How many steps everytime the loss is printed")
-@click.option('--log_freq', default=100, type=int, help="How many steps everytime the log is printed to TensorBoard")
-@click.option('--save_rate', default=10000, type=int, help="How many steps everytime the model is saved")
 @click.option('--continue_training', default=False, type=bool, help="Continue training where it stopped")
 @click.option('--data_gaussian', default=False, type=bool)
 @click.option('--data_shuffle', default=True, type=bool)
-@click.option('--k_interval', default=2, type=int)
-
 
 # for config
-@click.option('--loss_fct', default="sampledsoftmax", type=str, help="The loss function to use. Choose among softmax, sampledsoftmax")
 @click.option('--use_dropout', default=True, type=bool)
 @click.option('--use_highway', default=False, type=bool)
 @click.option('--use_residual', default=False, type=bool)
@@ -46,9 +142,9 @@ class Train:
 @click.option('--lr_decay', default=0.9, type=float)
 @click.option('--keep_prob', default=0.7, type=float, help="Dropout keep probability")
 @click.option('--grad_clip', default=2.3, type=float)
-@click.option('--bid', default=1, type=int, help="1 means single direction RNN, 2 means bidirection RNN")
 @click.option('--train_epoch', default=8, type=int, help="training epoch")
 @click.option('--batch_size', default=128, type=int)
+@click.option('--time_step', default=8, type=int)
 @click.option('--num_layers', default=2, type=int)
 @click.option('--hidden_size', default=512, type=int)
 @click.option('--output_size', default=69, type=int)
@@ -56,50 +152,36 @@ class Train:
 
 def main( 
           model_dir, save_model_name, load_model_dir, load_model_name,
-          data_path, data_in, data_out, log_dir, loss_fct, continue_training,
+          data_dir, log_dir, continue_training, data_gaussian, data_shuffle,
           use_dropout, use_highway, use_residual, use_peephole, res_weight,
-          print_freq, log_freq, save_rate, backward_train,
-          learning_rate, lr_decay, keep_prob, grad_clip, bid, max_max_epoch,
-          batch_size, num_layers, embed_dim, hidden_size, fast_test, cell):
+          learning_rate, lr_decay, keep_prob, grad_clip, train_epoch,
+          batch_size, time_step, num_layers, hidden_size, output_size, cell):
   params = {}
   params["model_dir"] = model_dir
   params["save_model_name"] = save_model_name
   params["load_model_dir"] = load_model_dir
   params["load_model_name"] = load_model_name
-  params["data_path"] = data_path
+  params["data_dir"] = data_dir
   params["log_dir"] = log_dir
-  params["loss_fct"] = loss_fct
-  params["word_break_level"] = word_break_level
-  params["bpe_separator"] = bpe_separator
   params["continue_training"] = continue_training
-  params["use_fasttext_embedding"] = use_fasttext_embedding
-  params["use_dropout"] = use_dropout
-  params["use_highway"] = use_highway
-  params["use_residual"] = use_residual
-  params["use_peephole"] = use_peephole
-  params["resWeight"] = res_weight
-  params["vocab_size"] = vocab_size
-  params["bpe_symbols"] = bpe_symbols
-  params["bpe_min_frequency"] = bpe_min_frequency
-  params["sampled_softmax_size"] = sampled_softmax_size
-  params["nce_num_samples"] = nce_num_samples
-  params["number_limit"] = number_limit
-  params["print_freq"] = print_freq
-  params["log_freq"] = log_freq
-  params["save_rate"] = save_rate
-  params["backward_train"] = backward_train
+  params["data_gaussian"] = data_gaussian
+  params["data_shuffle"] = data_shuffle
   configs = {}
+  configs["use_dropout"] = use_dropout
+  configs["use_highway"] = use_highway
+  configs["use_residual"] = use_residual
+  configs["use_peephole"] = use_peephole
+  configs["resWeight"] = res_weight
   configs["learning_rate"] = learning_rate
   configs["lr_decay"] = lr_decay
   configs["keep_prob"] = keep_prob
   configs["grad_clip"] = grad_clip
-  configs["bid"] = bid
-  configs["max_max_epoch"] = max_max_epoch
+  configs["train_epoch"] = max_max_epoch
   configs["batch_size"] = batch_size
+  configs["time_step"] = time_step
   configs["num_layers"] = num_layers
-  configs["embed_dim"] = embed_dim
   configs["hidden_size"] = hidden_size
-  configs["fast_test"] = fast_test
+  configs["output_size"] = output_size
   configs["cell"] = cell
   _config = Config(flag="configs", params=configs)
   _params = Config(flag="params", params=params)
