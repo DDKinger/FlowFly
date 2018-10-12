@@ -6,7 +6,7 @@ from model import Model
 from config import Config
 
 class Train:
-    def __init__(self, params, configs):
+    def __init__(self, params, config):
         self.params = params
         self.config = config
         self._build_graph()
@@ -91,19 +91,19 @@ class Train:
                     trainer.train_minibatch({_inputs: x, _targets: y})
                     progress_writer.update_with_trainer(trainer, with_metric=True)
                 progress_writer.epoch_summary(with_metric=True)
-                output.save(model_path(epoch+1)
+                output.save(model_path(epoch+1))
                 print("Saving model to '%s'" % model_path(epoch+1))
                 
-                costs = {'mape':[], 'mae':[], 'rmse:',[]}
+                costs = {'mape':[], 'mae':[], 'rmse:':[]}
                 _costs = cost.eval({_inputs:x_v, _targets:y_v})
                 for key in _costs:
-                    if key_name = 'mape'
+                    if key_name == 'mape':
                         costs[key.name].append(_costs[key])   
                     else:
                         costs[key.name].append(_costs[key]*vmax)            
                 print("valid_mape:", costs['mape'][-1])
                 print("valid_mae:", costs['mae'][-1])
-                print("valid_rmse:", costs['rmse'][-1]))
+                print("valid_rmse:", costs['rmse'][-1])
                 
             print()
             print("train time:", time.time()-start_time)
@@ -134,7 +134,6 @@ class Train:
 
 # for config
 @click.option('--use_dropout', default=True, type=bool)
-@click.option('--use_highway', default=False, type=bool)
 @click.option('--use_residual', default=False, type=bool)
 @click.option('--use_peephole', default=False, type=bool)
 @click.option('--res_weight', default=1, type=float, help="output=resWeight*res+input")
@@ -168,7 +167,6 @@ def main(
   params["data_shuffle"] = data_shuffle
   configs = {}
   configs["use_dropout"] = use_dropout
-  configs["use_highway"] = use_highway
   configs["use_residual"] = use_residual
   configs["use_peephole"] = use_peephole
   configs["resWeight"] = res_weight

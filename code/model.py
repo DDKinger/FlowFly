@@ -1,4 +1,5 @@
 import cntk
+from cifg_lstm import CIFG_LSTM
 
 class Model(object):
   def __init__(self, config):
@@ -16,21 +17,21 @@ class Model(object):
 
     def lstm_cell():
       _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='basic_lstm')
-      if self.params.use_dropout:
+      if self.config.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
       
     def gru_cell():
       _cell_creator = cntk.layers.Recurrence(cntk.layers.GRU(hidden_size) , name='gru')
-      if self.params.use_dropout:
+      if self.config.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
     
     def cifg_cell():
       _cell_creator = cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='cifg_lstm')
-      if self.params.use_dropout:
+      if self.config.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
@@ -44,7 +45,7 @@ class Model(object):
     else:
       raise ValueError("Unsupported cell type, choose from {'lstm', 'gru', 'cifg_lstm'}.")
 
-    if self.params.use_residual:
+    if self.config.use_residual:
       print("  ** using residual **  ")
       _output = inputs
       for _ in range(num_layers):

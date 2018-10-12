@@ -24,7 +24,7 @@ def shuffle(x, y):
     return x, y
 
 
-def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step):
+def get_xy(data_dir, is_training=True, data_gaussian, data_shuffle, batch_size, time_step):
     dataset = load_data(data_dir, data_gaussian, is_training)
     x = dataset['traffic_flow'] 
     bs = batch_size   
