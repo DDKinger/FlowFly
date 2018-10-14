@@ -4,6 +4,7 @@ from cifg_lstm import CIFG_LSTM
 class Model(object):
   def __init__(self, config):
     self.config = config
+    self._build_model()
 
 
   def _build_model(self):
@@ -16,7 +17,7 @@ class Model(object):
     target = cntk.input_variable((output_size), name='target')
 
     def lstm_cell():
-      _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='basic_lstm')
+      _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.config.use_peephole), name='basic_lstm')
       if self.config.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
@@ -30,7 +31,7 @@ class Model(object):
       return _cell_creator
     
     def cifg_cell():
-      _cell_creator = cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.params.use_peephole), name='cifg_lstm')
+      _cell_creator = cntk.layers.Recurrence(CIFG_LSTM(hidden_size, use_peepholes=self.config.use_peephole), name='cifg_lstm')
       if self.config.use_dropout:
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
@@ -49,7 +50,7 @@ class Model(object):
       print("  ** using residual **  ")
       _output = inputs
       for _ in range(num_layers):
-        _output = self.params.resWeight * _cell_creator()(_output) + _output
+        _output = self.config.resWeight * _cell_creator()(_output) + _output
         # _output = _cell_creator()(_output) + _output
     else:
       cell = cntk.layers.For(range(num_layers), lambda:_cell_creator())
@@ -57,8 +58,10 @@ class Model(object):
     
     _output = cntk.sequence.last(_output)
     output = cntk.layers.Dense(output_size)(_output)
+    self.inputs = inputs
+    self.target = target
     self.output = output
-    self.loss = cntk.squared_error(output, target)
+    loss = cntk.squared_error(output, target)
     cost_mape = cntk.reduce_mean(cntk.abs(output-target)/target, axis=cntk.Axis.all_axes(), name='mape') 
     cost_mae = cntk.reduce_mean(cntk.abs(output-target), axis=cntk.Axis.all_axes(), name='mae')
     cost_rmse = cntk.reduce_l2((output-target), axis=cntk.Axis.all_axes(), name='rmse')  

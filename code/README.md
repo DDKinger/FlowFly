@@ -1,0 +1,1 @@
+python train.py --model_dir=..\..\models --save_model_name=flow_prediction --data_dir=..\..\data --log_dir=..\..\logs --use_dropout=False --train_epoch=4 --batch_size=144 --time_step=8 --num_layers=1 --hidden_size=128 --output_size=69 --cell=lstm

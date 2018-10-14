@@ -7,12 +7,12 @@ def load_data(data_dir, data_gaussian, is_training):
     if data_gaussian:
         data_name = 'TrafficFlow_69_12week_6day_gaussian'
     else:
-        data_name = 'TrafficFlow_69_12week_6day_normal'
+        data_name = 'TrafficFlow_69_12week_6day_minmax'
     if is_training:
         data_name += '_train.mat'
     else:
         data_name += '_test.mat'
-    return sio.loadmat(os.path.join(data_dir, data_name))['traffic_flow']
+    return sio.loadmat(os.path.join(data_dir, data_name))
 
 
 def shuffle(x, y):
@@ -24,7 +24,7 @@ def shuffle(x, y):
     return x, y
 
 
-def get_xy(data_dir, is_training=True, data_gaussian, data_shuffle, batch_size, time_step):
+def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step):
     dataset = load_data(data_dir, data_gaussian, is_training)
     x = dataset['traffic_flow'] 
     bs = batch_size   
@@ -39,12 +39,16 @@ def get_xy(data_dir, is_training=True, data_gaussian, data_shuffle, batch_size, 
             _y.append(x[j+ts])
     _x = np.asarray(_x, dtype=np.float32)
     _y = np.asarray(_y, dtype=np.float32)
-    if is_training： 
+    print("_x.shape:", _x.shape)
+    print("_y.shape:", _y.shape)
+    if is_training: 
         if data_shuffle:
             _x, _y = shuffle(_x, _y)
         n_station = _y.shape[-1]
-        _x = _x.reshape(-1, batch_size, time_step, n_station)
-        _y = _y.reshape(-1, batch_size, time_step, n_station)
+        _x = _x[:len(_x)-len(_x)%bs]
+        _y = _y[:len(_y)-len(_y)%bs]
+        _x = _x.reshape(-1, bs, ts, n_station)
+        _y = _y.reshape(-1, bs, n_station)
     vmax = dataset['vmax']
     return _x, _y, vmax
 
