@@ -27,9 +27,6 @@ def shuffle(x, y):
 def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step):
     dataset = load_data(data_dir, data_gaussian, is_training)
     x = dataset['traffic_flow'] 
-    if data_gaussian:
-        dataset = load_data(data_dir, False, is_training)
-        x_mm = dataset['traffic_flow'] 
     bs = batch_size   
     ts = time_step
     n_weekday = 1440    # 12*24*5
@@ -39,22 +36,22 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
     for i in range(0, len(x)-n_week+1, n_week):
         for j in range(i, i+n_weekday):
             _x.append(x[j:j+ts])
-            if data_gaussian:
-                _y.append(x_mm[j+ts])
-            else:
-                _y.append(x[j+ts])
+            _y.append(x[j+ts])
     _x = np.asarray(_x, dtype=np.float32)
     _y = np.asarray(_y, dtype=np.float32)
-    print("_x.shape:", _x.shape)
-    print("_y.shape:", _y.shape)
+    n_station = x.shape[-1]
     if is_training: 
         if data_shuffle:
             _x, _y = shuffle(_x, _y)
-        n_station = _y.shape[-1]
         _x = _x[:len(_x)-len(_x)%bs]
         _y = _y[:len(_y)-len(_y)%bs]
-        _x = _x.reshape(-1, bs, ts, n_station)
+        _x = _x.reshape(-1, bs, ts*n_station)
         _y = _y.reshape(-1, bs, n_station)
+    else:
+        _x = _x.reshape(-1, ts*n_station)
+        _y = _y.reshape(-1, n_station) 
+    print("_x.shape:", _x.shape)
+    print("_y.shape:", _y.shape)
     vmax = dataset['vmax']
     return _x, _y, vmax
 

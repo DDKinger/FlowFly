@@ -15,6 +15,11 @@ class Model(object):
 
     inputs = cntk.sequence.input_variable((output_size), name='inputs')
     target = cntk.input_variable((output_size), name='target')
+    self.inputs = inputs
+    self.target = target
+
+    if self.config.use_embedding:
+      inputs = cntk.layers.Dense(self.config.embedding_size)(inputs)
 
     def lstm_cell():
       _cell_creator = cntk.layers.Recurrence(cntk.layers.LSTM(hidden_size, use_peepholes=self.config.use_peephole), name='basic_lstm')
@@ -39,34 +44,39 @@ class Model(object):
         
     if self.config.cell == 'gru':
       _cell_creator = gru_cell
+      # _cell_creator_last = cntk.layers.Recurrence(cntk.layers.GRU(output_size) , name='gru_last')
     elif self.config.cell == 'lstm':
       _cell_creator = lstm_cell
+      # _cell_creator_last = cntk.layers.Recurrence(cntk.layers.LSTM(output_size) , name='lstm_last')
     elif self.config.cell == 'cifg_lstm':
       _cell_creator = cifg_cell
+      # _cell_creator_last = cntk.layers.Recurrence(CIFG_LSTM(output_size) , name='cifg_last')
     else:
       raise ValueError("Unsupported cell type, choose from {'lstm', 'gru', 'cifg_lstm'}.")
 
     if self.config.use_residual:
+      if num_layers < 2:
+        raise ValueError("if using residual connection, num_layers should be greater than 1")
       print("  ** using residual **  ")
-      _output = inputs
-      for _ in range(num_layers):
+      _output = _cell_creator()(inputs)
+      for _ in range(num_layers-1):
         _output = self.config.resWeight * _cell_creator()(_output) + _output
         # _output = _cell_creator()(_output) + _output
     else:
       cell = cntk.layers.For(range(num_layers), lambda:_cell_creator())
       _output = cell(inputs)
     
-    _output = cntk.sequence.last(_output)
-    output = cntk.layers.Dense(output_size)(_output)
-    self.inputs = inputs
-    self.target = target
+    # _output = _cell_creator_last(_output)
+    output = cntk.sequence.last(_output)
+    output = cntk.layers.Dense(output_size, activation=cntk.sigmoid, name = 'y_out')(output)
     self.output = output
     loss = cntk.squared_error(output, target)
+    self.loss = loss
     cost_mape = cntk.reduce_mean(cntk.abs(output-target)/target, axis=cntk.Axis.all_axes(), name='mape') 
     cost_mae = cntk.reduce_mean(cntk.abs(output-target), axis=cntk.Axis.all_axes(), name='mae')
-    cost_rmse = cntk.reduce_l2((output-target), axis=cntk.Axis.all_axes(), name='rmse')  
+    cost_rmse = cntk.sqrt(cntk.reduce_mean(cntk.square(output-target), axis=cntk.Axis.all_axes()), name='rmse')
     self.cost = cntk.combine([cost_mape, cost_mae, cost_rmse])
-    self.criterion = cntk.combine([loss, cost_mape])
+    # self.criterion = cntk.combine([loss, cost_mape])
 
 
   @property
