@@ -68,7 +68,10 @@ class Model(object):
     
     # _output = _cell_creator_last(_output)
     output = cntk.sequence.last(_output)
-    output = cntk.layers.Dense(output_size, activation=cntk.sigmoid, name = 'y_out')(output)
+    if self.config.cell == 'cifg_lstm':
+      output = cntk.layers.Dense(output_size, name = 'y_out')(output)
+    else:
+      output = cntk.layers.Dense(output_size, activation=cntk.sigmoid, name = 'y_out')(output)
     self.output = output
     loss = cntk.squared_error(output, target)
     self.loss = loss
