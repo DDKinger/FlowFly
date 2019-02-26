@@ -1,0 +1,8 @@
+grbm with sparsity = 0£¬ 0
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.390119e+00, MAPE_test:9.171353e+00
+MAE_train:1.590528e+01, MAE_test:2.129330e+01
+RMSE_train:2.285492e+01, RMSE_test:3.013155e+01
+Total time: 2706.418000

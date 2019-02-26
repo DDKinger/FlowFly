@@ -1,0 +1,17 @@
+
+grbm with sparsity = 0.5£¬ 0.5£¬ È«²¿grbm £¬gmakebaches
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.417914e+00, MAPE_test:7.595351e+00
+MAE_train:1.864233e+01, MAE_test:2.040132e+01
+RMSE_train:2.731936e+01, RMSE_test:2.935511e+01
+Total time: 2478.945000
+MAPE_train:7.397195e+00, MAPE_test:7.537493e+00
+MAE_train:1.858896e+01, MAE_test:2.020758e+01
+RMSE_train:2.724043e+01, RMSE_test:2.910400e+01
+Total time: 2514.881000
+MAPE_train:7.417950e+00, MAPE_test:7.562064e+00
+MAE_train:1.865149e+01, MAE_test:2.027535e+01
+RMSE_train:2.733196e+01, RMSE_test:2.921666e+01
+Total time: 2461.042000

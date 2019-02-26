@@ -1,0 +1,42 @@
+rbm, grbm, makebatch
+MAPE_train:9.793096e+00, MAPE_test:9.649015e+00
+MAE_train:2.366084e+01, MAE_test:2.509050e+01
+RMSE_train:3.355993e+01, RMSE_test:3.525313e+01
+Total time: 1603.717319
+MAPE_train:9.760710e+00, MAPE_test:9.618733e+00
+MAE_train:2.358480e+01, MAE_test:2.496215e+01
+RMSE_train:3.345136e+01, RMSE_test:3.503284e+01
+Total time: 1523.161516
+MAPE_train:9.775223e+00, MAPE_test:9.566642e+00
+MAE_train:2.364609e+01, MAE_test:2.488024e+01
+RMSE_train:3.352032e+01, RMSE_test:3.489458e+01
+Total time: 1529.109820
+
+rbm, grbm, gmakebatch
+MAPE_train:3.382164e+01, MAPE_test:3.212177e+01
+MAE_train:6.789252e+01, MAE_test:6.878333e+01
+RMSE_train:8.960645e+01, RMSE_test:9.242469e+01
+Total time: 1442.118858
+
+rbm,rbm, makebatch, noise = 0
+MAPE_train:9.993970e+00, MAPE_test:9.801439e+00
+MAE_train:2.491219e+01, MAE_test:2.635297e+01
+RMSE_train:3.543673e+01, RMSE_test:3.735240e+01
+Total time: 1535.875726
+MAPE_train:1.002334e+01, MAPE_test:9.865729e+00
+MAE_train:2.498002e+01, MAE_test:2.649432e+01
+RMSE_train:3.558891e+01, RMSE_test:3.758879e+01
+Total time: 1553.166934
+
+rbm rbm 0.5 0
+MAPE_train:7.259182e+00, MAPE_test:7.462961e+00
+MAE_train:1.842204e+01, MAE_test:2.022742e+01
+RMSE_train:2.707247e+01, RMSE_test:2.920668e+01
+Total time: 1499.461140
+
+grbm rbm 0 0 
+MAPE_train:7.304574e+00, MAPE_test:7.764056e+00
+MAE_train:1.866023e+01, MAE_test:2.140653e+01
+RMSE_train:2.730546e+01, RMSE_test:3.085261e+01
+Total time: 1443.673956
+

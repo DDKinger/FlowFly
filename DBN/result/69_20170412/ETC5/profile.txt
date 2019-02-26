@@ -1,0 +1,8 @@
+grbm with sparsity = 0.5， 0.5
+maxepoch=20，20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:6.885158e+00, MAPE_test:7.216733e+00
+MAE_train:1.772222e+01, MAE_test:1.976359e+01
+RMSE_train:2.615046e+01, RMSE_test:2.865520e+01
+时间已过 6243.052083 秒。

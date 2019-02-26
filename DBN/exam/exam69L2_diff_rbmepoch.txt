@@ -1,0 +1,144 @@
+grbm with sparsity = 0.5 
+numhid=150; numpen=150; 
+TimeK = 2;Layer = 2;
+
+maxepoch=5£¬5,200;
+MAPE_train:8.205189e+00, MAPE_test:8.097351e+00
+MAE_train:1.982839e+01, MAE_test:2.096761e+01
+RMSE_train:2.876774e+01, RMSE_test:3.009289e+01
+MAPE_train:8.159619e+00, MAPE_test:8.021377e+00
+MAE_train:1.970779e+01, MAE_test:2.078721e+01
+RMSE_train:2.865174e+01, RMSE_test:2.992518e+01
+
+maxepoch=10£¬10,200;
+MAPE_train:7.663963e+00, MAPE_test:7.697055e+00
+MAE_train:1.902585e+01, MAE_test:2.034024e+01
+RMSE_train:2.785401e+01, RMSE_test:2.937832e+01
+MAPE_train:7.690357e+00, MAPE_test:7.761852e+00
+MAE_train:1.899483e+01, MAE_test:2.030522e+01
+RMSE_train:2.781939e+01, RMSE_test:2.929028e+01
+MAPE_train:7.675019e+00, MAPE_test:7.717128e+00
+MAE_train:1.900464e+01, MAE_test:2.033809e+01
+RMSE_train:2.782701e+01, RMSE_test:2.939783e+01
+MAPE_train:7.688840e+00, MAPE_test:7.746289e+00
+MAE_train:1.902055e+01, MAE_test:2.029745e+01
+RMSE_train:2.785098e+01, RMSE_test:2.930554e+01
+
+maxepoch=15£¬15,200;
+MAPE_train:7.592315e+00, MAPE_test:7.681841e+00
+MAE_train:1.898149e+01, MAE_test:2.038181e+01
+RMSE_train:2.777160e+01, RMSE_test:2.943431e+01
+MAPE_train:7.586782e+00, MAPE_test:7.686297e+00
+MAE_train:1.896923e+01, MAE_test:2.040016e+01
+RMSE_train:2.775134e+01, RMSE_test:2.940046e+01
+MAPE_train:7.564789e+00, MAPE_test:7.633660e+00
+MAE_train:1.892285e+01, MAE_test:2.037087e+01
+RMSE_train:2.771528e+01, RMSE_test:2.946910e+01
+MAPE_train:7.587205e+00, MAPE_test:7.685022e+00
+MAE_train:1.898703e+01, MAE_test:2.037528e+01
+RMSE_train:2.780721e+01, RMSE_test:2.944888e+01
+
+maxepoch=20£¬20,200;
+MAPE_train:7.554362e+00, MAPE_test:7.663830e+00
+MAE_train:1.900320e+01, MAE_test:2.063525e+01
+RMSE_train:2.781633e+01, RMSE_test:2.984628e+01
+MAPE_train:7.590423e+00, MAPE_test:7.717516e+00
+MAE_train:1.909182e+01, MAE_test:2.061556e+01
+RMSE_train:2.785822e+01, RMSE_test:2.965385e+01
+MAPE_train:7.558733e+00, MAPE_test:7.658427e+00
+MAE_train:1.903309e+01, MAE_test:2.053692e+01
+RMSE_train:2.780425e+01, RMSE_test:2.965717e+01
+MAPE_train:7.571191e+00, MAPE_test:7.671305e+00
+MAE_train:1.905496e+01, MAE_test:2.045916e+01
+RMSE_train:2.784947e+01, RMSE_test:2.950973e+01
+
+maxepoch=25£¬25,200;
+MAPE_train:7.539160e+00, MAPE_test:7.649703e+00
+MAE_train:1.907559e+01, MAE_test:2.063374e+01
+RMSE_train:2.787093e+01, RMSE_test:2.987906e+01
+MAPE_train:7.601128e+00, MAPE_test:7.742944e+00
+MAE_train:1.917890e+01, MAE_test:2.081314e+01
+RMSE_train:2.798886e+01, RMSE_test:2.995967e+01
+MAPE_train:7.604518e+00, MAPE_test:7.724937e+00
+MAE_train:1.915271e+01, MAE_test:2.070622e+01
+RMSE_train:2.795571e+01, RMSE_test:2.987005e+01
+
+maxepoch=30£¬30,200;
+MAPE_train:7.679657e+00, MAPE_test:7.824338e+00
+MAE_train:1.943916e+01, MAE_test:2.116573e+01
+RMSE_train:2.829022e+01, RMSE_test:3.047719e+01
+
+maxepoch=40£¬40,200;
+MAPE_train:7.854359e+00, MAPE_test:8.035012e+00
+MAE_train:1.997270e+01, MAE_test:2.169579e+01
+RMSE_train:2.896669e+01, RMSE_test:3.125494e+01
+
+
+grbm with sparsity = 0.5, 0.5
+numhid=256; numpen=256; 
+TimeK = 2;Layer = 2;
+
+maxepoch=5£¬5,200;
+MAPE_train:7.985619e+00, MAPE_test:7.889411e+00
+MAE_train:1.939199e+01, MAE_test:2.038446e+01
+RMSE_train:2.834218e+01, RMSE_test:2.939690e+01
+
+maxepoch=10£¬10,200;
+MAPE_train:7.531846e+00, MAPE_test:7.628232e+00
+MAE_train:1.869074e+01, MAE_test:2.006841e+01
+RMSE_train:2.746439e+01, RMSE_test:2.898170e+01
+MAPE_train:7.485260e+00, MAPE_test:7.529696e+00
+MAE_train:1.865383e+01, MAE_test:1.994780e+01
+RMSE_train:2.743592e+01, RMSE_test:2.888175e+01
+
+maxepoch=15£¬15,200;
+MAPE_train:7.420116e+00, MAPE_test:7.539294e+00
+MAE_train:1.864737e+01, MAE_test:2.008185e+01
+RMSE_train:2.742005e+01, RMSE_test:2.908926e+01
+MAPE_train:7.460464e+00, MAPE_test:7.590337e+00
+MAE_train:1.867879e+01, MAE_test:2.009248e+01
+RMSE_train:2.744926e+01, RMSE_test:2.909347e+01
+MAPE_train:7.458072e+00, MAPE_test:7.529583e+00
+MAE_train:1.867525e+01, MAE_test:2.009530e+01
+RMSE_train:2.744692e+01, RMSE_test:2.912337e+01
+MAPE_train:7.435025e+00, MAPE_test:7.547287e+00
+MAE_train:1.864237e+01, MAE_test:2.013144e+01
+RMSE_train:2.740888e+01, RMSE_test:2.915114e+01
+
+maxepoch=20£¬20,200;
+MAPE_train:7.409800e+00, MAPE_test:7.551336e+00
+MAE_train:1.868892e+01, MAE_test:2.025179e+01
+RMSE_train:2.747171e+01, RMSE_test:2.930846e+01
+MAPE_train:7.374812e+00, MAPE_test:7.551858e+00
+MAE_train:1.860831e+01, MAE_test:2.023419e+01
+RMSE_train:2.735697e+01, RMSE_test:2.929176e+01
+MAPE_train:7.383825e+00, MAPE_test:7.566144e+00
+MAE_train:1.863095e+01, MAE_test:2.021365e+01
+RMSE_train:2.736634e+01, RMSE_test:2.921212e+01
+MAPE_train:7.351898e+00, MAPE_test:7.524008e+00
+MAE_train:1.856680e+01, MAE_test:2.010954e+01
+RMSE_train:2.730327e+01, RMSE_test:2.913236e+01
+MAPE_train:7.398125e+00, MAPE_test:7.549361e+00
+MAE_train:1.868201e+01, MAE_test:2.022847e+01
+RMSE_train:2.743982e+01, RMSE_test:2.928808e+01
+
+maxepoch=25£¬25,200;
+MAPE_train:7.387381e+00, MAPE_test:7.577777e+00
+MAE_train:1.868324e+01, MAE_test:2.037465e+01
+RMSE_train:2.742662e+01, RMSE_test:2.946251e+01
+MAPE_train:7.394970e+00, MAPE_test:7.607690e+00
+MAE_train:1.869013e+01, MAE_test:2.043228e+01
+RMSE_train:2.744519e+01, RMSE_test:2.961142e+01
+MAPE_train:7.409824e+00, MAPE_test:7.586868e+00
+MAE_train:1.871801e+01, MAE_test:2.033306e+01
+RMSE_train:2.747313e+01, RMSE_test:2.943116e+01
+
+maxepoch=30£¬30,200;
+MAPE_train:7.420812e+00, MAPE_test:7.646761e+00
+MAE_train:1.880638e+01, MAE_test:2.059424e+01
+RMSE_train:2.755855e+01, RMSE_test:2.971784e+01
+
+maxepoch=35£¬35,200;
+MAPE_train:7.482365e+00, MAPE_test:7.656965e+00
+MAE_train:1.898883e+01, MAE_test:2.064935e+01
+RMSE_train:2.777309e+01, RMSE_test:2.990047e+01

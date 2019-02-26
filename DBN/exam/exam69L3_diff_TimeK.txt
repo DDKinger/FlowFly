@@ -1,0 +1,50 @@
+grbm with sparsity = 0.5
+maxepoch=20£¬20,200; 
+numhid=128; numpen=128; numpen2=128;
+TimeK = 1
+MAPE_train:8.141800e+00, MAPE_test:8.159145e+00
+MAE_train:2.036365e+01, MAE_test:2.172710e+01
+RMSE_train:2.944969e+01, RMSE_test:3.112649e+01
+TimeK = 2
+MAPE_train:7.789795e+00, MAPE_test:7.869313e+00
+MAE_train:1.952101e+01, MAE_test:2.103967e+01
+RMSE_train:2.840358e+01, RMSE_test:3.031130e+01
+TimeK = 3
+MAPE_train:7.805409e+00, MAPE_test:8.177519e+00
+MAE_train:1.963950e+01, MAE_test:2.214997e+01
+RMSE_train:2.843979e+01, RMSE_test:3.169815e+01
+TimeK = 4
+MAPE_train:7.816303e+00, MAPE_test:8.150394e+00
+MAE_train:1.971184e+01, MAE_test:2.233338e+01
+RMSE_train:2.848920e+01, RMSE_test:3.195748e+01
+
+grbm with sparsity = 0.5
+maxepoch=10£¬10,200; 
+numhid=150; numpen=150; numpen2=150;
+TimeK = 1
+MAPE_train:8.407215e+00, MAPE_test:8.281645e+00
+MAE_train:2.067414e+01, MAE_test:2.184233e+01
+RMSE_train:2.983037e+01, RMSE_test:3.123068e+01
+TimeK = 2
+MAPE_train:7.811155e+00, MAPE_test:7.905170e+00
+MAE_train:1.942739e+01, MAE_test:2.092942e+01
+RMSE_train:2.829520e+01, RMSE_test:3.015124e+01
+TimeK = 3
+MAPE_train:7.818903e+00, MAPE_test:7.927899e+00
+MAE_train:1.926497e+01, MAE_test:2.101412e+01
+RMSE_train:2.798259e+01, RMSE_test:3.018899e+01
+TimeK = 4
+MAPE_train:7.835316e+00, MAPE_test:8.055879e+00
+MAE_train:1.934618e+01, MAE_test:2.150708e+01
+RMSE_train:2.803879e+01, RMSE_test:3.083714e+01
+TimeK = 5
+MAPE_train:7.875904e+00, MAPE_test:8.194714e+00
+MAE_train:1.956502e+01, MAE_test:2.235076e+01
+RMSE_train:2.825509e+01, RMSE_test:3.202097e+01
+TimeK = 6
+MAPE_train:7.859053e+00, MAPE_test:8.212235e+00
+MAE_train:1.965559e+01, MAE_test:2.237585e+01
+RMSE_train:2.835386e+01, RMSE_test:3.197467e+01
+MAPE_train:7.884789e+00, MAPE_test:8.417530e+00
+MAE_train:1.967482e+01, MAE_test:2.298865e+01
+RMSE_train:2.839063e+01, RMSE_test:3.277964e+01

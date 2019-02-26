@@ -1,0 +1,33 @@
+MLP, dropout 0, epoch = 1000
+MAPE_train = 7.0859, MAPE_test = 7.6514
+MLP, dropout 0.5
+MAPE_train = 12.9680, MAPE_test = 13.0071
+
+SAE, ZeroMaskedFraction = 0, lr = 1£¬ smooth, epoch = 1000
+MAPE_train = 7.2446, MAPE_test = 7.7166
+
+SDAE, ZeroMaskedFraction = 0.5, lr = 1£¬ smooth
+MAPE_train = 7.1952, MAPE_test = 7.9223
+
+Classical DBN
+rbm, rbm, makebatches, sparsity = 0£¬0 
+maxepoch=20£¬20,1000;
+numhid=256; numpen=256; 
+TimeK = 2;Layer = 2;
+
+MAPE_train:9.993970e+00, MAPE_test:9.801439e+00
+
+MAE_train:2.491219e+01, MAE_test:2.635297e+01
+
+RMSE_train:3.543673e+01, RMSE_test:3.735240e+01
+
+Total time: 1535.875726
+
+MAPE_train:1.002334e+01, MAPE_test:9.865729e+00
+
+MAE_train:2.498002e+01, MAE_test:2.649432e+01
+
+RMSE_train:3.558891e+01, RMSE_test:3.758879e+01
+
+Total time: 1553.166934
+

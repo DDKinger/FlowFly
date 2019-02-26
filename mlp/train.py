@@ -14,6 +14,7 @@ class Train:
         self.config = config
         self._load_data()
         self._build_graph()
+        print(self.config)
 
 
     def __call__(self):
@@ -81,7 +82,7 @@ class Train:
         #     gradient_clipping_threshold_per_sample = config.grad_clip,
         #     gradient_clipping_with_truncation = True
         # )
-        learner = cntk.learners.adadelta(
+        learner = cntk.learners.adagrad(
             output.parameters,
             lr = cntk.learners.learning_parameter_schedule_per_sample(lr),
             gradient_clipping_threshold_per_sample = config.grad_clip,

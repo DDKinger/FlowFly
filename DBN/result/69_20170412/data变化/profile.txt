@@ -1,0 +1,22 @@
+grbm with sparsity = 0.5, 0, data0 = (rand(size(data)) > 0.5) .* data;
+maxepoch=20£¬20, 1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.412159e+00, MAPE_test:7.655979e+00
+MAE_train:1.866159e+01, MAE_test:2.065303e+01
+RMSE_train:2.731646e+01, RMSE_test:2.977967e+01
+Total time: 2553.526000
+
+grbm with sparsity = 0.5, 0.5, data0 = (rand(size(data)) > 0.5) .* data;
+maxepoch=20£¬20, 1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.336099e+00, MAPE_test:8.299913e+00
+MAE_train:2.050010e+01, MAE_test:2.196453e+01
+RMSE_train:2.949609e+01, RMSE_test:3.122030e+01
+Total time: 2814.612000
+
+MAPE_train:8.415338e+00, MAPE_test:8.367126e+00
+MAE_train:2.057088e+01, MAE_test:2.204956e+01
+RMSE_train:2.956468e+01, RMSE_test:3.137203e+01
+Total time: 2768.504000

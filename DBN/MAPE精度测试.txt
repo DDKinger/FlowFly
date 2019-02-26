@@ -1,0 +1,71 @@
+grbm
+maxepoch=100£¬50,256; 
+numhid=32; numpen=32; numpen2=32;
+train=11.67,test=13.86
+
+grbm
+maxepoch=150£¬100,256; 
+numhid=64; numpen=64; numpen2=64;
+train=10.12,test=12.68 
+
+grbm
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=9.30,test=11.8 
+
+grbm
+maxepoch=200£¬100,256; 
+numhid=256; numpen=256; numpen2=256;
+train=9.10,test=11.45 
+
+rbm with sparsity
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=11.37,test=12.74 
+
+rbm
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=11.35,test=12.64 
+
+
+obs = 78
+grbm
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=9.16,test=11.35 
+
+grbm with sparsity = 0.3
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=8.67,test=10.67 
+
+grbm with sparsity = 0.5
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=8.90,test=10.72 
+
+rbm with sparsity = 0.3
+maxepoch=150£¬100,256; 
+numhid=128; numpen=128; numpen2=128;
+train=10,test=11.04 
+
+rbm with sparsity = 0.3
+maxepoch=150£¬100,600; 
+numhid=128; numpen=128; numpen2=128;
+train=9.44,test=10.43
+
+grbm with sparsity = 0.3
+maxepoch=150£¬100,600; 
+numhid=128; numpen=128; numpen2=128;
+train=8.05,test=10.21 
+
+grbm with sparsity = 0.3 and noisy = 0.5
+maxepoch=150£¬100,600; 
+numhid=128; numpen=128; numpen2=128;
+train=8.43,test=10.46 
+
+grbm with sparsity = 0.3
+maxepoch=150£¬100,1200; 
+numhid=128; numpen=128; numpen2=128;
+train=7.95,test=10.01 

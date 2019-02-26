@@ -1,0 +1,13 @@
+ts=12
+
+layer=2, node=256, noise=0.5, epoch=1000, makebatch
+MAPE_train:7.542349e+00, MAPE_test:7.839738e+00
+MAE_train:1.843175e+01, MAE_test:2.060035e+01
+RMSE_train:2.663174e+01, RMSE_test:2.921327e+01
+Total time: 2125.436500
+
+layer=2, node=256, noise=0.5, epoch=1000, gmakebatch
+MAPE_train:6.815239e+00, MAPE_test:8.237848e+00
+MAE_train:1.733682e+01, MAE_test:2.303377e+01
+RMSE_train:2.477077e+01, RMSE_test:3.272315e+01
+Total time: 2055.906403

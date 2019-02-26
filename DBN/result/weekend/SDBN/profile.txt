@@ -1,0 +1,12 @@
+grbm rbm with sparsity = 0£¬ 0
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+epoch = 500
+MAPE_train = 9.0272, MAPE_test = 9.3651
+MAE_train = 17.2367, MAE_test = 22.5103
+RMSE_train = 24.6497, RMSE_test = 31.9328
+epoch = 1000
+MAPE_train = 8.5935, MAPE_test = 9.2328
+MAE_train = 16.6020, MAE_test = 22.0908
+RMSE_train = 23.7927, RMSE_test = 31.3461

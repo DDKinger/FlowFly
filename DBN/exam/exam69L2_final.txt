@@ -1,0 +1,89 @@
+grbm with sparsity = 0.5
+maxepoch=20，20,1500; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:6.813639e+00, MAPE_test:7.221769e+00
+MAE_train:1.757092e+01, MAE_test:1.982443e+01
+RMSE_train:2.591582e+01, RMSE_test:2.873228e+01
+时间已过 9985.473048 秒。
+
+grbm with sparsity = 0.5， 0.5
+maxepoch=20，20,200; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.409800e+00, MAPE_test:7.551336e+00
+MAE_train:1.868892e+01, MAE_test:2.025179e+01
+RMSE_train:2.747171e+01, RMSE_test:2.930846e+01
+MAPE_train:7.443487e+00, MAPE_test:7.591674e+00
+MAE_train:1.874487e+01, MAE_test:2.021984e+01
+RMSE_train:2.747748e+01, RMSE_test:2.918045e+01
+MAPE_train:7.392444e+00, MAPE_test:7.569979e+00
+MAE_train:1.864222e+01, MAE_test:2.017223e+01
+RMSE_train:2.736829e+01, RMSE_test:2.911349e+01
+
+grbm with sparsity = 0.5， 0.5
+maxepoch=20，20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:6.885158e+00, MAPE_test:7.216733e+00
+MAE_train:1.772222e+01, MAE_test:1.976359e+01
+RMSE_train:2.615046e+01, RMSE_test:2.865520e+01
+时间已过 6243.052083 秒。
+MAPE_train:6.907262e+00, MAPE_test:7.270515e+00
+MAE_train:1.772941e+01, MAE_test:1.972148e+01
+RMSE_train:2.615209e+01, RMSE_test:2.849909e+01
+MAPE_train:6.9104, MAPE_test:7.2774
+MAPE_train:6.993658e+00, MAPE_test:7.299076e+00
+MAE_train:1.774032e+01, MAE_test:1.965713e+01
+RMSE_train:2.612742e+01, RMSE_test:2.842287e+01
+MAPE_train:6.9000, MAPE_test:7.2181
+MAPE_train:6.927599, MAPE_test:7.287499
+
+rbm with sparsity = 0.5， 0.5
+maxepoch=20，20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.136591e+00, MAPE_test:8.171152e+00
+MAE_train:1.952508e+01, MAE_test:2.130019e+01
+RMSE_train:2.815056e+01, RMSE_test:3.016790e+01
+Total time: 1388.324000
+MAPE_train:8.141601e+00, MAPE_test:8.199394e+00
+MAE_train:1.945280e+01, MAE_test:2.131003e+01
+RMSE_train:2.802797e+01, RMSE_test:3.019385e+01
+Total time: 1357.192000
+
+rbm with sparsity = 0， 0
+maxepoch=20，20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:9.334665e+00, MAPE_test:9.159872e+00
+MAE_train:2.171602e+01, MAE_test:2.328003e+01
+RMSE_train:3.089164e+01, RMSE_test:3.281260e+01
+Total time: 1363.767000
+
+Grbm rbm with sparsity = 0， 0
+maxepoch=20，20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.302040e+00, MAPE_test:7.767074e+00
+MAE_train:1.868822e+01, MAE_test:2.153116e+01
+RMSE_train:2.735708e+01, RMSE_test:3.105419e+01
+
+keras_NN
+model = Sequential()
+model.add(Dense(256, input_shape=(138,)))
+model.add(Activation('sigmoid'))
+model.add(Dropout(0.5))
+model.add(Dense(256))
+model.add(Activation('sigmoid'))
+model.add(Dense(69))
+model.add(Activation('sigmoid'))
+model.compile(loss='mean_squared_error',
+              optimizer='RMSprop',
+              metrics=['mean_absolute_percentage_error'])
+
+history = model.fit(X_train, Y_train,
+                    batch_size=144, nb_epoch=200,
+                    verbose=1, shuffle=True)
+Ttain accuracy: 8.4919 
+Test accuracy: 8.50147591167

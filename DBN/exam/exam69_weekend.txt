@@ -1,0 +1,63 @@
+MLP
+epoch = 500
+MAPE_train = 16.4188, MAPE_test = 14.8333
+MAE_train = 33.7834, MAE_test = 35.2161
+RMSE_train = 45.9512, RMSE_test = 48.9731
+epoch = 1000
+MAPE_train = 15.3956, MAPE_test = 14.0280
+MAE_train = 31.3623, MAE_test = 33.4296
+RMSE_train = 42.7642, RMSE_test = 46.5476
+
+SDAE
+epoch = 500
+MAPE_train = 9.4130, MAPE_test = 9.9451
+MAE_train = 18.7682, MAE_test = 24.8293
+RMSE_train = 26.2850, RMSE_test = 35.204
+epoch = 1000
+MAPE_train = 8.7874, MAPE_test = 9.6673
+MAE_train = 17.6592, MAE_test = 24.0930
+RMSE_train = 24.8327, RMSE_test = 34.363
+
+CDBN
+epoch = 500
+MAPE_train = 13.3355, MAPE_test = 11.7756
+epoch = 1000
+MAPE_train = 12.5063, MAPE_test = 11.0358
+epoch = 500
+MAPE_train = 13.4388, MAPE_test = 11.8660
+epoch = 1000
+MAPE_train = 12.6863, MAPE_test = 11.1311
+epoch = 500
+MAPE_train = 13.5723, MAPE_test = 11.9986
+MAE_train = 25.5969, MAE_test = 27.9614
+RMSE_train = 35.7811, RMSE_test = 38.4017
+epoch = 1000
+MAPE_train = 12.8346, MAPE_test = 11.3421
+MAE_train = 23.8485, MAE_test = 26.1419
+RMSE_train = 33.3233, RMSE_test = 36.2068
+
+SDBN
+epoch = 500
+MAPE_train = 9.0272, MAPE_test = 9.3651
+epoch = 1000
+MAPE_train = 8.5935, MAPE_test = 9.2328
+epoch = 500
+MAPE_train = 9.2848, MAPE_test = 9.5375
+MAE_train = 17.2367, MAE_test = 22.5103
+RMSE_train = 24.6497, RMSE_test = 31.9328
+epoch = 1000
+MAPE_train = 8.8637, MAPE_test = 9.3773
+MAE_train = 16.6020, MAE_test = 22.0908
+RMSE_train = 23.7927, RMSE_test = 31.3461 
+
+DDBN
+epoch = 200
+MAPE_train = 8.8510, MAPE_test = 8.8435
+epoch = 500
+MAPE_train = 8.3797, MAPE_test = 8.6884
+MAE_train = 15.9836, MAE_test = 19.8217
+RMSE_train = 23.0707, RMSE_test = 27.9723
+epoch = 1000
+MAPE_train = 8.0571, MAPE_test = 8.6813
+MAE_train = 15.5699, MAE_test = 19.9430
+RMSE_train = 22.4611, RMSE_test = 28.1666

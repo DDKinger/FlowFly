@@ -1,0 +1,173 @@
+grbm rbm with sparsity = 0.5£¬ 0.5 gmakebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:6.907262e+00, MAPE_test:7.270515e+00
+MAE_train:1.772941e+01, MAE_test:1.972148e+01
+RMSE_train:2.615209e+01, RMSE_test:2.849909e+01
+
+grbm rbm with sparsity = 0.5£¬ 0 gmakebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.348084e+00, MAPE_test:7.572825e+00
+MAE_train:1.856955e+01, MAE_test:2.037595e+01
+RMSE_train:2.725595e+01, RMSE_test:2.933136e+01
+Total time: 2541.655000
+MAPE_train:7.281241e+00, MAPE_test:7.474265e+00
+MAE_train:1.849011e+01, MAE_test:2.019977e+01
+RMSE_train:2.717960e+01, RMSE_test:2.920534e+01
+Total time: 2594.573000
+
+grbm rbm with sparsity = 0.5£¬ 0.5 makebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:9.859825e+00, MAPE_test:9.745140e+00
+MAE_train:2.397656e+01, MAE_test:2.555669e+01
+RMSE_train:3.397221e+01, RMSE_test:3.598845e+01
+Total time: 2853.642000
+MAPE_train:9.781111e+00, MAPE_test:9.620096e+00
+MAE_train:2.381119e+01, MAE_test:2.527570e+01
+RMSE_train:3.379897e+01, RMSE_test:3.562704e+01
+Total time: 4316.270000
+
+grbm rbm with sparsity = 0£¬ 0 gmakebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.302040e+00, MAPE_test:7.767074e+00
+MAE_train:1.868822e+01, MAE_test:2.153116e+01
+RMSE_train:2.735708e+01, RMSE_test:3.105419e+01
+MAPE_train:7.291888e+00, MAPE_test:7.742884e+00
+MAE_train:1.867029e+01, MAE_test:2.147141e+01
+RMSE_train:2.731297e+01, RMSE_test:3.084243e+01
+Total time: 2588.067000
+
+grbm grbm with sparsity = 0.5£¬ 0.5£¬ gmakebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.417914e+00, MAPE_test:7.595351e+00
+MAE_train:1.864233e+01, MAE_test:2.040132e+01
+RMSE_train:2.731936e+01, RMSE_test:2.935511e+01
+Total time: 2478.945000
+MAPE_train:7.397195e+00, MAPE_test:7.537493e+00
+MAE_train:1.858896e+01, MAE_test:2.020758e+01
+RMSE_train:2.724043e+01, RMSE_test:2.910400e+01
+Total time: 2514.881000
+MAPE_train:7.417950e+00, MAPE_test:7.562064e+00
+MAE_train:1.865149e+01, MAE_test:2.027535e+01
+RMSE_train:2.733196e+01, RMSE_test:2.921666e+01
+Total time: 2461.042000
+
+grbm grbm with sparsity = 0.5£¬ 0.5£¬ makebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:1.092881e+01, MAPE_test:1.072841e+01
+MAE_train:2.750068e+01, MAE_test:2.875314e+01
+RMSE_train:3.948449e+01, RMSE_test:4.072003e+01
+Total time: 2691.680000
+MAPE_train:1.062489e+01, MAPE_test:1.044945e+01
+MAE_train:2.654712e+01, MAE_test:2.791016e+01
+RMSE_train:3.791631e+01, RMSE_test:3.952632e+01
+Total time: 2660.100000
+
+rbm rbm with sparsity = 0.5£¬ 0.5 gmakebatches_my
+maxepoch=20£¬20,1500; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:3.429276e+01, MAPE_test:3.256811e+01
+MAE_train:6.805359e+01, MAE_test:6.895354e+01
+RMSE_train:8.957069e+01, RMSE_test:9.242439e+01
+Total time: 2542.563000
+
+rbm rbm with sparsity = 0.5£¬ 0.5 makebatches_my
+maxepoch=20£¬20,1500; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.941735e+00, MAPE_test:8.665396e+00
+MAE_train:2.162272e+01, MAE_test:2.238548e+01
+RMSE_train:3.092867e+01, RMSE_test:3.160924e+01
+Total time: 2555.598000
+MAPE_train:8.961323e+00, MAPE_test:8.703124e+00
+MAE_train:2.161112e+01, MAE_test:2.236970e+01
+RMSE_train:3.087773e+01, RMSE_test:3.154181e+01
+Total time: 2541.740000
+MAPE_train:8.938447e+00, MAPE_test:8.688479e+00
+MAE_train:2.159854e+01, MAE_test:2.241113e+01
+RMSE_train:3.086237e+01, RMSE_test:3.163301e+01
+Total time: 2685.240000
+
+rbm rbm with sparsity = 0£¬ 0 makebatches_my
+maxepoch=20£¬20,1500; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:1.008565e+01, MAPE_test:9.974495e+00
+MAE_train:2.513795e+01, MAE_test:2.668188e+01
+RMSE_train:3.581304e+01, RMSE_test:3.778857e+01
+Total time: 3191.531000
+MAPE_train:9.995953e+00, MAPE_test:9.818830e+00
+MAE_train:2.488935e+01, MAE_test:2.637811e+01
+RMSE_train:3.540826e+01, RMSE_test:3.738708e+01
+Total time: 2814.182000
+MAPE_train:1.000709e+01, MAPE_test:9.901506e+00
+MAE_train:2.493871e+01, MAE_test:2.654788e+01
+RMSE_train:3.554282e+01, RMSE_test:3.762036e+01
+Total time: 3005.548000
+
+grbm grbm with sparsity = 0.5£¬ 0.5£¬ gmakebaches_my, gaussian mask
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:7.535079e+00, MAPE_test:8.758783e+00
+MAE_train:1.899941e+01, MAE_test:2.497627e+01
+RMSE_train:2.703771e+01, RMSE_test:3.537687e+01
+Total time: 2533.122000
+MAPE_train:7.551810e+00, MAPE_test:9.013272e+00
+MAE_train:1.906548e+01, MAE_test:2.587886e+01
+RMSE_train:2.706580e+01, RMSE_test:3.642811e+01
+Total time: 2462.792000
+
+rbm grbm with sparsity = 0.5£¬ 0.5£¬ makebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:9.793096e+00, MAPE_test:9.649015e+00
+
+MAE_train:2.366084e+01, MAE_test:2.509050e+01
+
+RMSE_train:3.355993e+01, RMSE_test:3.525313e+01
+
+Total time: 1603.717319
+
+MAPE_train:9.760710e+00, MAPE_test:9.618733e+00
+
+MAE_train:2.358480e+01, MAE_test:2.496215e+01
+
+RMSE_train:3.345136e+01, RMSE_test:3.503284e+01
+
+Total time: 1523.161516
+
+MAPE_train:9.775223e+00, MAPE_test:9.566642e+00
+
+MAE_train:2.364609e+01, MAE_test:2.488024e+01
+
+RMSE_train:3.352032e+01, RMSE_test:3.489458e+01
+Total time: 1529.109820
+
+rbm
+
+rbm grbm with sparsity = 0.5£¬ 0.5£¬ gmakebaches_my
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+
+MAPE_train:3.382164e+01, MAPE_test:3.212177e+01
+
+MAE_train:6.789252e+01, MAE_test:6.878333e+01
+
+RMSE_train:8.960645e+01, RMSE_test:9.242469e+01
+
+Total time: 1442.118858

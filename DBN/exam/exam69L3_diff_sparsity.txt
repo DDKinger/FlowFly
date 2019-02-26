@@ -1,0 +1,36 @@
+grbm
+maxepoch=10£¬10,200; 
+numhid=150; numpen=150; numpen2=150;
+TimeK = 2
+sparsity = 0.3
+MAPE_train:7.750376e+00, MAPE_test:7.959720e+00
+MAE_train:1.923146e+01, MAE_test:2.120686e+01
+RMSE_train:2.797598e+01, RMSE_test:3.049192e+01
+sparsity = 0.4
+MAPE_train:7.769202e+00, MAPE_test:7.830199e+00
+MAE_train:1.920806e+01, MAE_test:2.073103e+01
+RMSE_train:2.802012e+01, RMSE_test:2.988870e+01
+MAPE_train:7.790632e+00, MAPE_test:7.872805e+00
+MAE_train:1.926369e+01, MAE_test:2.078838e+01
+RMSE_train:2.805219e+01, RMSE_test:2.990951e+01
+MAPE_train:7.799427e+00, MAPE_test:7.909932e+00
+MAE_train:1.925707e+01, MAE_test:2.096384e+01
+RMSE_train:2.805427e+01, RMSE_test:3.017373e+01
+sparsity = 0.5
+MAPE_train:7.871336e+00, MAPE_test:7.851565e+00
+MAE_train:1.949444e+01, MAE_test:2.087262e+01
+RMSE_train:2.836067e+01, RMSE_test:3.008706e+01
+MAPE_train:7.871412e+00, MAPE_test:7.906246e+00
+MAE_train:1.952669e+01, MAE_test:2.095655e+01
+RMSE_train:2.838480e+01, RMSE_test:3.010848e+01
+MAPE_train:7.861045e+00, MAPE_test:7.877530e+00
+MAE_train:1.942834e+01, MAE_test:2.076043e+01
+RMSE_train:2.828591e+01, RMSE_test:2.995469e+01
+sparsity = 0.6
+MAPE_train:8.095847e+00, MAPE_test:8.054636e+00
+MAE_train:1.999610e+01, MAE_test:2.126921e+01
+RMSE_train:2.892714e+01, RMSE_test:3.054330e+01
+sparsity = 0.7
+MAPE_train:8.428183e+00, MAPE_test:8.380743e+00
+MAE_train:2.065464e+01, MAE_test:2.211672e+01
+RMSE_train:2.967485e+01, RMSE_test:3.148553e+01

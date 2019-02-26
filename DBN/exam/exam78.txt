@@ -1,0 +1,39 @@
+grbm with sparsity = 0.5 ²»´òÂÒÑµÁ·Ë³Ðò
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=11.06,test=11.4 
+
+grbm with sparsity = 0.8
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=9.16,test=10.87
+
+grbm with sparsity = 0.7
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=9.10,test=10.78
+
+grbm with sparsity = 0.6
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=8.92,test=10.50  
+
+grbm with sparsity = 0.5
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=8.83,test=10.37 
+
+grbm with sparsity = 0.4
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=8.86,test=10.71 
+
+grbm with sparsity = 0.3
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=8.91,test=10.97 
+
+grbm with sparsity = 0
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+train=9.50,test=11.52 

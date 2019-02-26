@@ -1,0 +1,21 @@
+rbm rbm with sparsity = 0.5£¬ 0.5
+maxepoch=20£¬20,1500; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.681875e+00, MAPE_test:8.455994e+00
+MAE_train:2.102186e+01, MAE_test:2.181621e+01
+RMSE_train:3.020375e+01, RMSE_test:3.093243e+01
+Total time: 3877.087000
+
+rbm rbm with sparsity = 0.5£¬ 0.5
+maxepoch=20£¬20,1000; 
+numhid=256; numpen=256;
+TimeK = 2; Layer = 2;
+MAPE_train:8.941735e+00, MAPE_test:8.665396e+00
+MAE_train:2.162272e+01, MAE_test:2.238548e+01
+RMSE_train:3.092867e+01, RMSE_test:3.160924e+01
+Total time: 2555.598000
+MAPE_train:8.961323e+00, MAPE_test:8.703124e+00
+MAE_train:2.161112e+01, MAE_test:2.236970e+01
+RMSE_train:3.087773e+01, RMSE_test:3.154181e+01
+Total time: 2541.740000

@@ -1,0 +1,4 @@
+grbm with sparsity = 0.5
+maxepoch=150£¬100,1200; 
+numhid=128; numpen=128; numpen2=128;
+train=7.84,test=10.25 

@@ -1,0 +1,35 @@
+grbm with sparsity = 0.5
+maxepoch=50£¬50,100; 
+numhid=128; numpen=128; numpen2=128;
+
+TimeK = 2
+train=8.36,test=8.57 
+
+TimeK = 6
+train = 8.52£¬test = 8.91
+
+
+grbm with sparsity = 0.5
+maxepoch=50£¬50,200; 
+numhid=128; numpen=128; numpen2=128;
+
+TimeK = 2
+train=8.02,test=8.32
+
+TimeK = 4
+train=8.04,test=8.38
+
+
+grbm with sparsity = 0.5
+maxepoch=50£¬50,600; 
+numhid=128; numpen=128; numpen2=128;
+MAPE_train:7.382080e+00, MAPE_test:7.864461e+00
+MAE_train:1.886019e+01, MAE_test:2.119185e+01
+RMSE_train:2.756433e+01, RMSE_test:3.059657e+01
+
+grbm with sparsity = 0.5
+maxepoch=50£¬50,1200; 
+numhid=128; numpen=128; numpen2=128;
+MAPE_train:7.122137e+00, MAPE_test:7.629900e+00
+MAE_train:1.830452e+01, MAE_test:2.092158e+01
+RMSE_train:2.685011e+01, RMSE_test:3.023052e+01

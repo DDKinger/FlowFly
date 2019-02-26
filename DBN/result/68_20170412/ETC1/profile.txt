@@ -1,0 +1,4 @@
+grbm with sparsity = 0.5
+maxepoch=50£¬50£¬T; 
+numhid=128; numpen=128; numpen2=128;
+TimeK = 2£»

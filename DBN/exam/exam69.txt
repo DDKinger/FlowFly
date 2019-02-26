@@ -1,0 +1,58 @@
+grbm with sparsity = 0.5
+maxepoch=50£¬50,200; 
+numhid=128; numpen=128; numpen2=128;
+
+TimeK = 2
+train=7.89,test=8.29
+
+TimeK = 3
+train=7.94,test=8.36
+
+TimeK = 4
+train=7.94,test=8.69
+
+
+grbm with sparsity = 0.5
+maxepoch=10£¬10,200; 
+numhid=128; numpen=128; numpen2=128;
+TimeK = 2
+MAPE_train:7.955718e+00, MAPE_test:7.960022e+00
+MAE_train:1.962708e+01, MAE_test:2.100712e+01
+RMSE_train:2.850977e+01, RMSE_test:3.028008e+01
+TimeK = 4
+MAPE_train:7.846760e+00, MAPE_test:8.016604e+00
+MAE_train:1.953616e+01, MAE_test:2.165759e+01
+RMSE_train:2.825769e+01, RMSE_test:3.106845e+01
+
+
+grbm with sparsity = 0.5
+maxepoch=5£¬5,200; 
+numhid=128; numpen=128; numpen2=128;
+TimeK = 2
+MAPE_train:8.991480e+00, MAPE_test:8.984437e+00
+MAE_train:2.175838e+01, MAE_test:2.348228e+01
+RMSE_train:3.102449e+01, RMSE_test:3.325182e+01
+
+
+
+grbm with sparsity = 0.5
+maxepoch=30£¬30,200; 
+numhid=128; numpen=128; numpen2=128;
+TimeK = 2
+MAPE_train:7.867679e+00, MAPE_test:7.982367e+00
+MAE_train:1.987123e+01, MAE_test:2.172997e+01
+RMSE_train:2.880859e+01, RMSE_test:3.130095e+01
+
+grbm with sparsity = 0.5
+maxepoch=150£¬100,600; 
+numhid=128; numpen=128; numpen2=128;
+MAPE_train:7.883655e+00, MAPE_test:8.603930e+00
+MAE_train:1.704800e-02, MAE_test:3.996649e-03
+RMSE_train:2.462298e-02, RMSE_test:1.295837e-02
+
+grbm with sparsity = 0.5
+maxepoch=50£¬50,1200; 
+numhid=128; numpen=128; numpen2=128;
+MAPE_train:7.096664e+00, MAPE_test:7.582820e+00
+MAE_train:1.831972e+01, MAE_test:20.7320
+RMSE_train:2.683014e+01, RMSE_test:66.9110

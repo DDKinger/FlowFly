@@ -1,0 +1,962 @@
+Pretraining a deep autoencoder. 
+Size of the training dataset=  1436 
+Size of the test dataset=  1436 
+Pretraining Layer 1 with RBM: 328-32 
+epoch 1epoch    1 error 20409.5  
+epoch 2epoch    2 error 13830.1  
+epoch 3epoch    3 error 11960.1  
+epoch 4epoch    4 error 10612.1  
+epoch 5epoch    5 error 9674.9  
+epoch 6epoch    6 error 8668.0  
+epoch 7epoch    7 error 6364.9  
+epoch 8epoch    8 error 4308.8  
+epoch 9epoch    9 error 3273.0  
+epoch 10epoch   10 error 2749.2  
+epoch 11epoch   11 error 2275.6  
+epoch 12epoch   12 error 1907.5  
+epoch 13epoch   13 error 1752.5  
+epoch 14epoch   14 error 1619.2  
+epoch 15epoch   15 error 1571.6  
+epoch 16epoch   16 error 1527.2  
+epoch 17epoch   17 error 1472.6  
+epoch 18epoch   18 error 1422.9  
+epoch 19epoch   19 error 1451.9  
+epoch 20epoch   20 error 1409.4  
+epoch 21epoch   21 error 1390.5  
+epoch 22epoch   22 error 1399.6  
+epoch 23epoch   23 error 1377.7  
+epoch 24epoch   24 error 1388.7  
+epoch 25epoch   25 error 1361.0  
+epoch 26epoch   26 error 1372.8  
+epoch 27epoch   27 error 1370.0  
+epoch 28epoch   28 error 1336.9  
+epoch 29epoch   29 error 1337.5  
+epoch 30epoch   30 error 1327.1  
+epoch 31epoch   31 error 1335.3  
+epoch 32epoch   32 error 1337.1  
+epoch 33epoch   33 error 1339.3  
+epoch 34epoch   34 error 1339.9  
+epoch 35epoch   35 error 1307.9  
+epoch 36epoch   36 error 1334.4  
+epoch 37epoch   37 error 1332.3  
+epoch 38epoch   38 error 1310.7  
+epoch 39epoch   39 error 1303.1  
+epoch 40epoch   40 error 1280.5  
+epoch 41epoch   41 error 1306.8  
+epoch 42epoch   42 error 1304.8  
+epoch 43epoch   43 error 1301.5  
+epoch 44epoch   44 error 1297.0  
+epoch 45epoch   45 error 1288.7  
+epoch 46epoch   46 error 1245.1  
+epoch 47epoch   47 error 1268.1  
+epoch 48epoch   48 error 1273.8  
+epoch 49epoch   49 error 1243.6  
+epoch 50epoch   50 error 1244.9  
+
+Pretraining Layer 2 with RBM: 32-32 
+epoch 1epoch    1 error 5941.2  
+epoch 2epoch    2 error 3079.3  
+epoch 3epoch    3 error 1780.3  
+epoch 4epoch    4 error 1489.7  
+epoch 5epoch    5 error 1369.2  
+epoch 6epoch    6 error 1230.9  
+epoch 7epoch    7 error 1012.7  
+epoch 8epoch    8 error  858.1  
+epoch 9epoch    9 error  670.7  
+epoch 10epoch   10 error  542.4  
+epoch 11epoch   11 error  481.1  
+epoch 12epoch   12 error  439.4  
+epoch 13epoch   13 error  423.4  
+epoch 14epoch   14 error  407.9  
+epoch 15epoch   15 error  382.8  
+epoch 16epoch   16 error  383.4  
+epoch 17epoch   17 error  378.6  
+epoch 18epoch   18 error  370.6  
+epoch 19epoch   19 error  368.7  
+epoch 20epoch   20 error  366.3  
+epoch 21epoch   21 error  370.2  
+epoch 22epoch   22 error  362.6  
+epoch 23epoch   23 error  356.9  
+epoch 24epoch   24 error  353.8  
+epoch 25epoch   25 error  331.1  
+epoch 26epoch   26 error  352.0  
+epoch 27epoch   27 error  339.6  
+epoch 28epoch   28 error  349.6  
+epoch 29epoch   29 error  355.6  
+epoch 30epoch   30 error  346.7  
+epoch 31epoch   31 error  344.2  
+epoch 32epoch   32 error  343.0  
+epoch 33epoch   33 error  347.3  
+epoch 34epoch   34 error  354.4  
+epoch 35epoch   35 error  354.0  
+epoch 36epoch   36 error  328.3  
+epoch 37epoch   37 error  326.0  
+epoch 38epoch   38 error  342.1  
+epoch 39epoch   39 error  334.3  
+epoch 40epoch   40 error  331.2  
+epoch 41epoch   41 error  328.5  
+epoch 42epoch   42 error  327.2  
+epoch 43epoch   43 error  321.2  
+epoch 44epoch   44 error  333.8  
+epoch 45epoch   45 error  328.4  
+epoch 46epoch   46 error  330.7  
+epoch 47epoch   47 error  324.2  
+epoch 48epoch   48 error  334.7  
+epoch 49epoch   49 error  332.6  
+epoch 50epoch   50 error  322.5  
+
+Pretraining Layer 3 with RBM: 32-32 
+epoch 1epoch    1 error 6559.2  
+epoch 2epoch    2 error 3483.4  
+epoch 3epoch    3 error 1841.9  
+epoch 4epoch    4 error 1480.7  
+epoch 5epoch    5 error 1367.4  
+epoch 6epoch    6 error 1198.7  
+epoch 7epoch    7 error 1032.3  
+epoch 8epoch    8 error  732.1  
+epoch 9epoch    9 error  507.3  
+epoch 10epoch   10 error  405.7  
+epoch 11epoch   11 error  371.4  
+epoch 12epoch   12 error  353.1  
+epoch 13epoch   13 error  354.4  
+epoch 14epoch   14 error  356.4  
+epoch 15epoch   15 error  349.8  
+epoch 16epoch   16 error  306.5  
+epoch 17epoch   17 error  304.9  
+epoch 18epoch   18 error  319.1  
+epoch 19epoch   19 error  301.2  
+epoch 20epoch   20 error  302.5  
+epoch 21epoch   21 error  307.5  
+epoch 22epoch   22 error  301.8  
+epoch 23epoch   23 error  298.5  
+epoch 24epoch   24 error  306.6  
+epoch 25epoch   25 error  301.2  
+epoch 26epoch   26 error  288.0  
+epoch 27epoch   27 error  285.1  
+epoch 28epoch   28 error  285.8  
+epoch 29epoch   29 error  288.2  
+epoch 30epoch   30 error  300.0  
+epoch 31epoch   31 error  299.9  
+epoch 32epoch   32 error  309.5  
+epoch 33epoch   33 error  283.4  
+epoch 34epoch   34 error  274.2  
+epoch 35epoch   35 error  308.3  
+epoch 36epoch   36 error  308.5  
+epoch 37epoch   37 error  291.3  
+epoch 38epoch   38 error  285.1  
+epoch 39epoch   39 error  299.4  
+epoch 40epoch   40 error  278.3  
+epoch 41epoch   41 error  257.5  
+epoch 42epoch   42 error  276.7  
+epoch 43epoch   43 error  288.7  
+epoch 44epoch   44 error  274.4  
+epoch 45epoch   45 error  300.5  
+epoch 46epoch   46 error  285.9  
+epoch 47epoch   47 error  263.0  
+epoch 48epoch   48 error  281.2  
+epoch 49epoch   49 error  293.9  
+epoch 50epoch   50 error  304.5  
+
+Fine Tune model. 
+Size of the training dataset=  1436 
+Size of the test dataset=  1436 
+Before epoch 1 Train # MAPE_train: 2.588368e+02 . Test # MAPE_test: 2.866103e+02 	 	 
+epoch 1 batch 1Linesearch      1;  Value 7.972760e-01Linesearch      2;  Value 3.253932e-01Linesearch      3;  Value 2.153553e-01
+Before epoch 2 Train # MAPE_train: 4.296034e+01 . Test # MAPE_test: 4.933856e+01 	 	 
+epoch 2 batch 1Linesearch      1;  Value 1.991251e-01Linesearch      2;  Value 1.626880e-01Linesearch      3;  Value 1.313266e-01
+Before epoch 3 Train # MAPE_train: 2.667209e+01 . Test # MAPE_test: 3.033180e+01 	 	 
+epoch 3 batch 1Linesearch      1;  Value 1.213684e-01Linesearch      2;  Value 1.150478e-01Linesearch      3;  Value 1.082369e-01
+Before epoch 4 Train # MAPE_train: 2.480687e+01 . Test # MAPE_test: 2.844108e+01 	 	 
+epoch 4 batch 1Linesearch      1;  Value 1.053056e-01Linesearch      2;  Value 1.015855e-01Linesearch      3;  Value 9.880876e-02
+Before epoch 5 Train # MAPE_train: 2.376297e+01 . Test # MAPE_test: 2.742810e+01 	 	 
+epoch 5 batch 1Linesearch      1;  Value 9.667072e-02Linesearch      2;  Value 9.511671e-02Linesearch      3;  Value 9.295895e-02
+Before epoch 6 Train # MAPE_train: 2.224588e+01 . Test # MAPE_test: 2.588890e+01 	 	 
+epoch 6 batch 1Linesearch      1;  Value 9.056723e-02Linesearch      2;  Value 8.630060e-02Linesearch      3;  Value 8.358019e-02
+Before epoch 7 Train # MAPE_train: 2.141241e+01 . Test # MAPE_test: 2.464202e+01 	 	 
+epoch 7 batch 1Linesearch      1;  Value 8.184488e-02Linesearch      2;  Value 8.024913e-02Linesearch      3;  Value 7.877292e-02
+Before epoch 8 Train # MAPE_train: 1.966733e+01 . Test # MAPE_test: 2.281849e+01 	 	 
+epoch 8 batch 1Linesearch      1;  Value 7.773248e-02Linesearch      2;  Value 7.639038e-02Linesearch      3;  Value 7.565292e-02
+Before epoch 9 Train # MAPE_train: 1.925359e+01 . Test # MAPE_test: 2.213991e+01 	 	 
+epoch 9 batch 1Linesearch      1;  Value 7.507100e-02Linesearch      2;  Value 7.435557e-02Linesearch      3;  Value 7.338980e-02
+Before epoch 10 Train # MAPE_train: 1.829054e+01 . Test # MAPE_test: 2.122387e+01 	 	 
+epoch 10 batch 1Linesearch      1;  Value 7.270742e-02Linesearch      2;  Value 7.188817e-02Linesearch      3;  Value 7.145781e-02
+Before epoch 11 Train # MAPE_train: 1.795394e+01 . Test # MAPE_test: 2.067422e+01 	 	 
+epoch 11 batch 1Linesearch      1;  Value 7.105460e-02Linesearch      2;  Value 7.062401e-02Linesearch      3;  Value 6.996017e-02
+Before epoch 12 Train # MAPE_train: 1.719538e+01 . Test # MAPE_test: 1.980498e+01 	 	 
+epoch 12 batch 1Linesearch      1;  Value 6.944619e-02Linesearch      2;  Value 6.904646e-02Linesearch      3;  Value 6.870603e-02
+Before epoch 13 Train # MAPE_train: 1.705951e+01 . Test # MAPE_test: 1.965915e+01 	 	 
+epoch 13 batch 1Linesearch      1;  Value 6.833422e-02Linesearch      2;  Value 6.812391e-02Linesearch      3;  Value 6.751296e-02
+Before epoch 14 Train # MAPE_train: 1.651195e+01 . Test # MAPE_test: 1.913727e+01 	 	 
+epoch 14 batch 1Linesearch      1;  Value 6.698076e-02Linesearch      2;  Value 6.678601e-02Linesearch      3;  Value 6.648421e-02
+Before epoch 15 Train # MAPE_train: 1.630812e+01 . Test # MAPE_test: 1.884400e+01 	 	 
+epoch 15 batch 1Linesearch      1;  Value 6.627560e-02Linesearch      2;  Value 6.597581e-02Linesearch      3;  Value 6.520116e-02
+Before epoch 16 Train # MAPE_train: 1.564179e+01 . Test # MAPE_test: 1.821901e+01 	 	 
+epoch 16 batch 1Linesearch      1;  Value 6.463091e-02Linesearch      2;  Value 6.439305e-02Linesearch      3;  Value 6.418767e-02
+Before epoch 17 Train # MAPE_train: 1.548593e+01 . Test # MAPE_test: 1.799858e+01 	 	 
+epoch 17 batch 1Linesearch      1;  Value 6.411339e-02Linesearch      2;  Value 6.400345e-02Linesearch      3;  Value 6.352816e-02
+Before epoch 18 Train # MAPE_train: 1.510469e+01 . Test # MAPE_test: 1.759067e+01 	 	 
+epoch 18 batch 1Linesearch      1;  Value 6.318659e-02Linesearch      2;  Value 6.306419e-02Linesearch      3;  Value 6.295486e-02
+Before epoch 19 Train # MAPE_train: 1.503239e+01 . Test # MAPE_test: 1.751539e+01 	 	 
+epoch 19 batch 1Linesearch      1;  Value 6.289261e-02Linesearch      2;  Value 6.280830e-02Linesearch      3;  Value 6.246969e-02
+Before epoch 20 Train # MAPE_train: 1.472799e+01 . Test # MAPE_test: 1.715947e+01 	 	 
+epoch 20 batch 1Linesearch      1;  Value 6.220396e-02Linesearch      2;  Value 6.211573e-02Linesearch      3;  Value 6.203998e-02
+Before epoch 21 Train # MAPE_train: 1.469141e+01 . Test # MAPE_test: 1.715825e+01 	 	 
+epoch 21 batch 1Linesearch      1;  Value 6.198910e-02Linesearch      2;  Value 6.191546e-02Linesearch      3;  Value 6.165679e-02
+Before epoch 22 Train # MAPE_train: 1.444266e+01 . Test # MAPE_test: 1.684718e+01 	 	 
+epoch 22 batch 1Linesearch      1;  Value 6.144789e-02Linesearch      2;  Value 6.137195e-02Linesearch      3;  Value 6.131183e-02
+Before epoch 23 Train # MAPE_train: 1.441749e+01 . Test # MAPE_test: 1.687310e+01 	 	 
+epoch 23 batch 1Linesearch      1;  Value 6.126940e-02Linesearch      2;  Value 6.120339e-02Linesearch      3;  Value 6.099870e-02
+Before epoch 24 Train # MAPE_train: 1.419773e+01 . Test # MAPE_test: 1.658697e+01 	 	 
+epoch 24 batch 1Linesearch      1;  Value 6.083350e-02Linesearch      2;  Value 6.076806e-02Linesearch      3;  Value 6.071969e-02
+Before epoch 25 Train # MAPE_train: 1.418899e+01 . Test # MAPE_test: 1.663571e+01 	 	 
+epoch 25 batch 1Linesearch      1;  Value 6.068332e-02Linesearch      2;  Value 6.062536e-02Linesearch      3;  Value 6.046676e-02
+Before epoch 26 Train # MAPE_train: 1.399188e+01 . Test # MAPE_test: 1.637490e+01 	 	 
+epoch 26 batch 1Linesearch      1;  Value 6.032986e-02Linesearch      2;  Value 6.027220e-02Linesearch      3;  Value 6.023332e-02
+Before epoch 27 Train # MAPE_train: 1.399776e+01 . Test # MAPE_test: 1.643861e+01 	 	 
+epoch 27 batch 1Linesearch      1;  Value 6.020157e-02Linesearch      2;  Value 6.014920e-02Linesearch      3;  Value 6.002034e-02
+Before epoch 28 Train # MAPE_train: 1.381362e+01 . Test # MAPE_test: 1.619431e+01 	 	 
+epoch 28 batch 1Linesearch      1;  Value 5.990494e-02Linesearch      2;  Value 5.985343e-02Linesearch      3;  Value 5.982155e-02
+Before epoch 29 Train # MAPE_train: 1.383157e+01 . Test # MAPE_test: 1.626803e+01 	 	 
+epoch 29 batch 1Linesearch      1;  Value 5.979331e-02Linesearch      2;  Value 5.974488e-02Linesearch      3;  Value 5.963566e-02
+Before epoch 30 Train # MAPE_train: 1.365903e+01 . Test # MAPE_test: 1.603924e+01 	 	 
+epoch 30 batch 1Linesearch      1;  Value 5.953508e-02Linesearch      2;  Value 5.948780e-02Linesearch      3;  Value 5.946044e-02
+Before epoch 31 Train # MAPE_train: 1.368383e+01 . Test # MAPE_test: 1.611713e+01 	 	 
+epoch 31 batch 1Linesearch      1;  Value 5.943490e-02Linesearch      2;  Value 5.938938e-02Linesearch      3;  Value 5.929261e-02
+Before epoch 32 Train # MAPE_train: 1.351882e+01 . Test # MAPE_test: 1.589828e+01 	 	 
+epoch 32 batch 1Linesearch      1;  Value 5.920191e-02Linesearch      2;  Value 5.915764e-02Linesearch      3;  Value 5.913327e-02
+Before epoch 33 Train # MAPE_train: 1.354810e+01 . Test # MAPE_test: 1.597895e+01 	 	 
+epoch 33 batch 1Linesearch      1;  Value 5.910990e-02Linesearch      2;  Value 5.906665e-02Linesearch      3;  Value 5.897820e-02
+Before epoch 34 Train # MAPE_train: 1.338951e+01 . Test # MAPE_test: 1.576858e+01 	 	 
+epoch 34 batch 1Linesearch      1;  Value 5.889512e-02Linesearch      2;  Value 5.885358e-02Linesearch      3;  Value 5.883224e-02
+Before epoch 35 Train # MAPE_train: 1.342536e+01 . Test # MAPE_test: 1.585882e+01 	 	 
+epoch 35 batch 1Linesearch      1;  Value 5.881218e-02Linesearch      2;  Value 5.878118e-02Linesearch      3;  Value 5.767436e-02
+Before epoch 36 Train # MAPE_train: 1.262181e+01 . Test # MAPE_test: 1.503249e+01 	 	 
+epoch 36 batch 1Linesearch      1;  Value 5.714098e-02Linesearch      2;  Value 5.697957e-02Linesearch      3;  Value 5.695628e-02
+Before epoch 37 Train # MAPE_train: 1.261522e+01 . Test # MAPE_test: 1.504023e+01 	 	 
+epoch 37 batch 1Linesearch      1;  Value 5.694527e-02Linesearch      2;  Value 5.691290e-02Linesearch      3;  Value 5.685033e-02
+Before epoch 38 Train # MAPE_train: 1.249585e+01 . Test # MAPE_test: 1.491336e+01 	 	 
+epoch 38 batch 1Linesearch      1;  Value 5.679920e-02Linesearch      2;  Value 5.677514e-02Linesearch      3;  Value 5.675874e-02
+Before epoch 39 Train # MAPE_train: 1.250048e+01 . Test # MAPE_test: 1.490755e+01 	 	 
+epoch 39 batch 1Linesearch      1;  Value 5.674608e-02Linesearch      2;  Value 5.672917e-02Linesearch      3;  Value 5.669532e-02
+Before epoch 40 Train # MAPE_train: 1.246963e+01 . Test # MAPE_test: 1.489362e+01 	 	 
+epoch 40 batch 1Linesearch      1;  Value 5.666386e-02Linesearch      2;  Value 5.664848e-02Linesearch      3;  Value 5.663464e-02
+Before epoch 41 Train # MAPE_train: 1.245468e+01 . Test # MAPE_test: 1.485970e+01 	 	 
+epoch 41 batch 1Linesearch      1;  Value 5.662195e-02Linesearch      2;  Value 5.660714e-02Linesearch      3;  Value 5.657754e-02
+Before epoch 42 Train # MAPE_train: 1.242621e+01 . Test # MAPE_test: 1.484985e+01 	 	 
+epoch 42 batch 1Linesearch      1;  Value 5.654886e-02Linesearch      2;  Value 5.653432e-02Linesearch      3;  Value 5.652127e-02
+Before epoch 43 Train # MAPE_train: 1.241288e+01 . Test # MAPE_test: 1.481640e+01 	 	 
+epoch 43 batch 1Linesearch      1;  Value 5.650901e-02Linesearch      2;  Value 5.649442e-02Linesearch      3;  Value 5.646624e-02
+Before epoch 44 Train # MAPE_train: 1.238725e+01 . Test # MAPE_test: 1.481057e+01 	 	 
+epoch 44 batch 1Linesearch      1;  Value 5.643884e-02Linesearch      2;  Value 5.642441e-02Linesearch      3;  Value 5.641189e-02
+Before epoch 45 Train # MAPE_train: 1.237221e+01 . Test # MAPE_test: 1.477416e+01 	 	 
+epoch 45 batch 1Linesearch      1;  Value 5.640003e-02Linesearch      2;  Value 5.638545e-02Linesearch      3;  Value 5.635828e-02
+Before epoch 46 Train # MAPE_train: 1.235042e+01 . Test # MAPE_test: 1.477328e+01 	 	 
+epoch 46 batch 1Linesearch      1;  Value 5.633181e-02Linesearch      2;  Value 5.631733e-02Linesearch      3;  Value 5.630530e-02
+Before epoch 47 Train # MAPE_train: 1.233351e+01 . Test # MAPE_test: 1.473409e+01 	 	 
+epoch 47 batch 1Linesearch      1;  Value 5.629383e-02Linesearch      2;  Value 5.627913e-02Linesearch      3;  Value 5.625271e-02
+Before epoch 48 Train # MAPE_train: 1.231457e+01 . Test # MAPE_test: 1.473670e+01 	 	 
+epoch 48 batch 1Linesearch      1;  Value 5.622688e-02Linesearch      2;  Value 5.621226e-02Linesearch      3;  Value 5.620068e-02
+Before epoch 49 Train # MAPE_train: 1.229612e+01 . Test # MAPE_test: 1.469538e+01 	 	 
+epoch 49 batch 1Linesearch      1;  Value 5.618956e-02Linesearch      2;  Value 5.617467e-02Linesearch      3;  Value 5.614875e-02
+Before epoch 50 Train # MAPE_train: 1.227965e+01 . Test # MAPE_test: 1.470081e+01 	 	 
+epoch 50 batch 1Linesearch      1;  Value 5.612336e-02Linesearch      2;  Value 5.610855e-02Linesearch      3;  Value 5.609736e-02
+Before epoch 51 Train # MAPE_train: 1.225986e+01 . Test # MAPE_test: 1.465777e+01 	 	 
+epoch 51 batch 1Linesearch      1;  Value 5.608655e-02Linesearch      2;  Value 5.607140e-02Linesearch      3;  Value 5.604583e-02
+Before epoch 52 Train # MAPE_train: 1.224537e+01 . Test # MAPE_test: 1.466537e+01 	 	 
+epoch 52 batch 1Linesearch      1;  Value 5.602073e-02Linesearch      2;  Value 5.600564e-02Linesearch      3;  Value 5.599481e-02
+Before epoch 53 Train # MAPE_train: 1.222440e+01 . Test # MAPE_test: 1.462098e+01 	 	 
+epoch 53 batch 1Linesearch      1;  Value 5.598429e-02Linesearch      2;  Value 5.596879e-02Linesearch      3;  Value 5.594345e-02
+Before epoch 54 Train # MAPE_train: 1.221154e+01 . Test # MAPE_test: 1.463026e+01 	 	 
+epoch 54 batch 1Linesearch      1;  Value 5.591853e-02Linesearch      2;  Value 5.590311e-02Linesearch      3;  Value 5.589258e-02
+Before epoch 55 Train # MAPE_train: 1.218960e+01 . Test # MAPE_test: 1.458477e+01 	 	 
+epoch 55 batch 1Linesearch      1;  Value 5.588234e-02Linesearch      2;  Value 5.586642e-02Linesearch      3;  Value 5.584121e-02
+Before epoch 56 Train # MAPE_train: 1.217803e+01 . Test # MAPE_test: 1.459535e+01 	 	 
+epoch 56 batch 1Linesearch      1;  Value 5.581638e-02Linesearch      2;  Value 5.580054e-02Linesearch      3;  Value 5.579030e-02
+Before epoch 57 Train # MAPE_train: 1.215529e+01 . Test # MAPE_test: 1.454897e+01 	 	 
+epoch 57 batch 1Linesearch      1;  Value 5.578031e-02Linesearch      2;  Value 5.576387e-02Linesearch      3;  Value 5.573869e-02
+Before epoch 58 Train # MAPE_train: 1.214467e+01 . Test # MAPE_test: 1.456049e+01 	 	 
+epoch 58 batch 1Linesearch      1;  Value 5.571388e-02Linesearch      2;  Value 5.569754e-02Linesearch      3;  Value 5.568755e-02
+Before epoch 59 Train # MAPE_train: 1.212126e+01 . Test # MAPE_test: 1.451340e+01 	 	 
+epoch 59 batch 1Linesearch      1;  Value 5.567779e-02Linesearch      2;  Value 5.566074e-02Linesearch      3;  Value 5.563546e-02
+Before epoch 60 Train # MAPE_train: 1.211131e+01 . Test # MAPE_test: 1.452550e+01 	 	 
+epoch 60 batch 1Linesearch      1;  Value 5.561074e-02Linesearch      2;  Value 5.559406e-02Linesearch      3;  Value 5.558566e-02
+Before epoch 61 Train # MAPE_train: 1.208996e+01 . Test # MAPE_test: 1.448378e+01 	 	 
+epoch 61 batch 1Linesearch      1;  Value 5.557749e-02Linesearch      2;  Value 5.556491e-02Linesearch      3;  Value 5.550493e-02
+Before epoch 62 Train # MAPE_train: 1.206751e+01 . Test # MAPE_test: 1.446465e+01 	 	 
+epoch 62 batch 1Linesearch      1;  Value 5.544703e-02Linesearch      2;  Value 5.543378e-02Linesearch      3;  Value 5.542562e-02
+Before epoch 63 Train # MAPE_train: 1.203680e+01 . Test # MAPE_test: 1.442758e+01 	 	 
+epoch 63 batch 1Linesearch      1;  Value 5.541723e-02Linesearch      2;  Value 5.540457e-02Linesearch      3;  Value 5.534890e-02
+Before epoch 64 Train # MAPE_train: 1.202149e+01 . Test # MAPE_test: 1.441750e+01 	 	 
+epoch 64 batch 1Linesearch      1;  Value 5.529467e-02Linesearch      2;  Value 5.528127e-02Linesearch      3;  Value 5.527337e-02
+Before epoch 65 Train # MAPE_train: 1.198762e+01 . Test # MAPE_test: 1.437484e+01 	 	 
+epoch 65 batch 1Linesearch      1;  Value 5.526507e-02Linesearch      2;  Value 5.525232e-02Linesearch      3;  Value 5.520142e-02
+Before epoch 66 Train # MAPE_train: 1.197717e+01 . Test # MAPE_test: 1.436971e+01 	 	 
+epoch 66 batch 1Linesearch      1;  Value 5.515141e-02Linesearch      2;  Value 5.513794e-02Linesearch      3;  Value 5.513052e-02
+Before epoch 67 Train # MAPE_train: 1.194266e+01 . Test # MAPE_test: 1.432672e+01 	 	 
+epoch 67 batch 1Linesearch      1;  Value 5.512268e-02Linesearch      2;  Value 5.510975e-02Linesearch      3;  Value 5.506355e-02
+Before epoch 68 Train # MAPE_train: 1.193576e+01 . Test # MAPE_test: 1.432632e+01 	 	 
+epoch 68 batch 1Linesearch      1;  Value 5.501791e-02Linesearch      2;  Value 5.500393e-02Linesearch      3;  Value 5.499713e-02
+Before epoch 69 Train # MAPE_train: 1.190199e+01 . Test # MAPE_test: 1.428264e+01 	 	 
+epoch 69 batch 1Linesearch      1;  Value 5.499007e-02Linesearch      2;  Value 5.497637e-02Linesearch      3;  Value 5.493441e-02
+Before epoch 70 Train # MAPE_train: 1.189715e+01 . Test # MAPE_test: 1.428178e+01 	 	 
+epoch 70 batch 1Linesearch      1;  Value 5.489465e-02Linesearch      2;  Value 5.487970e-02Linesearch      3;  Value 5.486951e-02
+Before epoch 71 Train # MAPE_train: 1.186625e+01 . Test # MAPE_test: 1.424537e+01 	 	 
+epoch 71 batch 1Linesearch      1;  Value 5.485930e-02Linesearch      2;  Value 5.484423e-02Linesearch      3;  Value 5.480159e-02
+Before epoch 72 Train # MAPE_train: 1.185480e+01 . Test # MAPE_test: 1.423014e+01 	 	 
+epoch 72 batch 1Linesearch      1;  Value 5.475941e-02Linesearch      2;  Value 5.474453e-02Linesearch      3;  Value 5.472260e-02
+Before epoch 73 Train # MAPE_train: 1.182317e+01 . Test # MAPE_test: 1.419285e+01 	 	 
+epoch 73 batch 1Linesearch      1;  Value 5.470244e-02Linesearch      2;  Value 5.469016e-02Linesearch      3;  Value 5.467024e-02
+Before epoch 74 Train # MAPE_train: 1.182317e+01 . Test # MAPE_test: 1.420783e+01 	 	 
+epoch 74 batch 1Linesearch      1;  Value 5.465039e-02Linesearch      2;  Value 5.463839e-02Linesearch      3;  Value 5.461438e-02
+Before epoch 75 Train # MAPE_train: 1.179298e+01 . Test # MAPE_test: 1.416422e+01 	 	 
+epoch 75 batch 1Linesearch      1;  Value 5.459123e-02Linesearch      2;  Value 5.457946e-02Linesearch      3;  Value 5.456404e-02
+Before epoch 76 Train # MAPE_train: 1.179108e+01 . Test # MAPE_test: 1.418277e+01 	 	 
+epoch 76 batch 1Linesearch      1;  Value 5.455031e-02Linesearch      2;  Value 5.453835e-02Linesearch      3;  Value 5.450898e-02
+Before epoch 77 Train # MAPE_train: 1.176503e+01 . Test # MAPE_test: 1.413643e+01 	 	 
+epoch 77 batch 1Linesearch      1;  Value 5.448143e-02Linesearch      2;  Value 5.446905e-02Linesearch      3;  Value 5.445439e-02
+Before epoch 78 Train # MAPE_train: 1.175744e+01 . Test # MAPE_test: 1.414281e+01 	 	 
+epoch 78 batch 1Linesearch      1;  Value 5.444135e-02Linesearch      2;  Value 5.442927e-02Linesearch      3;  Value 5.439907e-02
+Before epoch 79 Train # MAPE_train: 1.173062e+01 . Test # MAPE_test: 1.409545e+01 	 	 
+epoch 79 batch 1Linesearch      1;  Value 5.437050e-02Linesearch      2;  Value 5.435378e-02Linesearch      3;  Value 5.434253e-02
+Before epoch 80 Train # MAPE_train: 1.172315e+01 . Test # MAPE_test: 1.410024e+01 	 	 
+epoch 80 batch 1Linesearch      1;  Value 5.433219e-02Linesearch      2;  Value 5.431778e-02Linesearch      3;  Value 5.428729e-02
+Before epoch 81 Train # MAPE_train: 1.169958e+01 . Test # MAPE_test: 1.406109e+01 	 	 
+epoch 81 batch 1Linesearch      1;  Value 5.426018e-02Linesearch      2;  Value 5.424366e-02Linesearch      3;  Value 5.423235e-02
+Before epoch 82 Train # MAPE_train: 1.169193e+01 . Test # MAPE_test: 1.406481e+01 	 	 
+epoch 82 batch 1Linesearch      1;  Value 5.422169e-02Linesearch      2;  Value 5.420724e-02Linesearch      3;  Value 5.417910e-02
+Before epoch 83 Train # MAPE_train: 1.167017e+01 . Test # MAPE_test: 1.402979e+01 	 	 
+epoch 83 batch 1Linesearch      1;  Value 5.415349e-02Linesearch      2;  Value 5.413728e-02Linesearch      3;  Value 5.412612e-02
+Before epoch 84 Train # MAPE_train: 1.166230e+01 . Test # MAPE_test: 1.403206e+01 	 	 
+epoch 84 batch 1Linesearch      1;  Value 5.411555e-02Linesearch      2;  Value 5.410122e-02Linesearch      3;  Value 5.407510e-02
+Before epoch 85 Train # MAPE_train: 1.164241e+01 . Test # MAPE_test: 1.400142e+01 	 	 
+epoch 85 batch 1Linesearch      1;  Value 5.405106e-02Linesearch      2;  Value 5.403520e-02Linesearch      3;  Value 5.402437e-02
+Before epoch 86 Train # MAPE_train: 1.163444e+01 . Test # MAPE_test: 1.400227e+01 	 	 
+epoch 86 batch 1Linesearch      1;  Value 5.401435e-02Linesearch      2;  Value 5.400047e-02Linesearch      3;  Value 5.397565e-02
+Before epoch 87 Train # MAPE_train: 1.161660e+01 . Test # MAPE_test: 1.397668e+01 	 	 
+epoch 87 batch 1Linesearch      1;  Value 5.395304e-02Linesearch      2;  Value 5.393747e-02Linesearch      3;  Value 5.392729e-02
+Before epoch 88 Train # MAPE_train: 1.160831e+01 . Test # MAPE_test: 1.397562e+01 	 	 
+epoch 88 batch 1Linesearch      1;  Value 5.391822e-02Linesearch      2;  Value 5.390418e-02Linesearch      3;  Value 5.388120e-02
+Before epoch 89 Train # MAPE_train: 1.159282e+01 . Test # MAPE_test: 1.395598e+01 	 	 
+epoch 89 batch 1Linesearch      1;  Value 5.386001e-02Linesearch      2;  Value 5.384463e-02Linesearch      3;  Value 5.383551e-02
+Before epoch 90 Train # MAPE_train: 1.158406e+01 . Test # MAPE_test: 1.395190e+01 	 	 
+epoch 90 batch 1Linesearch      1;  Value 5.382724e-02Linesearch      2;  Value 5.381241e-02Linesearch      3;  Value 5.379221e-02
+Before epoch 91 Train # MAPE_train: 1.157008e+01 . Test # MAPE_test: 1.393616e+01 	 	 
+epoch 91 batch 1Linesearch      1;  Value 5.377266e-02Linesearch      2;  Value 5.375743e-02Linesearch      3;  Value 5.374920e-02
+Before epoch 92 Train # MAPE_train: 1.156161e+01 . Test # MAPE_test: 1.392945e+01 	 	 
+epoch 92 batch 1Linesearch      1;  Value 5.374124e-02Linesearch      2;  Value 5.372628e-02Linesearch      3;  Value 5.370800e-02
+Before epoch 93 Train # MAPE_train: 1.154781e+01 . Test # MAPE_test: 1.391389e+01 	 	 
+epoch 93 batch 1Linesearch      1;  Value 5.368985e-02Linesearch      2;  Value 5.367494e-02Linesearch      3;  Value 5.366699e-02
+Before epoch 94 Train # MAPE_train: 1.154041e+01 . Test # MAPE_test: 1.390738e+01 	 	 
+epoch 94 batch 1Linesearch      1;  Value 5.365915e-02Linesearch      2;  Value 5.364450e-02Linesearch      3;  Value 5.362728e-02
+Before epoch 95 Train # MAPE_train: 1.152634e+01 . Test # MAPE_test: 1.389070e+01 	 	 
+epoch 95 batch 1Linesearch      1;  Value 5.361014e-02Linesearch      2;  Value 5.359559e-02Linesearch      3;  Value 5.358776e-02
+Before epoch 96 Train # MAPE_train: 1.152016e+01 . Test # MAPE_test: 1.388598e+01 	 	 
+epoch 96 batch 1Linesearch      1;  Value 5.358001e-02Linesearch      2;  Value 5.356569e-02Linesearch      3;  Value 5.354919e-02
+Before epoch 97 Train # MAPE_train: 1.150574e+01 . Test # MAPE_test: 1.386801e+01 	 	 
+epoch 97 batch 1Linesearch      1;  Value 5.353274e-02Linesearch      2;  Value 5.351852e-02Linesearch      3;  Value 5.351079e-02
+Before epoch 98 Train # MAPE_train: 1.150070e+01 . Test # MAPE_test: 1.386535e+01 	 	 
+epoch 98 batch 1Linesearch      1;  Value 5.350313e-02Linesearch      2;  Value 5.348912e-02Linesearch      3;  Value 5.347312e-02
+Before epoch 99 Train # MAPE_train: 1.148593e+01 . Test # MAPE_test: 1.384611e+01 	 	 
+epoch 99 batch 1Linesearch      1;  Value 5.345717e-02Linesearch      2;  Value 5.344325e-02Linesearch      3;  Value 5.343562e-02
+Before epoch 100 Train # MAPE_train: 1.148167e+01 . Test # MAPE_test: 1.384500e+01 	 	 
+epoch 100 batch 1Linesearch      1;  Value 5.342806e-02Linesearch      2;  Value 5.341640e-02Linesearch      3;  Value 5.340268e-02
+Before epoch 101 Train # MAPE_train: 1.146551e+01 . Test # MAPE_test: 1.382247e+01 	 	 
+epoch 101 batch 1Linesearch      1;  Value 5.338900e-02Linesearch      2;  Value 5.337742e-02Linesearch      3;  Value 5.336987e-02
+Before epoch 102 Train # MAPE_train: 1.146549e+01 . Test # MAPE_test: 1.382816e+01 	 	 
+epoch 102 batch 1Linesearch      1;  Value 5.336238e-02Linesearch      2;  Value 5.335081e-02Linesearch      3;  Value 5.333717e-02
+Before epoch 103 Train # MAPE_train: 1.144876e+01 . Test # MAPE_test: 1.380379e+01 	 	 
+epoch 103 batch 1Linesearch      1;  Value 5.332358e-02Linesearch      2;  Value 5.331206e-02Linesearch      3;  Value 5.330461e-02
+Before epoch 104 Train # MAPE_train: 1.144955e+01 . Test # MAPE_test: 1.381157e+01 	 	 
+epoch 104 batch 1Linesearch      1;  Value 5.329720e-02Linesearch      2;  Value 5.328568e-02Linesearch      3;  Value 5.327211e-02
+Before epoch 105 Train # MAPE_train: 1.143233e+01 . Test # MAPE_test: 1.378559e+01 	 	 
+epoch 105 batch 1Linesearch      1;  Value 5.325858e-02Linesearch      2;  Value 5.324711e-02Linesearch      3;  Value 5.323974e-02
+Before epoch 106 Train # MAPE_train: 1.143382e+01 . Test # MAPE_test: 1.379519e+01 	 	 
+epoch 106 batch 1Linesearch      1;  Value 5.323241e-02Linesearch      2;  Value 5.322093e-02Linesearch      3;  Value 5.320739e-02
+Before epoch 107 Train # MAPE_train: 1.141619e+01 . Test # MAPE_test: 1.376781e+01 	 	 
+epoch 107 batch 1Linesearch      1;  Value 5.319391e-02Linesearch      2;  Value 5.318246e-02Linesearch      3;  Value 5.317518e-02
+Before epoch 108 Train # MAPE_train: 1.141828e+01 . Test # MAPE_test: 1.377899e+01 	 	 
+epoch 108 batch 1Linesearch      1;  Value 5.316793e-02Linesearch      2;  Value 5.315645e-02Linesearch      3;  Value 5.314294e-02
+Before epoch 109 Train # MAPE_train: 1.140030e+01 . Test # MAPE_test: 1.375043e+01 	 	 
+epoch 109 batch 1Linesearch      1;  Value 5.312949e-02Linesearch      2;  Value 5.311803e-02Linesearch      3;  Value 5.311083e-02
+Before epoch 110 Train # MAPE_train: 1.140290e+01 . Test # MAPE_test: 1.376297e+01 	 	 
+epoch 110 batch 1Linesearch      1;  Value 5.310367e-02Linesearch      2;  Value 5.309217e-02Linesearch      3;  Value 5.307866e-02
+Before epoch 111 Train # MAPE_train: 1.138465e+01 . Test # MAPE_test: 1.373342e+01 	 	 
+epoch 111 batch 1Linesearch      1;  Value 5.306519e-02Linesearch      2;  Value 5.305371e-02Linesearch      3;  Value 5.304660e-02
+Before epoch 112 Train # MAPE_train: 1.138763e+01 . Test # MAPE_test: 1.374712e+01 	 	 
+epoch 112 batch 1Linesearch      1;  Value 5.303952e-02Linesearch      2;  Value 5.302798e-02Linesearch      3;  Value 5.301442e-02
+Before epoch 113 Train # MAPE_train: 1.136920e+01 . Test # MAPE_test: 1.371677e+01 	 	 
+epoch 113 batch 1Linesearch      1;  Value 5.300102e-02Linesearch      2;  Value 5.298976e-02Linesearch      3;  Value 5.298392e-02
+Before epoch 114 Train # MAPE_train: 1.137369e+01 . Test # MAPE_test: 1.372981e+01 	 	 
+epoch 114 batch 1Linesearch      1;  Value 5.297296e-02Linesearch      2;  Value 5.296743e-02Linesearch      3;  Value 5.206065e-02
+Before epoch 115 Train # MAPE_train: 1.115914e+01 . Test # MAPE_test: 1.361016e+01 	 	 
+epoch 115 batch 1Linesearch      1;  Value 5.158307e-02Linesearch      2;  Value 5.145332e-02Linesearch      3;  Value 5.143632e-02
+Before epoch 116 Train # MAPE_train: 1.099688e+01 . Test # MAPE_test: 1.334057e+01 	 	 
+epoch 116 batch 1Linesearch      1;  Value 5.142946e-02Linesearch      2;  Value 5.141162e-02Linesearch      3;  Value 5.136328e-02
+Before epoch 117 Train # MAPE_train: 1.093957e+01 . Test # MAPE_test: 1.326372e+01 	 	 
+epoch 117 batch 1Linesearch      1;  Value 5.134271e-02Linesearch      2;  Value 5.132616e-02Linesearch      3;  Value 5.131116e-02
+Before epoch 118 Train # MAPE_train: 1.096582e+01 . Test # MAPE_test: 1.331178e+01 	 	 
+epoch 118 batch 1Linesearch      1;  Value 5.130644e-02Linesearch      2;  Value 5.129922e-02Linesearch      3;  Value 5.128883e-02
+Before epoch 119 Train # MAPE_train: 1.095473e+01 . Test # MAPE_test: 1.329125e+01 	 	 
+epoch 119 batch 1Linesearch      1;  Value 5.128213e-02Linesearch      2;  Value 5.127397e-02Linesearch      3;  Value 5.126576e-02
+Before epoch 120 Train # MAPE_train: 1.095986e+01 . Test # MAPE_test: 1.330421e+01 	 	 
+epoch 120 batch 1Linesearch      1;  Value 5.125965e-02Linesearch      2;  Value 5.125210e-02Linesearch      3;  Value 5.124550e-02
+Before epoch 121 Train # MAPE_train: 1.095573e+01 . Test # MAPE_test: 1.329668e+01 	 	 
+epoch 121 batch 1Linesearch      1;  Value 5.123976e-02Linesearch      2;  Value 5.123233e-02Linesearch      3;  Value 5.122812e-02
+Before epoch 122 Train # MAPE_train: 1.095270e+01 . Test # MAPE_test: 1.330063e+01 	 	 
+epoch 122 batch 1Linesearch      1;  Value 5.122505e-02Linesearch      2;  Value 5.121861e-02Linesearch      3;  Value 5.120668e-02
+Before epoch 123 Train # MAPE_train: 1.094870e+01 . Test # MAPE_test: 1.329120e+01 	 	 
+epoch 123 batch 1Linesearch      1;  Value 5.119451e-02Linesearch      2;  Value 5.118842e-02Linesearch      3;  Value 5.118481e-02
+Before epoch 124 Train # MAPE_train: 1.094219e+01 . Test # MAPE_test: 1.328938e+01 	 	 
+epoch 124 batch 1Linesearch      1;  Value 5.118132e-02Linesearch      2;  Value 5.117535e-02Linesearch      3;  Value 5.116342e-02
+Before epoch 125 Train # MAPE_train: 1.094247e+01 . Test # MAPE_test: 1.328824e+01 	 	 
+epoch 125 batch 1Linesearch      1;  Value 5.115154e-02Linesearch      2;  Value 5.114576e-02Linesearch      3;  Value 5.114221e-02
+Before epoch 126 Train # MAPE_train: 1.093385e+01 . Test # MAPE_test: 1.328199e+01 	 	 
+epoch 126 batch 1Linesearch      1;  Value 5.113874e-02Linesearch      2;  Value 5.113306e-02Linesearch      3;  Value 5.112142e-02
+Before epoch 127 Train # MAPE_train: 1.093522e+01 . Test # MAPE_test: 1.328308e+01 	 	 
+epoch 127 batch 1Linesearch      1;  Value 5.110981e-02Linesearch      2;  Value 5.110431e-02Linesearch      3;  Value 5.110079e-02
+Before epoch 128 Train # MAPE_train: 1.092572e+01 . Test # MAPE_test: 1.327496e+01 	 	 
+epoch 128 batch 1Linesearch      1;  Value 5.109733e-02Linesearch      2;  Value 5.109192e-02Linesearch      3;  Value 5.108054e-02
+Before epoch 129 Train # MAPE_train: 1.092806e+01 . Test # MAPE_test: 1.327740e+01 	 	 
+epoch 129 batch 1Linesearch      1;  Value 5.106919e-02Linesearch      2;  Value 5.106395e-02Linesearch      3;  Value 5.106045e-02
+Before epoch 130 Train # MAPE_train: 1.091779e+01 . Test # MAPE_test: 1.326787e+01 	 	 
+epoch 130 batch 1Linesearch      1;  Value 5.105700e-02Linesearch      2;  Value 5.105184e-02Linesearch      3;  Value 5.104071e-02
+Before epoch 131 Train # MAPE_train: 1.092095e+01 . Test # MAPE_test: 1.327173e+01 	 	 
+epoch 131 batch 1Linesearch      1;  Value 5.102959e-02Linesearch      2;  Value 5.102460e-02Linesearch      3;  Value 5.102110e-02
+Before epoch 132 Train # MAPE_train: 1.091009e+01 . Test # MAPE_test: 1.326101e+01 	 	 
+epoch 132 batch 1Linesearch      1;  Value 5.101767e-02Linesearch      2;  Value 5.101272e-02Linesearch      3;  Value 5.100183e-02
+Before epoch 133 Train # MAPE_train: 1.091390e+01 . Test # MAPE_test: 1.326587e+01 	 	 
+epoch 133 batch 1Linesearch      1;  Value 5.099095e-02Linesearch      2;  Value 5.098616e-02Linesearch      3;  Value 5.098268e-02
+Before epoch 134 Train # MAPE_train: 1.090259e+01 . Test # MAPE_test: 1.325421e+01 	 	 
+epoch 134 batch 1Linesearch      1;  Value 5.097925e-02Linesearch      2;  Value 5.097451e-02Linesearch      3;  Value 5.096383e-02
+Before epoch 135 Train # MAPE_train: 1.090691e+01 . Test # MAPE_test: 1.326001e+01 	 	 
+epoch 135 batch 1Linesearch      1;  Value 5.095317e-02Linesearch      2;  Value 5.094857e-02Linesearch      3;  Value 5.094510e-02
+Before epoch 136 Train # MAPE_train: 1.089529e+01 . Test # MAPE_test: 1.324758e+01 	 	 
+epoch 136 batch 1Linesearch      1;  Value 5.094168e-02Linesearch      2;  Value 5.093712e-02Linesearch      3;  Value 5.092665e-02
+Before epoch 137 Train # MAPE_train: 1.089999e+01 . Test # MAPE_test: 1.325406e+01 	 	 
+epoch 137 batch 1Linesearch      1;  Value 5.091619e-02Linesearch      2;  Value 5.091177e-02Linesearch      3;  Value 5.090830e-02
+Before epoch 138 Train # MAPE_train: 1.088817e+01 . Test # MAPE_test: 1.324105e+01 	 	 
+epoch 138 batch 1Linesearch      1;  Value 5.090488e-02Linesearch      2;  Value 5.090049e-02Linesearch      3;  Value 5.089022e-02
+Before epoch 139 Train # MAPE_train: 1.089314e+01 . Test # MAPE_test: 1.324810e+01 	 	 
+epoch 139 batch 1Linesearch      1;  Value 5.087996e-02Linesearch      2;  Value 5.087569e-02Linesearch      3;  Value 5.087223e-02
+Before epoch 140 Train # MAPE_train: 1.088122e+01 . Test # MAPE_test: 1.323469e+01 	 	 
+epoch 140 batch 1Linesearch      1;  Value 5.086881e-02Linesearch      2;  Value 5.086457e-02Linesearch      3;  Value 5.085449e-02
+Before epoch 141 Train # MAPE_train: 1.088635e+01 . Test # MAPE_test: 1.324210e+01 	 	 
+epoch 141 batch 1Linesearch      1;  Value 5.084441e-02Linesearch      2;  Value 5.084030e-02Linesearch      3;  Value 5.083683e-02
+Before epoch 142 Train # MAPE_train: 1.087443e+01 . Test # MAPE_test: 1.322844e+01 	 	 
+epoch 142 batch 1Linesearch      1;  Value 5.083341e-02Linesearch      2;  Value 5.082931e-02Linesearch      3;  Value 5.081941e-02
+Before epoch 143 Train # MAPE_train: 1.087964e+01 . Test # MAPE_test: 1.323610e+01 	 	 
+epoch 143 batch 1Linesearch      1;  Value 5.080951e-02Linesearch      2;  Value 5.080553e-02Linesearch      3;  Value 5.080206e-02
+Before epoch 144 Train # MAPE_train: 1.086780e+01 . Test # MAPE_test: 1.322232e+01 	 	 
+epoch 144 batch 1Linesearch      1;  Value 5.079864e-02Linesearch      2;  Value 5.079467e-02Linesearch      3;  Value 5.078494e-02
+Before epoch 145 Train # MAPE_train: 1.087300e+01 . Test # MAPE_test: 1.323009e+01 	 	 
+epoch 145 batch 1Linesearch      1;  Value 5.077521e-02Linesearch      2;  Value 5.077135e-02Linesearch      3;  Value 5.076788e-02
+Before epoch 146 Train # MAPE_train: 1.086130e+01 . Test # MAPE_test: 1.321631e+01 	 	 
+epoch 146 batch 1Linesearch      1;  Value 5.076444e-02Linesearch      2;  Value 5.076060e-02Linesearch      3;  Value 5.075103e-02
+Before epoch 147 Train # MAPE_train: 1.086642e+01 . Test # MAPE_test: 1.322409e+01 	 	 
+epoch 147 batch 1Linesearch      1;  Value 5.074146e-02Linesearch      2;  Value 5.073772e-02Linesearch      3;  Value 5.073426e-02
+Before epoch 148 Train # MAPE_train: 1.085501e+01 . Test # MAPE_test: 1.321012e+01 	 	 
+epoch 148 batch 1Linesearch      1;  Value 5.073049e-02Linesearch      2;  Value 5.072702e-02Linesearch      3;  Value 5.071819e-02
+Before epoch 149 Train # MAPE_train: 1.086171e+01 . Test # MAPE_test: 1.322215e+01 	 	 
+epoch 149 batch 1Linesearch      1;  Value 5.070587e-02Linesearch      2;  Value 5.070346e-02Linesearch      3;  Value 5.068602e-02
+Before epoch 150 Train # MAPE_train: 1.083842e+01 . Test # MAPE_test: 1.318696e+01 	 	 
+epoch 150 batch 1Linesearch      1;  Value 5.066857e-02Linesearch      2;  Value 5.066552e-02Linesearch      3;  Value 5.066052e-02
+Before epoch 151 Train # MAPE_train: 1.084163e+01 . Test # MAPE_test: 1.319772e+01 	 	 
+epoch 151 batch 1Linesearch      1;  Value 5.065821e-02Linesearch      2;  Value 5.065323e-02Linesearch      3;  Value 5.063540e-02
+Before epoch 152 Train # MAPE_train: 1.083577e+01 . Test # MAPE_test: 1.320257e+01 	 	 
+epoch 152 batch 1Linesearch      1;  Value 5.061797e-02Linesearch      2;  Value 5.061278e-02Linesearch      3;  Value 5.061051e-02
+Before epoch 153 Train # MAPE_train: 1.083217e+01 . Test # MAPE_test: 1.318921e+01 	 	 
+epoch 153 batch 1Linesearch      1;  Value 5.060827e-02Linesearch      2;  Value 5.060320e-02Linesearch      3;  Value 5.058545e-02
+Before epoch 154 Train # MAPE_train: 1.082639e+01 . Test # MAPE_test: 1.319313e+01 	 	 
+epoch 154 batch 1Linesearch      1;  Value 5.056807e-02Linesearch      2;  Value 5.056282e-02Linesearch      3;  Value 5.056061e-02
+Before epoch 155 Train # MAPE_train: 1.082272e+01 . Test # MAPE_test: 1.318066e+01 	 	 
+epoch 155 batch 1Linesearch      1;  Value 5.055844e-02Linesearch      2;  Value 5.055330e-02Linesearch      3;  Value 5.053566e-02
+Before epoch 156 Train # MAPE_train: 1.081716e+01 . Test # MAPE_test: 1.318379e+01 	 	 
+epoch 156 batch 1Linesearch      1;  Value 5.051835e-02Linesearch      2;  Value 5.051307e-02Linesearch      3;  Value 5.051091e-02
+Before epoch 157 Train # MAPE_train: 1.081332e+01 . Test # MAPE_test: 1.317206e+01 	 	 
+epoch 157 batch 1Linesearch      1;  Value 5.050879e-02Linesearch      2;  Value 5.050362e-02Linesearch      3;  Value 5.048610e-02
+Before epoch 158 Train # MAPE_train: 1.080814e+01 . Test # MAPE_test: 1.317458e+01 	 	 
+epoch 158 batch 1Linesearch      1;  Value 5.046887e-02Linesearch      2;  Value 5.046358e-02Linesearch      3;  Value 5.046148e-02
+Before epoch 159 Train # MAPE_train: 1.080397e+01 . Test # MAPE_test: 1.316343e+01 	 	 
+epoch 159 batch 1Linesearch      1;  Value 5.045941e-02Linesearch      2;  Value 5.045421e-02Linesearch      3;  Value 5.043680e-02
+Before epoch 160 Train # MAPE_train: 1.079933e+01 . Test # MAPE_test: 1.316561e+01 	 	 
+epoch 160 batch 1Linesearch      1;  Value 5.041966e-02Linesearch      2;  Value 5.041438e-02Linesearch      3;  Value 5.041233e-02
+Before epoch 161 Train # MAPE_train: 1.079471e+01 . Test # MAPE_test: 1.315478e+01 	 	 
+epoch 161 batch 1Linesearch      1;  Value 5.041030e-02Linesearch      2;  Value 5.040509e-02Linesearch      3;  Value 5.038795e-02
+Before epoch 162 Train # MAPE_train: 1.079066e+01 . Test # MAPE_test: 1.315738e+01 	 	 
+epoch 162 batch 1Linesearch      1;  Value 5.037227e-02Linesearch      2;  Value 5.036830e-02Linesearch      3;  Value 5.036610e-02
+Before epoch 163 Train # MAPE_train: 1.078550e+01 . Test # MAPE_test: 1.314513e+01 	 	 
+epoch 163 batch 1Linesearch      1;  Value 5.036391e-02Linesearch      2;  Value 5.035998e-02Linesearch      3;  Value 5.034409e-02
+Before epoch 164 Train # MAPE_train: 1.078254e+01 . Test # MAPE_test: 1.314925e+01 	 	 
+epoch 164 batch 1Linesearch      1;  Value 5.032841e-02Linesearch      2;  Value 5.032440e-02Linesearch      3;  Value 5.032227e-02
+Before epoch 165 Train # MAPE_train: 1.077739e+01 . Test # MAPE_test: 1.313752e+01 	 	 
+epoch 165 batch 1Linesearch      1;  Value 5.032015e-02Linesearch      2;  Value 5.031617e-02Linesearch      3;  Value 5.030029e-02
+Before epoch 166 Train # MAPE_train: 1.077451e+01 . Test # MAPE_test: 1.314125e+01 	 	 
+epoch 166 batch 1Linesearch      1;  Value 5.028461e-02Linesearch      2;  Value 5.028056e-02Linesearch      3;  Value 5.027850e-02
+Before epoch 167 Train # MAPE_train: 1.076928e+01 . Test # MAPE_test: 1.312987e+01 	 	 
+epoch 167 batch 1Linesearch      1;  Value 5.027645e-02Linesearch      2;  Value 5.027243e-02Linesearch      3;  Value 5.025655e-02
+Before epoch 168 Train # MAPE_train: 1.076659e+01 . Test # MAPE_test: 1.313336e+01 	 	 
+epoch 168 batch 1Linesearch      1;  Value 5.024087e-02Linesearch      2;  Value 5.023679e-02Linesearch      3;  Value 5.023478e-02
+Before epoch 169 Train # MAPE_train: 1.076118e+01 . Test # MAPE_test: 1.312219e+01 	 	 
+epoch 169 batch 1Linesearch      1;  Value 5.023279e-02Linesearch      2;  Value 5.022873e-02Linesearch      3;  Value 5.021286e-02
+Before epoch 170 Train # MAPE_train: 1.075874e+01 . Test # MAPE_test: 1.312561e+01 	 	 
+epoch 170 batch 1Linesearch      1;  Value 5.019718e-02Linesearch      2;  Value 5.019306e-02Linesearch      3;  Value 5.019111e-02
+Before epoch 171 Train # MAPE_train: 1.075310e+01 . Test # MAPE_test: 1.311449e+01 	 	 
+epoch 171 batch 1Linesearch      1;  Value 5.018917e-02Linesearch      2;  Value 5.018508e-02Linesearch      3;  Value 5.016920e-02
+Before epoch 172 Train # MAPE_train: 1.075100e+01 . Test # MAPE_test: 1.311799e+01 	 	 
+epoch 172 batch 1Linesearch      1;  Value 5.015352e-02Linesearch      2;  Value 5.014937e-02Linesearch      3;  Value 5.014747e-02
+Before epoch 173 Train # MAPE_train: 1.074503e+01 . Test # MAPE_test: 1.310675e+01 	 	 
+epoch 173 batch 1Linesearch      1;  Value 5.014558e-02Linesearch      2;  Value 5.014145e-02Linesearch      3;  Value 5.012557e-02
+Before epoch 174 Train # MAPE_train: 1.074333e+01 . Test # MAPE_test: 1.311052e+01 	 	 
+epoch 174 batch 1Linesearch      1;  Value 5.010989e-02Linesearch      2;  Value 5.010571e-02Linesearch      3;  Value 5.010385e-02
+Before epoch 175 Train # MAPE_train: 1.073698e+01 . Test # MAPE_test: 1.309898e+01 	 	 
+epoch 175 batch 1Linesearch      1;  Value 5.010201e-02Linesearch      2;  Value 5.009785e-02Linesearch      3;  Value 5.008197e-02
+Before epoch 176 Train # MAPE_train: 1.073574e+01 . Test # MAPE_test: 1.310322e+01 	 	 
+epoch 176 batch 1Linesearch      1;  Value 5.006628e-02Linesearch      2;  Value 5.006207e-02Linesearch      3;  Value 5.006026e-02
+Before epoch 177 Train # MAPE_train: 1.072895e+01 . Test # MAPE_test: 1.309117e+01 	 	 
+epoch 177 batch 1Linesearch      1;  Value 5.005846e-02Linesearch      2;  Value 5.005428e-02Linesearch      3;  Value 5.003839e-02
+Before epoch 178 Train # MAPE_train: 1.072824e+01 . Test # MAPE_test: 1.309607e+01 	 	 
+epoch 178 batch 1Linesearch      1;  Value 5.002270e-02Linesearch      2;  Value 5.001846e-02Linesearch      3;  Value 5.001669e-02
+Before epoch 179 Train # MAPE_train: 1.072094e+01 . Test # MAPE_test: 1.308333e+01 	 	 
+epoch 179 batch 1Linesearch      1;  Value 5.001493e-02Linesearch      2;  Value 5.001072e-02Linesearch      3;  Value 4.999483e-02
+Before epoch 180 Train # MAPE_train: 1.072084e+01 . Test # MAPE_test: 1.308911e+01 	 	 
+epoch 180 batch 1Linesearch      1;  Value 4.997913e-02Linesearch      2;  Value 4.997488e-02Linesearch      3;  Value 4.997314e-02
+Before epoch 181 Train # MAPE_train: 1.071295e+01 . Test # MAPE_test: 1.307546e+01 	 	 
+epoch 181 batch 1Linesearch      1;  Value 4.997141e-02Linesearch      2;  Value 4.996718e-02Linesearch      3;  Value 4.995130e-02
+Before epoch 182 Train # MAPE_train: 1.071352e+01 . Test # MAPE_test: 1.308233e+01 	 	 
+epoch 182 batch 1Linesearch      1;  Value 4.993560e-02Linesearch      2;  Value 4.993133e-02Linesearch      3;  Value 4.992962e-02
+Before epoch 183 Train # MAPE_train: 1.070498e+01 . Test # MAPE_test: 1.306755e+01 	 	 
+epoch 183 batch 1Linesearch      1;  Value 4.992793e-02Linesearch      2;  Value 4.992369e-02Linesearch      3;  Value 4.990781e-02
+Before epoch 184 Train # MAPE_train: 1.070633e+01 . Test # MAPE_test: 1.307578e+01 	 	 
+epoch 184 batch 1Linesearch      1;  Value 4.989211e-02Linesearch      2;  Value 4.988783e-02Linesearch      3;  Value 4.988616e-02
+Before epoch 185 Train # MAPE_train: 1.069705e+01 . Test # MAPE_test: 1.305963e+01 	 	 
+epoch 185 batch 1Linesearch      1;  Value 4.988450e-02Linesearch      2;  Value 4.988025e-02Linesearch      3;  Value 4.986439e-02
+Before epoch 186 Train # MAPE_train: 1.069923e+01 . Test # MAPE_test: 1.306945e+01 	 	 
+epoch 186 batch 1Linesearch      1;  Value 4.984871e-02Linesearch      2;  Value 4.984443e-02Linesearch      3;  Value 4.984278e-02
+Before epoch 187 Train # MAPE_train: 1.068915e+01 . Test # MAPE_test: 1.305169e+01 	 	 
+epoch 187 batch 1Linesearch      1;  Value 4.984115e-02Linesearch      2;  Value 4.983690e-02Linesearch      3;  Value 4.982108e-02
+Before epoch 188 Train # MAPE_train: 1.069227e+01 . Test # MAPE_test: 1.306336e+01 	 	 
+epoch 188 batch 1Linesearch      1;  Value 4.980542e-02Linesearch      2;  Value 4.980115e-02Linesearch      3;  Value 4.979953e-02
+Before epoch 189 Train # MAPE_train: 1.068131e+01 . Test # MAPE_test: 1.304375e+01 	 	 
+epoch 189 batch 1Linesearch      1;  Value 4.979793e-02Linesearch      2;  Value 4.979369e-02Linesearch      3;  Value 4.977792e-02
+Before epoch 190 Train # MAPE_train: 1.068543e+01 . Test # MAPE_test: 1.305748e+01 	 	 
+epoch 190 batch 1Linesearch      1;  Value 4.976231e-02Linesearch      2;  Value 4.975807e-02Linesearch      3;  Value 4.975647e-02
+Before epoch 191 Train # MAPE_train: 1.067350e+01 . Test # MAPE_test: 1.303581e+01 	 	 
+epoch 191 batch 1Linesearch      1;  Value 4.975489e-02Linesearch      2;  Value 4.975068e-02Linesearch      3;  Value 4.973499e-02
+Before epoch 192 Train # MAPE_train: 1.067873e+01 . Test # MAPE_test: 1.305182e+01 	 	 
+epoch 192 batch 1Linesearch      1;  Value 4.971945e-02Linesearch      2;  Value 4.971524e-02Linesearch      3;  Value 4.971367e-02
+Before epoch 193 Train # MAPE_train: 1.066577e+01 . Test # MAPE_test: 1.302790e+01 	 	 
+epoch 193 batch 1Linesearch      1;  Value 4.971211e-02Linesearch      2;  Value 4.970794e-02Linesearch      3;  Value 4.969235e-02
+Before epoch 194 Train # MAPE_train: 1.067212e+01 . Test # MAPE_test: 1.304629e+01 	 	 
+epoch 194 batch 1Linesearch      1;  Value 4.967692e-02Linesearch      2;  Value 4.967276e-02Linesearch      3;  Value 4.967121e-02
+Before epoch 195 Train # MAPE_train: 1.065811e+01 . Test # MAPE_test: 1.302003e+01 	 	 
+epoch 195 batch 1Linesearch      1;  Value 4.966967e-02Linesearch      2;  Value 4.966555e-02Linesearch      3;  Value 4.965011e-02
+Before epoch 196 Train # MAPE_train: 1.066567e+01 . Test # MAPE_test: 1.304090e+01 	 	 
+epoch 196 batch 1Linesearch      1;  Value 4.963482e-02Linesearch      2;  Value 4.963073e-02Linesearch      3;  Value 4.962918e-02
+Before epoch 197 Train # MAPE_train: 1.065057e+01 . Test # MAPE_test: 1.301225e+01 	 	 
+epoch 197 batch 1Linesearch      1;  Value 4.962766e-02Linesearch      2;  Value 4.962361e-02Linesearch      3;  Value 4.960835e-02
+Before epoch 198 Train # MAPE_train: 1.065925e+01 . Test # MAPE_test: 1.303545e+01 	 	 
+epoch 198 batch 1Linesearch      1;  Value 4.959323e-02Linesearch      2;  Value 4.958922e-02Linesearch      3;  Value 4.958769e-02
+Before epoch 199 Train # MAPE_train: 1.064314e+01 . Test # MAPE_test: 1.300454e+01 	 	 
+epoch 199 batch 1Linesearch      1;  Value 4.958618e-02Linesearch      2;  Value 4.958221e-02Linesearch      3;  Value 4.956717e-02
+Before epoch 200 Train # MAPE_train: 1.065295e+01 . Test # MAPE_test: 1.303004e+01 	 	 
+epoch 200 batch 1Linesearch      1;  Value 4.955225e-02Linesearch      2;  Value 4.954833e-02Linesearch      3;  Value 4.954681e-02
+Before epoch 201 Train # MAPE_train: 1.063588e+01 . Test # MAPE_test: 1.299701e+01 	 	 
+epoch 201 batch 1Linesearch      1;  Value 4.954532e-02Linesearch      2;  Value 4.954143e-02Linesearch      3;  Value 4.952663e-02
+Before epoch 202 Train # MAPE_train: 1.064658e+01 . Test # MAPE_test: 1.302436e+01 	 	 
+epoch 202 batch 1Linesearch      1;  Value 4.951194e-02Linesearch      2;  Value 4.950812e-02Linesearch      3;  Value 4.950661e-02
+Before epoch 203 Train # MAPE_train: 1.062874e+01 . Test # MAPE_test: 1.298958e+01 	 	 
+epoch 203 batch 1Linesearch      1;  Value 4.950513e-02Linesearch      2;  Value 4.950133e-02Linesearch      3;  Value 4.948680e-02
+Before epoch 204 Train # MAPE_train: 1.064038e+01 . Test # MAPE_test: 1.301874e+01 	 	 
+epoch 204 batch 1Linesearch      1;  Value 4.947237e-02Linesearch      2;  Value 4.946865e-02Linesearch      3;  Value 4.946715e-02
+Before epoch 205 Train # MAPE_train: 1.062183e+01 . Test # MAPE_test: 1.298239e+01 	 	 
+epoch 205 batch 1Linesearch      1;  Value 4.946567e-02Linesearch      2;  Value 4.946197e-02Linesearch      3;  Value 4.944772e-02
+Before epoch 206 Train # MAPE_train: 1.063400e+01 . Test # MAPE_test: 1.301269e+01 	 	 
+epoch 206 batch 1Linesearch      1;  Value 4.943356e-02Linesearch      2;  Value 4.942994e-02Linesearch      3;  Value 4.942844e-02
+Before epoch 207 Train # MAPE_train: 1.061502e+01 . Test # MAPE_test: 1.297527e+01 	 	 
+epoch 207 batch 1Linesearch      1;  Value 4.942697e-02Linesearch      2;  Value 4.942336e-02Linesearch      3;  Value 4.940940e-02
+Before epoch 208 Train # MAPE_train: 1.062795e+01 . Test # MAPE_test: 1.300689e+01 	 	 
+epoch 208 batch 1Linesearch      1;  Value 4.939553e-02Linesearch      2;  Value 4.939200e-02Linesearch      3;  Value 4.939051e-02
+Before epoch 209 Train # MAPE_train: 1.060849e+01 . Test # MAPE_test: 1.296847e+01 	 	 
+epoch 209 batch 1Linesearch      1;  Value 4.938904e-02Linesearch      2;  Value 4.938552e-02Linesearch      3;  Value 4.937187e-02
+Before epoch 210 Train # MAPE_train: 1.062157e+01 . Test # MAPE_test: 1.300047e+01 	 	 
+epoch 210 batch 1Linesearch      1;  Value 4.935829e-02Linesearch      2;  Value 4.935486e-02Linesearch      3;  Value 4.935337e-02
+Before epoch 211 Train # MAPE_train: 1.060199e+01 . Test # MAPE_test: 1.296164e+01 	 	 
+epoch 211 batch 1Linesearch      1;  Value 4.935191e-02Linesearch      2;  Value 4.934847e-02Linesearch      3;  Value 4.933515e-02
+Before epoch 212 Train # MAPE_train: 1.061575e+01 . Test # MAPE_test: 1.299469e+01 	 	 
+epoch 212 batch 1Linesearch      1;  Value 4.932188e-02Linesearch      2;  Value 4.931854e-02Linesearch      3;  Value 4.931705e-02
+Before epoch 213 Train # MAPE_train: 1.059584e+01 . Test # MAPE_test: 1.295522e+01 	 	 
+epoch 213 batch 1Linesearch      1;  Value 4.931559e-02Linesearch      2;  Value 4.931224e-02Linesearch      3;  Value 4.929925e-02
+Before epoch 214 Train # MAPE_train: 1.060939e+01 . Test # MAPE_test: 1.298801e+01 	 	 
+epoch 214 batch 1Linesearch      1;  Value 4.928632e-02Linesearch      2;  Value 4.928306e-02Linesearch      3;  Value 4.928157e-02
+Before epoch 215 Train # MAPE_train: 1.058964e+01 . Test # MAPE_test: 1.294865e+01 	 	 
+epoch 215 batch 1Linesearch      1;  Value 4.928010e-02Linesearch      2;  Value 4.927684e-02Linesearch      3;  Value 4.926422e-02
+Before epoch 216 Train # MAPE_train: 1.060392e+01 . Test # MAPE_test: 1.298244e+01 	 	 
+epoch 216 batch 1Linesearch      1;  Value 4.925166e-02Linesearch      2;  Value 4.924849e-02Linesearch      3;  Value 4.924699e-02
+Before epoch 217 Train # MAPE_train: 1.058390e+01 . Test # MAPE_test: 1.294263e+01 	 	 
+epoch 217 batch 1Linesearch      1;  Value 4.924552e-02Linesearch      2;  Value 4.924234e-02Linesearch      3;  Value 4.923012e-02
+Before epoch 218 Train # MAPE_train: 1.059764e+01 . Test # MAPE_test: 1.297562e+01 	 	 
+epoch 218 batch 1Linesearch      1;  Value 4.921794e-02Linesearch      2;  Value 4.921486e-02Linesearch      3;  Value 4.921336e-02
+Before epoch 219 Train # MAPE_train: 1.057801e+01 . Test # MAPE_test: 1.293632e+01 	 	 
+epoch 219 batch 1Linesearch      1;  Value 4.921187e-02Linesearch      2;  Value 4.920878e-02Linesearch      3;  Value 4.919699e-02
+Before epoch 220 Train # MAPE_train: 1.059254e+01 . Test # MAPE_test: 1.297034e+01 	 	 
+epoch 220 batch 1Linesearch      1;  Value 4.918524e-02Linesearch      2;  Value 4.918224e-02Linesearch      3;  Value 4.918073e-02
+Before epoch 221 Train # MAPE_train: 1.057266e+01 . Test # MAPE_test: 1.293070e+01 	 	 
+epoch 221 batch 1Linesearch      1;  Value 4.917924e-02Linesearch      2;  Value 4.917623e-02Linesearch      3;  Value 4.916487e-02
+Before epoch 222 Train # MAPE_train: 1.058645e+01 . Test # MAPE_test: 1.296356e+01 	 	 
+epoch 222 batch 1Linesearch      1;  Value 4.915356e-02Linesearch      2;  Value 4.915065e-02Linesearch      3;  Value 4.914913e-02
+Before epoch 223 Train # MAPE_train: 1.056711e+01 . Test # MAPE_test: 1.292472e+01 	 	 
+epoch 223 batch 1Linesearch      1;  Value 4.914762e-02Linesearch      2;  Value 4.914470e-02Linesearch      3;  Value 4.913379e-02
+Before epoch 224 Train # MAPE_train: 1.058167e+01 . Test # MAPE_test: 1.295853e+01 	 	 
+epoch 224 batch 1Linesearch      1;  Value 4.912291e-02Linesearch      2;  Value 4.912009e-02Linesearch      3;  Value 4.911855e-02
+Before epoch 225 Train # MAPE_train: 1.056212e+01 . Test # MAPE_test: 1.291948e+01 	 	 
+epoch 225 batch 1Linesearch      1;  Value 4.911703e-02Linesearch      2;  Value 4.911419e-02Linesearch      3;  Value 4.910370e-02
+Before epoch 226 Train # MAPE_train: 1.057595e+01 . Test # MAPE_test: 1.295210e+01 	 	 
+epoch 226 batch 1Linesearch      1;  Value 4.909324e-02Linesearch      2;  Value 4.909050e-02Linesearch      3;  Value 4.908894e-02
+Before epoch 227 Train # MAPE_train: 1.055695e+01 . Test # MAPE_test: 1.291391e+01 	 	 
+epoch 227 batch 1Linesearch      1;  Value 4.908740e-02Linesearch      2;  Value 4.908465e-02Linesearch      3;  Value 4.907456e-02
+Before epoch 228 Train # MAPE_train: 1.057137e+01 . Test # MAPE_test: 1.294721e+01 	 	 
+epoch 228 batch 1Linesearch      1;  Value 4.906448e-02Linesearch      2;  Value 4.906182e-02Linesearch      3;  Value 4.906025e-02
+Before epoch 229 Train # MAPE_train: 1.055226e+01 . Test # MAPE_test: 1.290897e+01 	 	 
+epoch 229 batch 1Linesearch      1;  Value 4.905869e-02Linesearch      2;  Value 4.905600e-02Linesearch      3;  Value 4.904628e-02
+Before epoch 230 Train # MAPE_train: 1.056610e+01 . Test # MAPE_test: 1.294129e+01 	 	 
+epoch 230 batch 1Linesearch      1;  Value 4.903657e-02Linesearch      2;  Value 4.903397e-02Linesearch      3;  Value 4.903238e-02
+Before epoch 231 Train # MAPE_train: 1.054747e+01 . Test # MAPE_test: 1.290382e+01 	 	 
+epoch 231 batch 1Linesearch      1;  Value 4.903080e-02Linesearch      2;  Value 4.902819e-02Linesearch      3;  Value 4.901881e-02
+Before epoch 232 Train # MAPE_train: 1.056161e+01 . Test # MAPE_test: 1.293642e+01 	 	 
+epoch 232 batch 1Linesearch      1;  Value 4.900944e-02Linesearch      2;  Value 4.900691e-02Linesearch      3;  Value 4.900530e-02
+Before epoch 233 Train # MAPE_train: 1.054304e+01 . Test # MAPE_test: 1.289912e+01 	 	 
+epoch 233 batch 1Linesearch      1;  Value 4.900370e-02Linesearch      2;  Value 4.900115e-02Linesearch      3;  Value 4.899210e-02
+Before epoch 234 Train # MAPE_train: 1.055674e+01 . Test # MAPE_test: 1.293099e+01 	 	 
+epoch 234 batch 1Linesearch      1;  Value 4.898304e-02Linesearch      2;  Value 4.898057e-02Linesearch      3;  Value 4.897894e-02
+Before epoch 235 Train # MAPE_train: 1.053859e+01 . Test # MAPE_test: 1.289434e+01 	 	 
+epoch 235 batch 1Linesearch      1;  Value 4.897732e-02Linesearch      2;  Value 4.897484e-02Linesearch      3;  Value 4.896609e-02
+Before epoch 236 Train # MAPE_train: 1.055233e+01 . Test # MAPE_test: 1.292613e+01 	 	 
+epoch 236 batch 1Linesearch      1;  Value 4.895735e-02Linesearch      2;  Value 4.895494e-02Linesearch      3;  Value 4.895329e-02
+Before epoch 237 Train # MAPE_train: 1.053439e+01 . Test # MAPE_test: 1.288984e+01 	 	 
+epoch 237 batch 1Linesearch      1;  Value 4.895165e-02Linesearch      2;  Value 4.894922e-02Linesearch      3;  Value 4.894078e-02
+Before epoch 238 Train # MAPE_train: 1.054774e+01 . Test # MAPE_test: 1.292104e+01 	 	 
+epoch 238 batch 1Linesearch      1;  Value 4.893234e-02Linesearch      2;  Value 4.892999e-02Linesearch      3;  Value 4.892831e-02
+Before epoch 239 Train # MAPE_train: 1.053022e+01 . Test # MAPE_test: 1.288539e+01 	 	 
+epoch 239 batch 1Linesearch      1;  Value 4.892664e-02Linesearch      2;  Value 4.892427e-02Linesearch      3;  Value 4.891613e-02
+Before epoch 240 Train # MAPE_train: 1.054347e+01 . Test # MAPE_test: 1.291626e+01 	 	 
+epoch 240 batch 1Linesearch      1;  Value 4.890800e-02Linesearch      2;  Value 4.890570e-02Linesearch      3;  Value 4.890400e-02
+Before epoch 241 Train # MAPE_train: 1.052627e+01 . Test # MAPE_test: 1.288115e+01 	 	 
+epoch 241 batch 1Linesearch      1;  Value 4.890232e-02Linesearch      2;  Value 4.890000e-02Linesearch      3;  Value 4.889218e-02
+Before epoch 242 Train # MAPE_train: 1.053903e+01 . Test # MAPE_test: 1.291129e+01 	 	 
+epoch 242 batch 1Linesearch      1;  Value 4.888439e-02Linesearch      2;  Value 4.888211e-02Linesearch      3;  Value 4.888042e-02
+Before epoch 243 Train # MAPE_train: 1.052233e+01 . Test # MAPE_test: 1.287707e+01 	 	 
+epoch 243 batch 1Linesearch      1;  Value 4.887874e-02Linesearch      2;  Value 4.887645e-02Linesearch      3;  Value 4.886908e-02
+Before epoch 244 Train # MAPE_train: 1.053425e+01 . Test # MAPE_test: 1.290540e+01 	 	 
+epoch 244 batch 1Linesearch      1;  Value 4.886216e-02Linesearch      2;  Value 4.886028e-02Linesearch      3;  Value 4.885839e-02
+Before epoch 245 Train # MAPE_train: 1.051852e+01 . Test # MAPE_test: 1.287248e+01 	 	 
+epoch 245 batch 1Linesearch      1;  Value 4.885654e-02Linesearch      2;  Value 4.885463e-02Linesearch      3;  Value 4.884836e-02
+Before epoch 246 Train # MAPE_train: 1.052956e+01 . Test # MAPE_test: 1.289831e+01 	 	 
+epoch 246 batch 1Linesearch      1;  Value 4.884319e-02Linesearch      2;  Value 4.884077e-02Linesearch      3;  Value 4.883913e-02
+Before epoch 247 Train # MAPE_train: 1.051528e+01 . Test # MAPE_test: 1.286989e+01 	 	 
+epoch 247 batch 1Linesearch      1;  Value 4.883753e-02Linesearch      2;  Value 4.883507e-02Linesearch      3;  Value 4.883022e-02
+Before epoch 248 Train # MAPE_train: 1.052666e+01 . Test # MAPE_test: 1.289475e+01 	 	 
+epoch 248 batch 1Linesearch      1;  Value 4.882540e-02Linesearch      2;  Value 4.882295e-02Linesearch      3;  Value 4.882135e-02
+Before epoch 249 Train # MAPE_train: 1.051240e+01 . Test # MAPE_test: 1.286682e+01 	 	 
+epoch 249 batch 1Linesearch      1;  Value 4.881977e-02Linesearch      2;  Value 4.881731e-02Linesearch      3;  Value 4.881258e-02
+Before epoch 250 Train # MAPE_train: 1.052370e+01 . Test # MAPE_test: 1.289161e+01 	 	 
+epoch 250 batch 1Linesearch      1;  Value 4.880785e-02Linesearch      2;  Value 4.880542e-02Linesearch      3;  Value 4.880383e-02
+Before epoch 251 Train # MAPE_train: 1.050950e+01 . Test # MAPE_test: 1.286374e+01 	 	 
+epoch 251 batch 1Linesearch      1;  Value 4.880225e-02Linesearch      2;  Value 4.879982e-02Linesearch      3;  Value 4.879516e-02
+Before epoch 252 Train # MAPE_train: 1.052086e+01 . Test # MAPE_test: 1.288859e+01 	 	 
+epoch 252 batch 1Linesearch      1;  Value 4.879050e-02Linesearch      2;  Value 4.878810e-02Linesearch      3;  Value 4.878651e-02
+Before epoch 253 Train # MAPE_train: 1.050666e+01 . Test # MAPE_test: 1.286070e+01 	 	 
+epoch 253 batch 1Linesearch      1;  Value 4.878493e-02Linesearch      2;  Value 4.878252e-02Linesearch      3;  Value 4.877793e-02
+Before epoch 254 Train # MAPE_train: 1.051802e+01 . Test # MAPE_test: 1.288559e+01 	 	 
+epoch 254 batch 1Linesearch      1;  Value 4.877334e-02Linesearch      2;  Value 4.877097e-02Linesearch      3;  Value 4.876938e-02
+Before epoch 255 Train # MAPE_train: 1.050385e+01 . Test # MAPE_test: 1.285769e+01 	 	 
+epoch 255 batch 1Linesearch      1;  Value 4.876779e-02Linesearch      2;  Value 4.876541e-02Linesearch      3;  Value 4.876089e-02
+Before epoch 256 Train # MAPE_train: 1.051522e+01 . Test # MAPE_test: 1.288262e+01 	 	 
+epoch 256 batch 1Linesearch      1;  Value 4.875636e-02Linesearch      2;  Value 4.875402e-02Linesearch      3;  Value 4.875243e-02
+Before epoch 257 Train # MAPE_train: 1.050107e+01 . Test # MAPE_test: 1.285473e+01 	 	 
+epoch 257 batch 1Linesearch      1;  Value 4.875084e-02Linesearch      2;  Value 4.874849e-02Linesearch      3;  Value 4.874403e-02
+Before epoch 258 Train # MAPE_train: 1.051243e+01 . Test # MAPE_test: 1.287967e+01 	 	 
+epoch 258 batch 1Linesearch      1;  Value 4.873957e-02Linesearch      2;  Value 4.873725e-02Linesearch      3;  Value 4.873566e-02
+Before epoch 259 Train # MAPE_train: 1.049832e+01 . Test # MAPE_test: 1.285179e+01 	 	 
+epoch 259 batch 1Linesearch      1;  Value 4.873407e-02Linesearch      2;  Value 4.873175e-02Linesearch      3;  Value 4.872735e-02
+Before epoch 260 Train # MAPE_train: 1.050968e+01 . Test # MAPE_test: 1.287674e+01 	 	 
+epoch 260 batch 1Linesearch      1;  Value 4.872295e-02Linesearch      2;  Value 4.872067e-02Linesearch      3;  Value 4.871907e-02
+Before epoch 261 Train # MAPE_train: 1.049561e+01 . Test # MAPE_test: 1.284889e+01 	 	 
+epoch 261 batch 1Linesearch      1;  Value 4.871747e-02Linesearch      2;  Value 4.871518e-02Linesearch      3;  Value 4.871085e-02
+Before epoch 262 Train # MAPE_train: 1.050695e+01 . Test # MAPE_test: 1.287384e+01 	 	 
+epoch 262 batch 1Linesearch      1;  Value 4.870652e-02Linesearch      2;  Value 4.870426e-02Linesearch      3;  Value 4.870265e-02
+Before epoch 263 Train # MAPE_train: 1.049292e+01 . Test # MAPE_test: 1.284602e+01 	 	 
+epoch 263 batch 1Linesearch      1;  Value 4.870106e-02Linesearch      2;  Value 4.869879e-02Linesearch      3;  Value 4.869452e-02
+Before epoch 264 Train # MAPE_train: 1.050424e+01 . Test # MAPE_test: 1.287096e+01 	 	 
+epoch 264 batch 1Linesearch      1;  Value 4.869025e-02Linesearch      2;  Value 4.868802e-02Linesearch      3;  Value 4.868641e-02
+Before epoch 265 Train # MAPE_train: 1.049027e+01 . Test # MAPE_test: 1.284318e+01 	 	 
+epoch 265 batch 1Linesearch      1;  Value 4.868481e-02Linesearch      2;  Value 4.868257e-02Linesearch      3;  Value 4.867837e-02
+Before epoch 266 Train # MAPE_train: 1.050156e+01 . Test # MAPE_test: 1.286811e+01 	 	 
+epoch 266 batch 1Linesearch      1;  Value 4.867415e-02Linesearch      2;  Value 4.867195e-02Linesearch      3;  Value 4.867034e-02
+Before epoch 267 Train # MAPE_train: 1.048764e+01 . Test # MAPE_test: 1.284038e+01 	 	 
+epoch 267 batch 1Linesearch      1;  Value 4.866873e-02Linesearch      2;  Value 4.866652e-02Linesearch      3;  Value 4.866238e-02
+Before epoch 268 Train # MAPE_train: 1.049890e+01 . Test # MAPE_test: 1.286528e+01 	 	 
+epoch 268 batch 1Linesearch      1;  Value 4.865822e-02Linesearch      2;  Value 4.865604e-02Linesearch      3;  Value 4.865443e-02
+Before epoch 269 Train # MAPE_train: 1.048505e+01 . Test # MAPE_test: 1.283760e+01 	 	 
+epoch 269 batch 1Linesearch      1;  Value 4.865282e-02Linesearch      2;  Value 4.865064e-02Linesearch      3;  Value 4.864655e-02
+Before epoch 270 Train # MAPE_train: 1.049628e+01 . Test # MAPE_test: 1.286248e+01 	 	 
+epoch 270 batch 1Linesearch      1;  Value 4.864246e-02Linesearch      2;  Value 4.864030e-02Linesearch      3;  Value 4.863868e-02
+Before epoch 271 Train # MAPE_train: 1.048248e+01 . Test # MAPE_test: 1.283485e+01 	 	 
+epoch 271 batch 1Linesearch      1;  Value 4.863707e-02Linesearch      2;  Value 4.863491e-02Linesearch      3;  Value 4.863088e-02
+Before epoch 272 Train # MAPE_train: 1.049368e+01 . Test # MAPE_test: 1.285971e+01 	 	 
+epoch 272 batch 1Linesearch      1;  Value 4.862685e-02Linesearch      2;  Value 4.862472e-02Linesearch      3;  Value 4.862310e-02
+Before epoch 273 Train # MAPE_train: 1.047995e+01 . Test # MAPE_test: 1.283213e+01 	 	 
+epoch 273 batch 1Linesearch      1;  Value 4.862148e-02Linesearch      2;  Value 4.861935e-02Linesearch      3;  Value 4.861538e-02
+Before epoch 274 Train # MAPE_train: 1.049111e+01 . Test # MAPE_test: 1.285696e+01 	 	 
+epoch 274 batch 1Linesearch      1;  Value 4.861140e-02Linesearch      2;  Value 4.860930e-02Linesearch      3;  Value 4.860767e-02
+Before epoch 275 Train # MAPE_train: 1.047744e+01 . Test # MAPE_test: 1.282944e+01 	 	 
+epoch 275 batch 1Linesearch      1;  Value 4.860604e-02Linesearch      2;  Value 4.860393e-02Linesearch      3;  Value 4.860002e-02
+Before epoch 276 Train # MAPE_train: 1.048856e+01 . Test # MAPE_test: 1.285424e+01 	 	 
+epoch 276 batch 1Linesearch      1;  Value 4.859610e-02Linesearch      2;  Value 4.859402e-02Linesearch      3;  Value 4.859239e-02
+Before epoch 277 Train # MAPE_train: 1.047495e+01 . Test # MAPE_test: 1.282678e+01 	 	 
+epoch 277 batch 1Linesearch      1;  Value 4.859076e-02Linesearch      2;  Value 4.858868e-02Linesearch      3;  Value 4.858482e-02
+Before epoch 278 Train # MAPE_train: 1.048604e+01 . Test # MAPE_test: 1.285154e+01 	 	 
+epoch 278 batch 1Linesearch      1;  Value 4.858095e-02Linesearch      2;  Value 4.857890e-02Linesearch      3;  Value 4.857726e-02
+Before epoch 279 Train # MAPE_train: 1.047250e+01 . Test # MAPE_test: 1.282414e+01 	 	 
+epoch 279 batch 1Linesearch      1;  Value 4.857562e-02Linesearch      2;  Value 4.857356e-02Linesearch      3;  Value 4.856976e-02
+Before epoch 280 Train # MAPE_train: 1.048353e+01 . Test # MAPE_test: 1.284886e+01 	 	 
+epoch 280 batch 1Linesearch      1;  Value 4.856595e-02Linesearch      2;  Value 4.856392e-02Linesearch      3;  Value 4.856227e-02
+Before epoch 281 Train # MAPE_train: 1.047006e+01 . Test # MAPE_test: 1.282153e+01 	 	 
+epoch 281 batch 1Linesearch      1;  Value 4.856063e-02Linesearch      2;  Value 4.855860e-02Linesearch      3;  Value 4.855485e-02
+Before epoch 282 Train # MAPE_train: 1.048105e+01 . Test # MAPE_test: 1.284621e+01 	 	 
+epoch 282 batch 1Linesearch      1;  Value 4.855109e-02Linesearch      2;  Value 4.854909e-02Linesearch      3;  Value 4.854743e-02
+Before epoch 283 Train # MAPE_train: 1.046766e+01 . Test # MAPE_test: 1.281894e+01 	 	 
+epoch 283 batch 1Linesearch      1;  Value 4.854578e-02Linesearch      2;  Value 4.854377e-02Linesearch      3;  Value 4.854007e-02
+Before epoch 284 Train # MAPE_train: 1.047859e+01 . Test # MAPE_test: 1.284358e+01 	 	 
+epoch 284 batch 1Linesearch      1;  Value 4.853637e-02Linesearch      2;  Value 4.853439e-02Linesearch      3;  Value 4.853272e-02
+Before epoch 285 Train # MAPE_train: 1.046527e+01 . Test # MAPE_test: 1.281637e+01 	 	 
+epoch 285 batch 1Linesearch      1;  Value 4.853106e-02Linesearch      2;  Value 4.852908e-02Linesearch      3;  Value 4.852543e-02
+Before epoch 286 Train # MAPE_train: 1.047615e+01 . Test # MAPE_test: 1.284098e+01 	 	 
+epoch 286 batch 1Linesearch      1;  Value 4.852178e-02Linesearch      2;  Value 4.851982e-02Linesearch      3;  Value 4.851815e-02
+Before epoch 287 Train # MAPE_train: 1.046292e+01 . Test # MAPE_test: 1.281383e+01 	 	 
+epoch 287 batch 1Linesearch      1;  Value 4.851649e-02Linesearch      2;  Value 4.851452e-02Linesearch      3;  Value 4.851093e-02
+Before epoch 288 Train # MAPE_train: 1.047373e+01 . Test # MAPE_test: 1.283839e+01 	 	 
+epoch 288 batch 1Linesearch      1;  Value 4.850733e-02Linesearch      2;  Value 4.850539e-02Linesearch      3;  Value 4.850371e-02
+Before epoch 289 Train # MAPE_train: 1.046058e+01 . Test # MAPE_test: 1.281131e+01 	 	 
+epoch 289 batch 1Linesearch      1;  Value 4.850204e-02Linesearch      2;  Value 4.850010e-02Linesearch      3;  Value 4.849655e-02
+Before epoch 290 Train # MAPE_train: 1.047134e+01 . Test # MAPE_test: 1.283583e+01 	 	 
+epoch 290 batch 1Linesearch      1;  Value 4.849300e-02Linesearch      2;  Value 4.849109e-02Linesearch      3;  Value 4.848940e-02
+Before epoch 291 Train # MAPE_train: 1.045827e+01 . Test # MAPE_test: 1.280882e+01 	 	 
+epoch 291 batch 1Linesearch      1;  Value 4.848772e-02Linesearch      2;  Value 4.848580e-02Linesearch      3;  Value 4.848231e-02
+Before epoch 292 Train # MAPE_train: 1.046896e+01 . Test # MAPE_test: 1.283329e+01 	 	 
+epoch 292 batch 1Linesearch      1;  Value 4.847880e-02Linesearch      2;  Value 4.847691e-02Linesearch      3;  Value 4.847522e-02
+Before epoch 293 Train # MAPE_train: 1.045598e+01 . Test # MAPE_test: 1.280635e+01 	 	 
+epoch 293 batch 1Linesearch      1;  Value 4.847352e-02Linesearch      2;  Value 4.847163e-02Linesearch      3;  Value 4.846818e-02
+Before epoch 294 Train # MAPE_train: 1.046660e+01 . Test # MAPE_test: 1.283077e+01 	 	 
+epoch 294 batch 1Linesearch      1;  Value 4.846473e-02Linesearch      2;  Value 4.846286e-02Linesearch      3;  Value 4.846117e-02
+Before epoch 295 Train # MAPE_train: 1.045340e+01 . Test # MAPE_test: 1.280290e+01 	 	 
+epoch 295 batch 1Linesearch      1;  Value 4.845926e-02Linesearch      2;  Value 4.845756e-02Linesearch      3;  Value 4.845430e-02
+Before epoch 296 Train # MAPE_train: 1.046379e+01 . Test # MAPE_test: 1.282767e+01 	 	 
+epoch 296 batch 1Linesearch      1;  Value 4.845103e-02Linesearch      2;  Value 4.844936e-02Linesearch      3;  Value 4.844743e-02
+Before epoch 297 Train # MAPE_train: 1.045119e+01 . Test # MAPE_test: 1.280051e+01 	 	 
+epoch 297 batch 1Linesearch      1;  Value 4.844551e-02Linesearch      2;  Value 4.844383e-02Linesearch      3;  Value 4.844061e-02
+Before epoch 298 Train # MAPE_train: 1.046148e+01 . Test # MAPE_test: 1.282520e+01 	 	 
+epoch 298 batch 1Linesearch      1;  Value 4.843739e-02Linesearch      2;  Value 4.843573e-02Linesearch      3;  Value 4.843379e-02
+Before epoch 299 Train # MAPE_train: 1.044901e+01 . Test # MAPE_test: 1.279814e+01 	 	 
+epoch 299 batch 1Linesearch      1;  Value 4.843185e-02Linesearch      2;  Value 4.843018e-02Linesearch      3;  Value 4.842701e-02
+Before epoch 300 Train # MAPE_train: 1.045918e+01 . Test # MAPE_test: 1.282273e+01 	 	 
+epoch 300 batch 1Linesearch      1;  Value 4.842383e-02Linesearch      2;  Value 4.842218e-02Linesearch      3;  Value 4.842022e-02
+Before epoch 301 Train # MAPE_train: 1.044684e+01 . Test # MAPE_test: 1.279580e+01 	 	 
+epoch 301 batch 1Linesearch      1;  Value 4.841827e-02Linesearch      2;  Value 4.841662e-02Linesearch      3;  Value 4.841349e-02
+Before epoch 302 Train # MAPE_train: 1.045688e+01 . Test # MAPE_test: 1.282028e+01 	 	 
+epoch 302 batch 1Linesearch      1;  Value 4.841035e-02Linesearch      2;  Value 4.840872e-02Linesearch      3;  Value 4.840674e-02
+Before epoch 303 Train # MAPE_train: 1.044469e+01 . Test # MAPE_test: 1.279347e+01 	 	 
+epoch 303 batch 1Linesearch      1;  Value 4.840478e-02Linesearch      2;  Value 4.840314e-02Linesearch      3;  Value 4.840005e-02
+Before epoch 304 Train # MAPE_train: 1.045460e+01 . Test # MAPE_test: 1.281783e+01 	 	 
+epoch 304 batch 1Linesearch      1;  Value 4.839695e-02Linesearch      2;  Value 4.839534e-02Linesearch      3;  Value 4.839334e-02
+Before epoch 305 Train # MAPE_train: 1.044255e+01 . Test # MAPE_test: 1.279116e+01 	 	 
+epoch 305 batch 1Linesearch      1;  Value 4.839136e-02Linesearch      2;  Value 4.838974e-02Linesearch      3;  Value 4.838668e-02
+Before epoch 306 Train # MAPE_train: 1.045232e+01 . Test # MAPE_test: 1.281538e+01 	 	 
+epoch 306 batch 1Linesearch      1;  Value 4.838363e-02Linesearch      2;  Value 4.838203e-02Linesearch      3;  Value 4.838002e-02
+Before epoch 307 Train # MAPE_train: 1.044043e+01 . Test # MAPE_test: 1.278887e+01 	 	 
+epoch 307 batch 1Linesearch      1;  Value 4.837802e-02Linesearch      2;  Value 4.837641e-02Linesearch      3;  Value 4.837340e-02
+Before epoch 308 Train # MAPE_train: 1.045005e+01 . Test # MAPE_test: 1.281294e+01 	 	 
+epoch 308 batch 1Linesearch      1;  Value 4.837038e-02Linesearch      2;  Value 4.836879e-02Linesearch      3;  Value 4.836677e-02
+Before epoch 309 Train # MAPE_train: 1.043833e+01 . Test # MAPE_test: 1.278661e+01 	 	 
+epoch 309 batch 1Linesearch      1;  Value 4.836476e-02Linesearch      2;  Value 4.836316e-02Linesearch      3;  Value 4.836019e-02
+Before epoch 310 Train # MAPE_train: 1.044779e+01 . Test # MAPE_test: 1.281050e+01 	 	 
+epoch 310 batch 1Linesearch      1;  Value 4.835720e-02Linesearch      2;  Value 4.835563e-02Linesearch      3;  Value 4.835359e-02
+Before epoch 311 Train # MAPE_train: 1.043624e+01 . Test # MAPE_test: 1.278437e+01 	 	 
+epoch 311 batch 1Linesearch      1;  Value 4.835157e-02Linesearch      2;  Value 4.834998e-02Linesearch      3;  Value 4.834704e-02
+Before epoch 312 Train # MAPE_train: 1.044554e+01 . Test # MAPE_test: 1.280806e+01 	 	 
+epoch 312 batch 1Linesearch      1;  Value 4.834410e-02Linesearch      2;  Value 4.834254e-02Linesearch      3;  Value 4.834049e-02
+Before epoch 313 Train # MAPE_train: 1.043417e+01 . Test # MAPE_test: 1.278215e+01 	 	 
+epoch 313 batch 1Linesearch      1;  Value 4.833845e-02Linesearch      2;  Value 4.833688e-02Linesearch      3;  Value 4.833397e-02
+Before epoch 314 Train # MAPE_train: 1.044329e+01 . Test # MAPE_test: 1.280562e+01 	 	 
+epoch 314 batch 1Linesearch      1;  Value 4.833106e-02Linesearch      2;  Value 4.832951e-02Linesearch      3;  Value 4.832745e-02
+Before epoch 315 Train # MAPE_train: 1.043211e+01 . Test # MAPE_test: 1.277997e+01 	 	 
+epoch 315 batch 1Linesearch      1;  Value 4.832540e-02Linesearch      2;  Value 4.832384e-02Linesearch      3;  Value 4.832097e-02
+Before epoch 316 Train # MAPE_train: 1.044105e+01 . Test # MAPE_test: 1.280318e+01 	 	 
+epoch 316 batch 1Linesearch      1;  Value 4.831809e-02Linesearch      2;  Value 4.831655e-02Linesearch      3;  Value 4.831448e-02
+Before epoch 317 Train # MAPE_train: 1.043008e+01 . Test # MAPE_test: 1.277781e+01 	 	 
+epoch 317 batch 1Linesearch      1;  Value 4.831241e-02Linesearch      2;  Value 4.831087e-02Linesearch      3;  Value 4.830803e-02
+Before epoch 318 Train # MAPE_train: 1.043881e+01 . Test # MAPE_test: 1.280074e+01 	 	 
+epoch 318 batch 1Linesearch      1;  Value 4.830519e-02Linesearch      2;  Value 4.830366e-02Linesearch      3;  Value 4.830157e-02
+Before epoch 319 Train # MAPE_train: 1.042806e+01 . Test # MAPE_test: 1.277567e+01 	 	 
+epoch 319 batch 1Linesearch      1;  Value 4.829950e-02Linesearch      2;  Value 4.829796e-02Linesearch      3;  Value 4.829515e-02
+Before epoch 320 Train # MAPE_train: 1.043658e+01 . Test # MAPE_test: 1.279829e+01 	 	 
+epoch 320 batch 1Linesearch      1;  Value 4.829235e-02Linesearch      2;  Value 4.829083e-02Linesearch      3;  Value 4.828873e-02
+Before epoch 321 Train # MAPE_train: 1.042605e+01 . Test # MAPE_test: 1.277357e+01 	 	 
+epoch 321 batch 1Linesearch      1;  Value 4.828665e-02Linesearch      2;  Value 4.828512e-02Linesearch      3;  Value 4.828235e-02
+Before epoch 322 Train # MAPE_train: 1.043436e+01 . Test # MAPE_test: 1.279584e+01 	 	 
+epoch 322 batch 1Linesearch      1;  Value 4.827957e-02Linesearch      2;  Value 4.827806e-02Linesearch      3;  Value 4.827596e-02
+Before epoch 323 Train # MAPE_train: 1.042406e+01 . Test # MAPE_test: 1.277149e+01 	 	 
+epoch 323 batch 1Linesearch      1;  Value 4.827387e-02Linesearch      2;  Value 4.827234e-02Linesearch      3;  Value 4.826960e-02
+Before epoch 324 Train # MAPE_train: 1.043214e+01 . Test # MAPE_test: 1.279340e+01 	 	 
+epoch 324 batch 1Linesearch      1;  Value 4.826686e-02Linesearch      2;  Value 4.826535e-02Linesearch      3;  Value 4.826324e-02
+Before epoch 325 Train # MAPE_train: 1.042209e+01 . Test # MAPE_test: 1.276944e+01 	 	 
+epoch 325 batch 1Linesearch      1;  Value 4.826115e-02Linesearch      2;  Value 4.825963e-02Linesearch      3;  Value 4.825692e-02
+Before epoch 326 Train # MAPE_train: 1.042993e+01 . Test # MAPE_test: 1.279095e+01 	 	 
+epoch 326 batch 1Linesearch      1;  Value 4.825420e-02Linesearch      2;  Value 4.825270e-02Linesearch      3;  Value 4.825059e-02
+Before epoch 327 Train # MAPE_train: 1.042014e+01 . Test # MAPE_test: 1.276742e+01 	 	 
+epoch 327 batch 1Linesearch      1;  Value 4.824849e-02Linesearch      2;  Value 4.824699e-02Linesearch      3;  Value 4.824430e-02
+Before epoch 328 Train # MAPE_train: 1.042772e+01 . Test # MAPE_test: 1.278850e+01 	 	 
+epoch 328 batch 1Linesearch      1;  Value 4.824161e-02Linesearch      2;  Value 4.824012e-02Linesearch      3;  Value 4.823801e-02
+Before epoch 329 Train # MAPE_train: 1.041819e+01 . Test # MAPE_test: 1.276542e+01 	 	 
+epoch 329 batch 1Linesearch      1;  Value 4.823590e-02Linesearch      2;  Value 4.823440e-02Linesearch      3;  Value 4.823174e-02
+Before epoch 330 Train # MAPE_train: 1.042552e+01 . Test # MAPE_test: 1.278605e+01 	 	 
+epoch 330 batch 1Linesearch      1;  Value 4.822908e-02Linesearch      2;  Value 4.822759e-02Linesearch      3;  Value 4.822548e-02
+Before epoch 331 Train # MAPE_train: 1.041626e+01 . Test # MAPE_test: 1.276345e+01 	 	 
+epoch 331 batch 1Linesearch      1;  Value 4.822338e-02Linesearch      2;  Value 4.822188e-02Linesearch      3;  Value 4.821925e-02
+Before epoch 332 Train # MAPE_train: 1.042333e+01 . Test # MAPE_test: 1.278360e+01 	 	 
+epoch 332 batch 1Linesearch      1;  Value 4.821661e-02Linesearch      2;  Value 4.821513e-02Linesearch      3;  Value 4.821302e-02
+Before epoch 333 Train # MAPE_train: 1.041434e+01 . Test # MAPE_test: 1.276150e+01 	 	 
+epoch 333 batch 1Linesearch      1;  Value 4.821092e-02Linesearch      2;  Value 4.820943e-02Linesearch      3;  Value 4.820682e-02
+Before epoch 334 Train # MAPE_train: 1.042114e+01 . Test # MAPE_test: 1.278115e+01 	 	 
+epoch 334 batch 1Linesearch      1;  Value 4.820421e-02Linesearch      2;  Value 4.820273e-02Linesearch      3;  Value 4.820062e-02
+Before epoch 335 Train # MAPE_train: 1.041244e+01 . Test # MAPE_test: 1.275957e+01 	 	 
+epoch 335 batch 1Linesearch      1;  Value 4.819852e-02Linesearch      2;  Value 4.819704e-02Linesearch      3;  Value 4.819445e-02
+Before epoch 336 Train # MAPE_train: 1.041897e+01 . Test # MAPE_test: 1.277871e+01 	 	 
+epoch 336 batch 1Linesearch      1;  Value 4.819186e-02Linesearch      2;  Value 4.819038e-02Linesearch      3;  Value 4.818828e-02
+Before epoch 337 Train # MAPE_train: 1.041055e+01 . Test # MAPE_test: 1.275766e+01 	 	 
+epoch 337 batch 1Linesearch      1;  Value 4.818619e-02Linesearch      2;  Value 4.818471e-02Linesearch      3;  Value 4.818214e-02
+Before epoch 338 Train # MAPE_train: 1.041680e+01 . Test # MAPE_test: 1.277627e+01 	 	 
+epoch 338 batch 1Linesearch      1;  Value 4.817958e-02Linesearch      2;  Value 4.817810e-02Linesearch      3;  Value 4.817601e-02
+Before epoch 339 Train # MAPE_train: 1.040866e+01 . Test # MAPE_test: 1.275577e+01 	 	 
+epoch 339 batch 1Linesearch      1;  Value 4.817392e-02Linesearch      2;  Value 4.817244e-02Linesearch      3;  Value 4.816990e-02
+Before epoch 340 Train # MAPE_train: 1.041464e+01 . Test # MAPE_test: 1.277385e+01 	 	 
+epoch 340 batch 1Linesearch      1;  Value 4.816735e-02Linesearch      2;  Value 4.816588e-02Linesearch      3;  Value 4.816380e-02
+Before epoch 341 Train # MAPE_train: 1.040679e+01 . Test # MAPE_test: 1.275390e+01 	 	 
+epoch 341 batch 1Linesearch      1;  Value 4.816172e-02Linesearch      2;  Value 4.816024e-02Linesearch      3;  Value 4.815772e-02
+Before epoch 342 Train # MAPE_train: 1.041250e+01 . Test # MAPE_test: 1.277143e+01 	 	 
+epoch 342 batch 1Linesearch      1;  Value 4.815519e-02Linesearch      2;  Value 4.815373e-02Linesearch      3;  Value 4.815165e-02
+Before epoch 343 Train # MAPE_train: 1.040492e+01 . Test # MAPE_test: 1.275204e+01 	 	 
+epoch 343 batch 1Linesearch      1;  Value 4.814958e-02Linesearch      2;  Value 4.814811e-02Linesearch      3;  Value 4.814560e-02
+Before epoch 344 Train # MAPE_train: 1.041037e+01 . Test # MAPE_test: 1.276902e+01 	 	 
+epoch 344 batch 1Linesearch      1;  Value 4.814310e-02Linesearch      2;  Value 4.814163e-02Linesearch      3;  Value 4.813956e-02
+Before epoch 345 Train # MAPE_train: 1.040307e+01 . Test # MAPE_test: 1.275020e+01 	 	 
+epoch 345 batch 1Linesearch      1;  Value 4.813750e-02Linesearch      2;  Value 4.813604e-02Linesearch      3;  Value 4.813355e-02
+Before epoch 346 Train # MAPE_train: 1.040826e+01 . Test # MAPE_test: 1.276663e+01 	 	 
+epoch 346 batch 1Linesearch      1;  Value 4.813106e-02Linesearch      2;  Value 4.812960e-02Linesearch      3;  Value 4.812754e-02
+Before epoch 347 Train # MAPE_train: 1.040122e+01 . Test # MAPE_test: 1.274836e+01 	 	 
+epoch 347 batch 1Linesearch      1;  Value 4.812549e-02Linesearch      2;  Value 4.812403e-02Linesearch      3;  Value 4.812155e-02
+Before epoch 348 Train # MAPE_train: 1.040616e+01 . Test # MAPE_test: 1.276426e+01 	 	 
+epoch 348 batch 1Linesearch      1;  Value 4.811909e-02Linesearch      2;  Value 4.811762e-02Linesearch      3;  Value 4.811558e-02
+Before epoch 349 Train # MAPE_train: 1.039938e+01 . Test # MAPE_test: 1.274654e+01 	 	 
+epoch 349 batch 1Linesearch      1;  Value 4.811355e-02Linesearch      2;  Value 4.811208e-02Linesearch      3;  Value 4.810963e-02
+Before epoch 350 Train # MAPE_train: 1.040408e+01 . Test # MAPE_test: 1.276190e+01 	 	 
+epoch 350 batch 1Linesearch      1;  Value 4.810717e-02Linesearch      2;  Value 4.810571e-02Linesearch      3;  Value 4.810369e-02
+Before epoch 351 Train # MAPE_train: 1.039755e+01 . Test # MAPE_test: 1.274472e+01 	 	 
+epoch 351 batch 1Linesearch      1;  Value 4.810167e-02Linesearch      2;  Value 4.810020e-02Linesearch      3;  Value 4.809776e-02
+Before epoch 352 Train # MAPE_train: 1.040201e+01 . Test # MAPE_test: 1.275955e+01 	 	 
+epoch 352 batch 1Linesearch      1;  Value 4.809532e-02Linesearch      2;  Value 4.809386e-02Linesearch      3;  Value 4.809185e-02
+Before epoch 353 Train # MAPE_train: 1.039572e+01 . Test # MAPE_test: 1.274291e+01 	 	 
+epoch 353 batch 1Linesearch      1;  Value 4.808985e-02Linesearch      2;  Value 4.808839e-02Linesearch      3;  Value 4.808596e-02
+Before epoch 354 Train # MAPE_train: 1.039996e+01 . Test # MAPE_test: 1.275723e+01 	 	 
+epoch 354 batch 1Linesearch      1;  Value 4.808354e-02Linesearch      2;  Value 4.808208e-02Linesearch      3;  Value 4.808008e-02
+Before epoch 355 Train # MAPE_train: 1.039390e+01 . Test # MAPE_test: 1.274110e+01 	 	 
+epoch 355 batch 1Linesearch      1;  Value 4.807809e-02Linesearch      2;  Value 4.807663e-02Linesearch      3;  Value 4.807422e-02
+Before epoch 356 Train # MAPE_train: 1.039792e+01 . Test # MAPE_test: 1.275492e+01 	 	 
+epoch 356 batch 1Linesearch      1;  Value 4.807181e-02Linesearch      2;  Value 4.807035e-02Linesearch      3;  Value 4.806837e-02
+Before epoch 357 Train # MAPE_train: 1.039209e+01 . Test # MAPE_test: 1.273930e+01 	 	 
+epoch 357 batch 1Linesearch      1;  Value 4.806640e-02Linesearch      2;  Value 4.806494e-02Linesearch      3;  Value 4.806254e-02
+Before epoch 358 Train # MAPE_train: 1.039590e+01 . Test # MAPE_test: 1.275263e+01 	 	 
+epoch 358 batch 1Linesearch      1;  Value 4.806014e-02Linesearch      2;  Value 4.805868e-02Linesearch      3;  Value 4.805672e-02
+Before epoch 359 Train # MAPE_train: 1.039028e+01 . Test # MAPE_test: 1.273750e+01 	 	 
+epoch 359 batch 1Linesearch      1;  Value 4.805476e-02Linesearch      2;  Value 4.805331e-02Linesearch      3;  Value 4.805092e-02
+Before epoch 360 Train # MAPE_train: 1.039389e+01 . Test # MAPE_test: 1.275036e+01 	 	 
+epoch 360 batch 1Linesearch      1;  Value 4.804853e-02Linesearch      2;  Value 4.804708e-02Linesearch      3;  Value 4.804513e-02
+Before epoch 361 Train # MAPE_train: 1.038848e+01 . Test # MAPE_test: 1.273571e+01 	 	 
+epoch 361 batch 1Linesearch      1;  Value 4.804319e-02Linesearch      2;  Value 4.804173e-02Linesearch      3;  Value 4.803936e-02
+Before epoch 362 Train # MAPE_train: 1.039190e+01 . Test # MAPE_test: 1.274811e+01 	 	 
+epoch 362 batch 1Linesearch      1;  Value 4.803699e-02Linesearch      2;  Value 4.803553e-02Linesearch      3;  Value 4.803360e-02
+Before epoch 363 Train # MAPE_train: 1.038668e+01 . Test # MAPE_test: 1.273391e+01 	 	 
+epoch 363 batch 1Linesearch      1;  Value 4.803168e-02Linesearch      2;  Value 4.803022e-02Linesearch      3;  Value 4.802786e-02
+Before epoch 364 Train # MAPE_train: 1.038992e+01 . Test # MAPE_test: 1.274588e+01 	 	 
+epoch 364 batch 1Linesearch      1;  Value 4.802550e-02Linesearch      2;  Value 4.802404e-02Linesearch      3;  Value 4.802213e-02
+Before epoch 365 Train # MAPE_train: 1.038489e+01 . Test # MAPE_test: 1.273212e+01 	 	 
+epoch 365 batch 1Linesearch      1;  Value 4.802023e-02Linesearch      2;  Value 4.801877e-02Linesearch      3;  Value 4.801642e-02
+Before epoch 366 Train # MAPE_train: 1.038796e+01 . Test # MAPE_test: 1.274367e+01 	 	 
+epoch 366 batch 1Linesearch      1;  Value 4.801407e-02Linesearch      2;  Value 4.801261e-02Linesearch      3;  Value 4.801072e-02
+Before epoch 367 Train # MAPE_train: 1.038310e+01 . Test # MAPE_test: 1.273033e+01 	 	 
+epoch 367 batch 1Linesearch      1;  Value 4.800883e-02Linesearch      2;  Value 4.800737e-02Linesearch      3;  Value 4.800503e-02
+Before epoch 368 Train # MAPE_train: 1.038601e+01 . Test # MAPE_test: 1.274147e+01 	 	 
+epoch 368 batch 1Linesearch      1;  Value 4.800270e-02Linesearch      2;  Value 4.800124e-02Linesearch      3;  Value 4.799936e-02
+Before epoch 369 Train # MAPE_train: 1.038132e+01 . Test # MAPE_test: 1.272855e+01 	 	 
+epoch 369 batch 1Linesearch      1;  Value 4.799749e-02Linesearch      2;  Value 4.799604e-02Linesearch      3;  Value 4.799370e-02
+Before epoch 370 Train # MAPE_train: 1.038407e+01 . Test # MAPE_test: 1.273929e+01 	 	 
+epoch 370 batch 1Linesearch      1;  Value 4.799138e-02Linesearch      2;  Value 4.798992e-02Linesearch      3;  Value 4.798807e-02
+Before epoch 371 Train # MAPE_train: 1.037954e+01 . Test # MAPE_test: 1.272676e+01 	 	 
+epoch 371 batch 1Linesearch      1;  Value 4.798621e-02Linesearch      2;  Value 4.798476e-02Linesearch      3;  Value 4.798243e-02
+Before epoch 372 Train # MAPE_train: 1.038215e+01 . Test # MAPE_test: 1.273713e+01 	 	 
+epoch 372 batch 1Linesearch      1;  Value 4.798012e-02Linesearch      2;  Value 4.797866e-02Linesearch      3;  Value 4.797682e-02
+Before epoch 373 Train # MAPE_train: 1.037777e+01 . Test # MAPE_test: 1.272498e+01 	 	 
+epoch 373 batch 1Linesearch      1;  Value 4.797499e-02Linesearch      2;  Value 4.797353e-02Linesearch      3;  Value 4.797122e-02
+Before epoch 374 Train # MAPE_train: 1.038024e+01 . Test # MAPE_test: 1.273498e+01 	 	 
+epoch 374 batch 1Linesearch      1;  Value 4.796891e-02Linesearch      2;  Value 4.796745e-02Linesearch      3;  Value 4.796563e-02
+Before epoch 375 Train # MAPE_train: 1.037600e+01 . Test # MAPE_test: 1.272320e+01 	 	 
+epoch 375 batch 1Linesearch      1;  Value 4.796382e-02Linesearch      2;  Value 4.796236e-02Linesearch      3;  Value 4.796005e-02
+Before epoch 376 Train # MAPE_train: 1.037834e+01 . Test # MAPE_test: 1.273285e+01 	 	 
+epoch 376 batch 1Linesearch      1;  Value 4.795776e-02Linesearch      2;  Value 4.795630e-02Linesearch      3;  Value 4.795450e-02
+Before epoch 377 Train # MAPE_train: 1.037424e+01 . Test # MAPE_test: 1.272141e+01 	 	 
+epoch 377 batch 1Linesearch      1;  Value 4.795270e-02Linesearch      2;  Value 4.795124e-02Linesearch      3;  Value 4.794895e-02
+Before epoch 378 Train # MAPE_train: 1.037645e+01 . Test # MAPE_test: 1.273074e+01 	 	 
+epoch 378 batch 1Linesearch      1;  Value 4.794666e-02Linesearch      2;  Value 4.794520e-02Linesearch      3;  Value 4.794341e-02
+Before epoch 379 Train # MAPE_train: 1.037247e+01 . Test # MAPE_test: 1.271964e+01 	 	 
+epoch 379 batch 1Linesearch      1;  Value 4.794163e-02Linesearch      2;  Value 4.794017e-02Linesearch      3;  Value 4.793789e-02
+Before epoch 380 Train # MAPE_train: 1.037458e+01 . Test # MAPE_test: 1.272863e+01 	 	 
+epoch 380 batch 1Linesearch      1;  Value 4.793561e-02Linesearch      2;  Value 4.793415e-02Linesearch      3;  Value 4.793238e-02
+Before epoch 381 Train # MAPE_train: 1.037072e+01 . Test # MAPE_test: 1.271786e+01 	 	 
+epoch 381 batch 1Linesearch      1;  Value 4.793062e-02Linesearch      2;  Value 4.792916e-02Linesearch      3;  Value 4.792688e-02
+Before epoch 382 Train # MAPE_train: 1.037272e+01 . Test # MAPE_test: 1.272655e+01 	 	 
+epoch 382 batch 1Linesearch      1;  Value 4.792461e-02Linesearch      2;  Value 4.792315e-02Linesearch      3;  Value 4.792140e-02
+Before epoch 383 Train # MAPE_train: 1.036897e+01 . Test # MAPE_test: 1.271608e+01 	 	 
+epoch 383 batch 1Linesearch      1;  Value 4.791966e-02Linesearch      2;  Value 4.791819e-02Linesearch      3;  Value 4.791593e-02
+Before epoch 384 Train # MAPE_train: 1.037087e+01 . Test # MAPE_test: 1.272448e+01 	 	 
+epoch 384 batch 1Linesearch      1;  Value 4.791367e-02Linesearch      2;  Value 4.791220e-02Linesearch      3;  Value 4.791047e-02
+Before epoch 385 Train # MAPE_train: 1.036722e+01 . Test # MAPE_test: 1.271430e+01 	 	 
+epoch 385 batch 1Linesearch      1;  Value 4.790874e-02Linesearch      2;  Value 4.790728e-02Linesearch      3;  Value 4.790502e-02
+Before epoch 386 Train # MAPE_train: 1.036903e+01 . Test # MAPE_test: 1.272242e+01 	 	 
+epoch 386 batch 1Linesearch      1;  Value 4.790277e-02Linesearch      2;  Value 4.790130e-02Linesearch      3;  Value 4.789959e-02
+Before epoch 387 Train # MAPE_train: 1.036548e+01 . Test # MAPE_test: 1.271253e+01 	 	 
+epoch 387 batch 1Linesearch      1;  Value 4.789788e-02Linesearch      2;  Value 4.789641e-02Linesearch      3;  Value 4.789416e-02
+Before epoch 388 Train # MAPE_train: 1.036719e+01 . Test # MAPE_test: 1.272038e+01 	 	 
+epoch 388 batch 1Linesearch      1;  Value 4.789192e-02Linesearch      2;  Value 4.789045e-02Linesearch      3;  Value 4.788875e-02
+Before epoch 389 Train # MAPE_train: 1.036374e+01 . Test # MAPE_test: 1.271075e+01 	 	 
+epoch 389 batch 1Linesearch      1;  Value 4.788706e-02Linesearch      2;  Value 4.788559e-02Linesearch      3;  Value 4.788335e-02
+Before epoch 390 Train # MAPE_train: 1.036537e+01 . Test # MAPE_test: 1.271835e+01 	 	 
+epoch 390 batch 1Linesearch      1;  Value 4.788111e-02Linesearch      2;  Value 4.787964e-02Linesearch      3;  Value 4.787796e-02
+Before epoch 391 Train # MAPE_train: 1.036200e+01 . Test # MAPE_test: 1.270897e+01 	 	 
+epoch 391 batch 1Linesearch      1;  Value 4.787629e-02Linesearch      2;  Value 4.787482e-02Linesearch      3;  Value 4.787258e-02
+Before epoch 392 Train # MAPE_train: 1.036355e+01 . Test # MAPE_test: 1.271633e+01 	 	 
+epoch 392 batch 1Linesearch      1;  Value 4.787035e-02Linesearch      2;  Value 4.786888e-02Linesearch      3;  Value 4.786722e-02
+Before epoch 393 Train # MAPE_train: 1.036027e+01 . Test # MAPE_test: 1.270720e+01 	 	 
+epoch 393 batch 1Linesearch      1;  Value 4.786556e-02Linesearch      2;  Value 4.786409e-02Linesearch      3;  Value 4.786186e-02
+Before epoch 394 Train # MAPE_train: 1.036175e+01 . Test # MAPE_test: 1.271432e+01 	 	 
+epoch 394 batch 1Linesearch      1;  Value 4.785964e-02Linesearch      2;  Value 4.785816e-02Linesearch      3;  Value 4.785652e-02
+Before epoch 395 Train # MAPE_train: 1.035854e+01 . Test # MAPE_test: 1.270542e+01 	 	 
+epoch 395 batch 1Linesearch      1;  Value 4.785488e-02Linesearch      2;  Value 4.785340e-02Linesearch      3;  Value 4.785118e-02
+Before epoch 396 Train # MAPE_train: 1.035995e+01 . Test # MAPE_test: 1.271233e+01 	 	 
+epoch 396 batch 1Linesearch      1;  Value 4.784897e-02Linesearch      2;  Value 4.784749e-02Linesearch      3;  Value 4.784588e-02
+Before epoch 397 Train # MAPE_train: 1.035694e+01 . Test # MAPE_test: 1.270427e+01 	 	 
+epoch 397 batch 1Linesearch      1;  Value 4.784443e-02Linesearch      2;  Value 4.784279e-02Linesearch      3;  Value 4.784055e-02
+Before epoch 398 Train # MAPE_train: 1.035835e+01 . Test # MAPE_test: 1.271045e+01 	 	 
+epoch 398 batch 1Linesearch      1;  Value 4.783831e-02Linesearch      2;  Value 4.783667e-02Linesearch      3;  Value 4.783523e-02
+Before epoch 399 Train # MAPE_train: 1.035520e+01 . Test # MAPE_test: 1.270244e+01 	 	 
+epoch 399 batch 1Linesearch      1;  Value 4.783379e-02Linesearch      2;  Value 4.783215e-02Linesearch      3;  Value 4.782992e-02
+Before epoch 400 Train # MAPE_train: 1.035658e+01 . Test # MAPE_test: 1.270853e+01 	 	 
+epoch 400 batch 1Linesearch      1;  Value 4.782769e-02Linesearch      2;  Value 4.782605e-02Linesearch      3;  Value 4.782462e-02
