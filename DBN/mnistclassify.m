@@ -27,7 +27,7 @@ maxepoch=20;
 numhid=256; numpen=256; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
 fprintf(1,'Pretraining a deep autoencoder. \n');
 
-makebatches_my;
+gmakebatches_my;
 numoutput = size(Y_output,2);
 [numcases numdims numbatches]=size(batchdata);
 
