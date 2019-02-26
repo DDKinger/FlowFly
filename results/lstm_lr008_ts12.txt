@@ -1,0 +1,74 @@
+--model_dir=../models --save_model_name=flow_prediction --data_dir=../data --log_dir=../logs --train_epoch=2000 --batch_size=144 --time_step=12 --output_size=69 --cell=lstm
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, keep_prob=0.9, res_weight=0.1
+valid_mape: 0.06980094313621521
+valid_mae: 19.09237139672041
+valid_rmse: 27.668613955378532
+train time: 4640.293324232101
+
+lr=0.08, epoch 2000
+l=3, node=256, ts=12, keep_prob=0.9, res_weight=0.3
+valid_mape: 0.070694699883461
+valid_mae: 19.294891119003296
+valid_rmse: 27.790033735334873
+train time: 3967.6241285800934
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, keep_prob=0.9, res_weight=0.3
+valid_mape: 0.06982328742742538
+valid_mae: 19.053928032517433
+valid_rmse: 27.575354553759098
+train time: 4370.74605679512
+
+lr=0.08, epoch 2000
+l=2, node=512, ts=12, keep_prob=0.9, res_weight=0.3
+valid_mape: 0.06993861496448517
+valid_mae: 19.050551265478134
+valid_rmse: 27.564821518957615
+train time: 3051.2898836135864
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, use_dropout=False, res_weight=0.1
+valid_mape: 0.07941895723342896
+valid_mae: 22.885370336472988
+valid_rmse: 33.16432001441717
+train time: 4484.146088838577
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, use_dropout=False, res_weight=0.3
+valid_mape: 0.07099761068820953
+valid_mae: 19.727455861866474
+valid_rmse: 28.556433722376823
+train time: 4399.232430934906
+
+lr=0.08, epoch 2000
+l=2, node=256, ts=12, keep_prob=0.9, res_weight=0.1
+epoch 2000
+valid_mape: 0.0711292028427124
+valid_mae: 19.443566232919693
+valid_rmse: 27.930585578083992
+train time: 2846.912778377533
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, keep_prob=0.8, res_weight=0.1
+valid_mape: 0.06996702402830124
+valid_mae: 19.12420506030321
+valid_rmse: 27.719550915062428
+train time: 4658.73016667366
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=12, keep_prob=0.8, res_weight=0.3
+valid_mape: 0.07013219594955444
+valid_mae: 19.11068471521139
+valid_rmse: 27.706897996366024
+train time: 4584.213161230087
+
+
+
+
+
+
+
+
+

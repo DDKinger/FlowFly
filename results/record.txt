@@ -1,0 +1,22 @@
+epoch: 2000
+valid_mape: 0.0713968276977539
+valid_mae: 19.529454723000526
+valid_rmse: 28.476499937474728
+
+grbm with sparsity = 0.5, makebatches_my
+maxepoch=20, 20, 1000; 
+numhid=256; numpen=256;
+Layer = 2;
+MAPE_train:7.345276e+00, MAPE_test:7.432368e+00
+MAE_train:1.806429e+01, MAE_test:1.969898e+01
+RMSE_train:2.638804e+01, RMSE_test:2.829238e+01
+Total time: 1656.548682
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=256; numpen=256;
+Layer = 2;
+MAPE_train:6.743253e+00, MAPE_test:7.410372e+00
+MAE_train:1.738137e+01, MAE_test:2.056930e+01
+RMSE_train:2.530404e+01, RMSE_test:2.951831e+01
+Total time: 1489.680556

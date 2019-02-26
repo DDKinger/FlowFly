@@ -195,7 +195,7 @@ class Train:
 @click.option('--num_layers', default=2, type=int)
 @click.option('--hidden_size', default=128, type=int)
 @click.option('--output_size', default=69, type=int)
-@click.option('--cell', default="lstm", type=str, help="Choose among lstm, gru, cifg_lstm")
+@click.option('--cell', default="lstm", type=str, help="Choose among lstm, gru, cifg_lstm, rnn")
 
 def main( 
           model_dir, save_model_name, load_model_dir, load_model_name, save_rate,

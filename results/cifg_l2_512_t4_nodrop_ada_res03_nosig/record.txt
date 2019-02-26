@@ -1,0 +1,6 @@
+epoch: 2000
+valid_mape: 0.07147467136383057
+valid_mae: 19.57177495211363
+valid_rmse: 28.525609105825424
+
+--use_dropout=False --train_epoch=2000--time_step=4 --num_layers=2 --hidden_size=512 --cell=cifg_lstm --res_weight=0.3

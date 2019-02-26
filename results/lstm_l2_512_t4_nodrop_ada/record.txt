@@ -1,0 +1,23 @@
+epoch: 2000
+valid_mape: 0.07493916898965836
+valid_mae: 19.974243097007275
+valid_rmse: 28.920985154807568
+{
+  "use_dropout": false,
+  "use_residual": false,
+  "use_peephole": false,
+  "use_embedding": false,
+  "embedding_size": 128,
+  "resWeight": 1.0,
+  "learning_rate": 0.01,
+  "lr_decay": 0.9,
+  "keep_prob": 0.7,
+  "grad_clip": 2.3,
+  "train_epoch": 2000,
+  "batch_size": 144,
+  "time_step": 4,
+  "num_layers": 2,
+  "hidden_size": 512,
+  "output_size": 69,
+  "cell": "lstm"
+}

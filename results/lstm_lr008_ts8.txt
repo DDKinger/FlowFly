@@ -1,0 +1,63 @@
+--model_dir=../models --save_model_name=flow_prediction --data_dir=../data --log_dir=../logs --train_epoch=2000 --batch_size=144 --time_step=8 --output_size=69 --cell=lstm
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.9, res_weight=0.1
+valid_mape: 0.06884244829416275
+valid_mae: 18.873410403728485
+valid_rmse: 27.526535265147686
+train time: 3369.5820395946503
+
+lr=0.08, epoch 2000
+l=2, node=512, ts=8, keep_prob=0.9, res_weight=0.3
+valid_mape: 0.06951470673084259
+valid_mae: 18.907600723206997
+valid_rmse: 27.512585632503033
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.9, res_weight=0.3
+valid_mape: 0.0693088099360466
+valid_mae: 18.87794890254736
+valid_rmse: 27.496432028710842
+train time: 3433.916666030884
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.9, res_weight=0.2
+valid_mape: 0.0690767914056778
+valid_mae: 18.983414232730865
+valid_rmse: 27.559114649891853
+train time: 3134.3498260974884
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.9, res_weight=0.05
+valid_mape: 0.06913123279809952
+valid_mae: 18.887059092521667
+valid_rmse: 27.543596126139164
+train time: 3285.0218484401703
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.9, use_residual=False
+valid_mape: 0.0772467628121376
+valid_mae: 21.828541830182076
+valid_rmse: 31.594380028545856
+train time: 3265.192081451416
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, keep_prob=0.8, res_weight=0.1
+valid_mape: 0.06929852813482285
+valid_mae: 18.94563914090395
+valid_rmse: 27.605497620999813
+train time: 3056.0614292621613
+
+lr=0.08, epoch 2000
+l=3, node=512, ts=8, use_dropout=False, res_weight=0.1
+valid_mape: 0.06967685371637344
+valid_mae: 19.300788290798664
+valid_rmse: 27.95486245304346
+train time: 3286.037261247635
+
+lr=0.08, epoch 2000
+l=4, node=512, ts=8, use_dropout=0.9, res_weight=0.1
+valid_mape: 0.06947841495275497
+valid_mae: 18.923094905912876
+valid_rmse: 27.54935610294342
+train time: 4495.319487571716

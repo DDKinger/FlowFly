@@ -1,0 +1,34 @@
+epoch: 2000
+valid_mape: 0.11404222249984741
+valid_mae: 25.583953768014908
+valid_rmse: 34.974037013947964
+
+<config.Config object at 0x7f9308544ac8>
+
+PastValue(Block504_Output_1, Constant96) -> PastValue445_Output_0;
+
+PastValue(Block504_Output_0, Constant96) -> PastValue442_Output_0;
+
+LSTM(Parameter5, Parameter6, Parameter7, PastValue442_Output_0, PastValue445_Output_0, Input3) -> Block504_Output_1;
+
+LSTM(Parameter5, Parameter6, Parameter7, PastValue442_Output_0, PastValue445_Output_0, Input3) -> Block504_Output_0;
+
+NoOp(Block504_Output_0) -> NoOp526_Output_0;
+
+PastValue(Block1068_Output_1, Constant660) -> PastValue1009_Output_0;
+
+PastValue(Block1068_Output_0, Constant660) -> PastValue1006_Output_0;
+
+LSTM(Parameter569, Parameter570, Parameter571, PastValue1006_Output_0, PastValue1009_Output_0, NoOp526_Output_0) -> Block1068_Output_1;
+
+LSTM(Parameter569, Parameter570, Parameter571, PastValue1006_Output_0, PastValue1009_Output_0, NoOp526_Output_0) -> Block1068_Output_0;
+
+NoOp(Block1068_Output_0) -> NoOp1090_Output_0;
+
+ElementTimes(Constant1173, NoOp1090_Output_0) -> ElementTimes1174_Output_0;
+
+Plus(ElementTimes1174_Output_0, NoOp526_Output_0) -> Plus1177_Output_0;
+
+Sequence::Slice(Plus1177_Output_0) -> Block1198_Output_0;
+
+Dense(Parameter1207, Parameter1208, Block1198_Output_0) -> Block1240_Output_0;

@@ -1,0 +1,30 @@
+epoch: 2000
+valid_mape: 0.06964284926652908
+valid_mae: 18.885080829262733
+valid_rmse: 27.39694795757532
+
+{
+  "use_dropout": false,
+  "use_residual": true,
+  "use_peephole": false,
+  "use_embedding": false,
+  "embedding_size": 128,
+  "resWeight": 0.3,
+  "learning_rate": 0.008,
+  "lr_decay": 0.9,
+  "keep_prob": 0.7,
+  "grad_clip": 2.3,
+  "train_epoch": 2000,
+  "batch_size": 144,
+  "time_step": 4,
+  "num_layers": 2,
+  "hidden_size": 512,
+  "output_size": 69,
+  "cell": "gru"
+}
+
+lr=0.04
+epoch 2000
+valid_mape: 0.06960050761699677
+valid_mae: 18.94275140762329
+valid_rmse: 27.422043576836586

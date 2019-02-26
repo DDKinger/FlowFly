@@ -41,6 +41,13 @@ class Model(object):
         print("  ** using dropout for LSTM **  ")
         _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
       return _cell_creator
+
+    def rnn_cell():
+      _cell_creator = cntk.layers.Recurrence(cntk.layers.RNNStep(hidden_size), name='rnn')
+      if self.config.use_dropout:
+        print("  ** using dropout for RNN **  ")
+        _cell_creator = cntk.layers.Dropout(keep_prob = keep_prob)(_cell_creator)
+      return _cell_creator
         
     if self.config.cell == 'gru':
       _cell_creator = gru_cell
@@ -51,8 +58,10 @@ class Model(object):
     elif self.config.cell == 'cifg_lstm':
       _cell_creator = cifg_cell
       # _cell_creator_last = cntk.layers.Recurrence(CIFG_LSTM(output_size) , name='cifg_last')
+    elif self.config.cell == 'rnn':
+      _cell_creator = rnn_cell
     else:
-      raise ValueError("Unsupported cell type, choose from {'lstm', 'gru', 'cifg_lstm'}.")
+      raise ValueError("Unsupported cell type, choose from {'lstm', 'gru', 'cifg_lstm', 'rnn'}.")
 
     if self.config.use_residual:
       if num_layers < 2:
