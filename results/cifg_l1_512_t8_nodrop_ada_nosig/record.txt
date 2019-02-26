@@ -1,4 +1,0 @@
-epoch 2000
-valid_mape: 0.07475287467241287
-valid_mae: 20.3351721391
-valid_rmse: 29.2834543213
