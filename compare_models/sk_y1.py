@@ -38,11 +38,11 @@ print("X_train data type:", X_train.dtype, "  X_train shape:", X_train.shape)
 print("Y_train data type:", Y_train.dtype, "  Y_train shape:", Y_train.shape)
 
 method = [
-          'DecisionTreeRegressor(max_depth = 10)',
-          'LinearRegression()', 
+          'DecisionTreeRegressor(max_depth = 10, random_state=0)',
+        #   'LinearRegression()', 
           'KNeighborsRegressor()',
-          'RandomForestRegressor()',
-          'MLPRegressor(hidden_layer_sizes=(256,),activation="logistic",batch_size=144)'
+          'RandomForestRegressor(random_state=0)',
+          'MLPRegressor(random_state=0, hidden_layer_sizes=(256,),activation="logistic",batch_size=144)'
          ]
 for s in method:
     t2 = 0

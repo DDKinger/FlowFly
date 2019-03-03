@@ -112,3 +112,13 @@ MAPE_train:6.902509e+00, MAPE_test:7.262398e+00
 MAE_train:1.771431e+01, MAE_test:1.968125e+01
 RMSE_train:2.619423e+01, RMSE_test:2.847309e+01
 Total time: 5155.084976
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=768; numpen=768;
+Layer = 2; t=4
+MAPE_train:6.688136e+00, MAPE_test:7.190011e+00
+MAE_train:1.718842e+01, MAE_test:1.965430e+01
+RMSE_train:2.523463e+01, RMSE_test:2.834871e+01
+Total time: 4898.900850
+

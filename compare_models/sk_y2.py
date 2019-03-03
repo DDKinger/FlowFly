@@ -24,10 +24,10 @@ X_train = X_input[:14400,:]
 X_test = X_input[14400:,:]
 X_mean = np.mean(X_train, axis = 0)
 X_std  = np.std(X_train, axis = 0)
-X_train -= X_mean
-X_train /= X_std
-X_test -= X_mean
-X_test /= X_std
+# X_train -= X_mean
+# X_train /= X_std
+# X_test -= X_mean
+# X_test /= X_std
 Y_output /= norm
 Y_train = Y_output[:14400,:]
 Y_test = Y_output[14400:,:]
@@ -37,12 +37,12 @@ print("X_train data type:", X_train.dtype, "  X_train shape:", X_train.shape)
 print("Y_train data type:", Y_train.dtype, "  Y_train shape:", Y_train.shape)
 
 method = [
-          # 'BayesianRidge()',
-          # 'AdaBoostRegressor(DecisionTreeRegressor(max_depth=1), n_estimators=50, random_state=0)',
-          # 'GradientBoostingRegressor(max_depth=1, random_state=0)',        
+        #   'BayesianRidge()',
+        #   'AdaBoostRegressor(DecisionTreeRegressor(max_depth=1, random_state=0), n_estimators=50, random_state=0)',
+          'GradientBoostingRegressor(max_depth=1, random_state=0)',        
           "SVR(kernel='rbf',epsilon = 0.05)",
           # "LinearSVR(C=1.0, dual=True, epsilon=0.0, fit_intercept=True, intercept_scaling=1.0, loss='epsilon_insensitive', max_iter=1000, random_state=0, tol=1e-05)",
-          "LinearSVR()"
+        #   "LinearSVR()"
           ]
 
 for s in method:

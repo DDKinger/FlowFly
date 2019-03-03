@@ -13,8 +13,8 @@ import scipy.io as sio
 
 
 def load_mat():
-    File_Xinput = './X_input_69_k2'
-    File_Youtput = './Y_output_69_k2'
+    File_Xinput = '/home/dd/DD/ML_Project/Traffic_flow/DBN/data/X_input_69_k2'
+    File_Youtput = '/home/dd/DD/ML_Project/Traffic_flow/DBN/data/Y_output_69_k2'
     data1 = sio.loadmat(File_Xinput)
     data2 = sio.loadmat(File_Youtput)
 #    return data1['X_input_weekend'], data2['Y_output_weekend']
@@ -58,13 +58,13 @@ model.summary()
 #plot(model)
 
 model.compile(loss='mean_squared_error',
-              optimizer='sgd',
+              optimizer='adam',
               metrics=['mean_absolute_percentage_error'])
 
 history = model.fit(X_train, Y_train,
                     validation_data = (X_test, Y_test),
                     batch_size=144, nb_epoch=1000,
-                    verbose=1, shuffle=True)
+                    verbose=0, shuffle=True)
 score = model.evaluate(X_test, Y_test, verbose=0)
 Y_predict = model.predict(X_test)
 MAE_test = np.mean(np.abs(Y_test - Y_predict))*norm

@@ -12,6 +12,18 @@ RMSE: 29.083953403241892
 prediction time: 0.190 S
 
 SVR(kernel='rbf',epsilon = 0.05)
+MAPE: 11.833174591319477 %
+MAE: 24.866389276305803
+RMSE: 32.747634499435534
+prediction time: 29.769 S
+
+LinearSVR()
+MAPE: 7.428238240999195 %
+MAE: 20.5945762253255
+RMSE: 30.059591884949118
+prediction time: 0.330 S
+
+SVR(kernel='rbf',epsilon = 0.05), gaussian
 SVR(C=1.0, cache_size=200, coef0=0.0, degree=3, epsilon=0.05, gamma='auto',
   kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
 MAPE: 13.289247333828877 %
@@ -19,7 +31,7 @@ MAE: 26.804418498442647
 RMSE: 35.04344359250357
 prediction time: 29.651 S
 
-LinearSVR()
+LinearSVR(), gaussian
 LinearSVR(C=1.0, dual=True, epsilon=0.0, fit_intercept=True,
      intercept_scaling=1.0, loss='epsilon_insensitive', max_iter=1000,
      random_state=None, tol=0.0001, verbose=0)
@@ -28,7 +40,7 @@ MAE: 28.2936476445151
 RMSE: 39.38795615331707
 prediction time: 0.278 S
 
-LinearSVR(C=1.0, dual=True, epsilon=0.0, fit_intercept=True, intercept_scaling=1.0, loss='epsilon_insensitive', max_iter=1000, random_state=0, tol=1e-05)
+LinearSVR(C=1.0, dual=True, epsilon=0.0, fit_intercept=True, intercept_scaling=1.0, loss='epsilon_insensitive', max_iter=1000, random_state=0, tol=1e-05), gaussian
 LinearSVR(C=1.0, dual=True, epsilon=0.0, fit_intercept=True,
      intercept_scaling=1.0, loss='epsilon_insensitive', max_iter=1000,
      random_state=0, tol=1e-05, verbose=0)
@@ -36,3 +48,23 @@ MAPE: 13.754609481171576 %
 MAE: 28.59139095602212
 RMSE: 39.068005836322556
 prediction time: 0.282 S
+
+mlp (myself)
+Layer = 2, Node=256, epoch=1000, optimizer=adam
+MAPE_test: 9.313485230339898
+MAE_test: 25.963727205991745
+RMSE_test: 37.997183963656425
+
+mlp (myself)
+Layer = 2, Node=512, epoch=1000, optimizer=adam
+Test score: 0.0009421330768317501
+MAPE_test: 8.878966442743938
+MAE_test: 24.820353001356125
+RMSE_test: 36.46469157189131
+
+mlp (myself)
+Layer = 2, Node=768, epoch=1000, optimizer=adam
+MAPE_test: 8.887887970606487
+MAE_test: 24.55893237143755
+RMSE_test: 36.15033137798309
+

@@ -38,7 +38,7 @@ def run(params):
     history = model.fit(x_train, y_train,
                         validation_data = (x_valid, y_valid),
                         batch_size=bs, nb_epoch=params['train_epoch'],
-                        verbose=2, shuffle=False)
+                        verbose=0, shuffle=False)
     score = model.evaluate(x_valid, y_valid, verbose=0)
     y_predict = model.predict(x_valid)
     MAE_test = np.mean(np.abs((y_valid - y_predict)))*norm
