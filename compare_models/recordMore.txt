@@ -1,0 +1,18 @@
+grbm with sparsity = 0.5, makebatches_my
+maxepoch=20, 20, 1000; 
+numhid=256; numpen=256;
+Layer = 2; t=6; interval=8
+MAPE_train:8.506439e+00, MAPE_test:9.691196e+00
+MAE_train:2.186524e+01, MAE_test:2.727818e+01
+RMSE_train:3.194900e+01, RMSE_test:3.986460e+01
+Total time: 6013.092562
+
+grbm with sparsity = 0.5, makebatches_my
+maxepoch=20, 20, 1000; 
+numhid=256; numpen=256;
+Layer = 2; t=6; interval=1
+MAPE_train:7.525225e+00, MAPE_test:8.047906e+00
+MAE_train:1.950872e+01, MAE_test:2.233466e+01
+RMSE_train:2.878789e+01, RMSE_test:3.228957e+01
+Total time: 4694.363192
+

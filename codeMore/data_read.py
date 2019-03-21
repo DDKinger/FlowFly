@@ -24,7 +24,7 @@ def shuffle(x, y):
     return x, y
 
 
-def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step):
+def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step, interval):
     dataset = load_data(data_dir, data_gaussian, is_training)
     x = dataset['traffic_flow'] 
     if data_gaussian:
@@ -40,9 +40,9 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
         for j in range(i, i+n_weekday):
             _x.append(x[j:j+ts])
             if data_gaussian:
-                _y.append(x_mm[j+ts])
+                _y.append(x_mm[j+ts+interval])
             else:
-                _y.append(x[j+ts])
+                _y.append(x[j+ts+interval])
     _x = np.asarray(_x, dtype=np.float32)
     _y = np.asarray(_y, dtype=np.float32)
     print("_x.shape:", _x.shape)

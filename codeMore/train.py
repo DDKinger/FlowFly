@@ -27,10 +27,12 @@ class Train:
         df = self.params.data_shuffle
         bs = self.config.batch_size
         ts = self.config.time_step
-        self.x_train, self.y_train, self.vmax = get_xy(data_dir, True, dg, df, bs, ts)
-        self.x_valid, self.y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts)
+        interval = self.config.interval
+        self.x_train, self.y_train, self.vmax = get_xy(data_dir, True, dg, df, bs, ts, interval)
+        self.x_valid, self.y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts, interval)
         print('x_train batch shape', self.x_train.shape, 'y_train batch shape', self.y_train.shape)
         print('x_valid batch shape', self.x_valid.shape, 'y_valid batch shape', self.y_valid.shape)
+        print("Predict traffic flow ", interval*5, "minutes later")
 
 
     def _build_graph(self):
@@ -191,18 +193,19 @@ class Train:
 @click.option('--grad_clip', default=2.3, type=float)
 @click.option('--train_epoch', default=8, type=int, help="training epoch")
 @click.option('--batch_size', default=144, type=int)
-@click.option('--time_step', default=8, type=int)
+@click.option('--time_step', default=8, type=int, help="how many intervals to depend for prediction")
 @click.option('--num_layers', default=2, type=int)
 @click.option('--hidden_size', default=128, type=int)
 @click.option('--output_size', default=69, type=int)
 @click.option('--cell', default="lstm", type=str, help="Choose among lstm, gru, cifg_lstm, rnn")
+@click.option('--interval', default=0, type=int, help="predict flow in the future at NO.(interval+1) interval")
 
 def main( 
           model_dir, save_model_name, load_model_dir, load_model_name, save_rate,
           data_dir, log_dir, continue_training, data_gaussian, data_shuffle,
           use_dropout, use_residual, use_peephole, res_weight, use_embedding,
           learning_rate, lr_decay, keep_prob, grad_clip, train_epoch, embedding_size,
-          batch_size, time_step, num_layers, hidden_size, output_size, cell):
+          batch_size, time_step, num_layers, hidden_size, output_size, cell, interval):
   params = {}
   params["model_dir"] = model_dir
   params["save_model_name"] = save_model_name
@@ -232,6 +235,7 @@ def main(
   configs["hidden_size"] = hidden_size
   configs["output_size"] = output_size
   configs["cell"] = cell
+  configs["interval"] = interval
   _params = Config(params)
   _config = Config(configs)  
   train = Train(_params, _config)
