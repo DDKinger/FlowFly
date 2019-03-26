@@ -1,0 +1,4 @@
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=12

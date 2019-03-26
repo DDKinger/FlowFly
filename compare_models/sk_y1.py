@@ -42,13 +42,13 @@ method = [
         #   'LinearRegression()', 
           'KNeighborsRegressor()',
           'RandomForestRegressor(random_state=0)',
-          'MLPRegressor(random_state=0, hidden_layer_sizes=(256,),activation="logistic",batch_size=144)'
+          'MLPRegressor(random_state=0, hidden_layer_sizes=(512,),activation="logistic",batch_size=144)'
          ]
 for s in method:
     t2 = 0
     print("Start training", s[:s.find('(')])
     clf = eval(s)
-#    print(clf)
+    print(clf)
     clf.fit(X_train,Y_train)
     t1 = time.clock()
     y_pred = clf.predict(X_test)

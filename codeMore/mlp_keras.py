@@ -18,8 +18,9 @@ def run(params):
     df = params['data_shuffle']
     bs = params['batch_size']
     ts = params['time_step']
-    x_train, y_train, vmax = get_xy(data_dir, True, dg, df, bs, ts)
-    x_valid, y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts)
+    interval = params['interval']
+    x_train, y_train, vmax = get_xy(data_dir, True, dg, df, bs, ts, interval)
+    x_valid, y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts, interval)
     x_input = Input(shape=(ts*n_obj,))
     for i in range(params['num_layers']):
         if i == 0:
@@ -67,11 +68,12 @@ def run(params):
 @click.option('--hidden_size', default=128, type=int)
 @click.option('--output_size', default=69, type=int)
 @click.option('--optimizer', default='adagrad', type=str)
+@click.option('--interval', default=0, type=int, help="predict flow in the future at NO.(interval+1) interval")
 
 def main( 
           data_dir, data_gaussian, data_shuffle, use_dropout, optimizer,
           learning_rate, lr_decay, keep_prob, grad_clip, train_epoch,
-          batch_size, time_step, num_layers, hidden_size, output_size):
+          batch_size, time_step, num_layers, hidden_size, output_size, interval):
   params = {}
   params["data_dir"] = data_dir
   params["data_gaussian"] = data_gaussian
@@ -88,6 +90,7 @@ def main(
   params["hidden_size"] = hidden_size
   params["output_size"] = output_size
   params["optimizer"] = optimizer
+  params["interval"] = interval
   run(params)
 
 
