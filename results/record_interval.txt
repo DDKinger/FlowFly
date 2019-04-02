@@ -7,6 +7,51 @@ MAE_train:2.558657e+01, MAE_test:3.216057e+01
 RMSE_train:3.692376e+01, RMSE_test:4.691088e+01
 Total time: 1585.400363
 
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=20
+MAPE_train:Inf, MAPE_test:Inf
+MAE_train:2.496882e+01, MAE_test:3.110743e+01
+RMSE_train:3.610825e+01, RMSE_test:4.554415e+01
+Total time: 1444.794073
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=18
+MAPE_train:Inf, MAPE_test:Inf
+MAE_train:2.470374e+01, MAE_test:3.102976e+01
+RMSE_train:3.568753e+01, RMSE_test:4.525538e+01
+Total time: 1437.537274
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=17
+MAPE_train:Inf, MAPE_test:Inf
+MAE_train:2.429841e+01, MAE_test:3.075646e+01
+RMSE_train:3.513206e+01, RMSE_test:4.469414e+01
+Total time: 1441.862522
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=16
+MAPE_train:9.720521e+00, MAPE_test:1.118172e+01
+MAE_train:2.433021e+01, MAE_test:3.081874e+01
+RMSE_train:3.518245e+01, RMSE_test:4.487160e+01
+Total time: 1432.953738
+
+grbm with sparsity = 0.5, gmakebatches_my
+maxepoch=20, 20, 1000; 
+numhid=512; numpen=512;
+Layer = 2; ts=2; interval=15
+MAPE_train:9.612911e+00, MAPE_test:1.087428e+01
+MAE_train:2.412723e+01, MAE_test:3.016628e+01
+RMSE_train:3.482900e+01, RMSE_test:4.394617e+01
+Total time: 1493.557640
+
 
 grbm with sparsity = 0.5, gmakebatches_my
 maxepoch=20, 20, 1000; 

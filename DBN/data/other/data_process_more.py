@@ -10,7 +10,14 @@ def main(ts, interval):
     x = sio.loadmat(data_dir)['traffic_flow'] 
     print("traffic_flow shape:", x.shape)
     # n_station = 69
-    n_weekday = 1440    # 12*24*5
+    if interval > 576:
+        n_weekday = 576    # 12*24*2
+    elif interval > 288:
+        n_weekday = 864    # 12*24*3
+    elif interval > 72:
+        n_weekday = 1152    # 12*24*4
+    else:
+        n_weekday = 1440    # 12*24*5
     n_week = 1728   # 12*24*6
     row = n_weekday*12
     _x = []
@@ -28,6 +35,7 @@ def main(ts, interval):
     Y_output = _y.reshape(row, -1, order='F')
     print("X_input.shape:", X_input.shape)
     print("Y_output.shape:", Y_output.shape)
+    print("n_weekday:", n_weekday)
     sio.savemat('../X_input_69_k'+ str(ts)+'_h'+str(interval), {'X_input': X_input})
     sio.savemat('../Y_output_69_k'+ str(ts)+'_h'+str(interval), {'Y_output': Y_output})
 

@@ -32,7 +32,14 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
         x_mm = dataset['traffic_flow'] 
     bs = batch_size   
     ts = time_step
-    n_weekday = 1440    # 12*24*5
+    if interval > 576:
+        n_weekday = 576    # 12*24*2
+    elif interval > 288:
+        n_weekday = 864    # 12*24*3
+    elif interval > 72:
+        n_weekday = 1152    # 12*24*4
+    else:
+        n_weekday = 1440    # 12*24*5
     n_week = 1728   # 12*24*6
     _x = []
     _y = []
@@ -47,6 +54,7 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
     _y = np.asarray(_y, dtype=np.float32)
     print("_x.shape:", _x.shape)
     print("_y.shape:", _y.shape)
+    print("n_weekday:", n_weekday)
     if is_training: 
         if data_shuffle:
             _x, _y = shuffle(_x, _y)

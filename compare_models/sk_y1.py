@@ -21,8 +21,12 @@ Y_output = Y_output.astype('float64')
 
 norm = np.amax(X_input)
 X_input /= norm
-X_train = X_input[:14400,:]
-X_test = X_input[14400:,:]
+
+n_total = len(X_input)
+n_train = int(n_total/12*10)
+print("number of train samples is ", n_train)
+X_train = X_input[:n_train,:]
+X_test = X_input[n_train:,:]
 X_mean = np.mean(X_train, axis = 0)
 X_std  = np.std(X_train, axis = 0)
 # X_train -= X_mean
@@ -30,8 +34,8 @@ X_std  = np.std(X_train, axis = 0)
 # X_test -= X_mean
 # X_test /= X_std
 Y_output /= norm
-Y_train = Y_output[:14400,:]
-Y_test = Y_output[14400:,:]
+Y_train = Y_output[:n_train,:]
+Y_test = Y_output[n_train:,:]
 y_pred = np.zeros([Y_test.shape[0], Y_test.shape[1]])
 
 print("X_train data type:", X_train.dtype, "  X_train shape:", X_train.shape)

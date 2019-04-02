@@ -1,11 +1,11 @@
-load ./data/X_input_69_k2_h10
-load ./data/Y_output_69_k2_h10
+load ./data/X_input_69_k2_h17
+load ./data/Y_output_69_k2_h17
 norm = max(max(X_input));
 X_input = X_input/norm;
 Y_output = Y_output/norm;
 
 fprintf(1, '------GMAKE------\n');
-fprintf(1, 'load k2_h10 \n');
+fprintf(1, 'load k2_h17 \n');
 fprintf(1, 'Norm = %d \n', norm);
 fprintf(1, 'Size of X_input= %d, %d \n', size(X_input));
 fprintf(1, 'Size of Y_output= %d, %d \n', size(Y_output));
