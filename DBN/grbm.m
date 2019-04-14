@@ -22,10 +22,10 @@
 % batchdata -- the data that is divided into batches (numcases numdims numbatches)
 % restart   -- set to 1 if learning starts from beginning 
 
-epsilonw      = 0.01;   % Learning rate for weights 
-epsilonvb     = 0.01;   % Learning rate for biases of visible units 
-epsilonhb     = 0.01;   % Learning rate for biases of hidden units 
-epsilonfstd   = 0.001;   % Learning rate for sigma
+epsilonw      = 0.001;   % Learning rate for weights 
+epsilonvb     = 0.001;   % Learning rate for biases of visible units 
+epsilonhb     = 0.001;   % Learning rate for biases of hidden units 
+epsilonfstd   = 0.0001;   % Learning rate for sigma
 weightcost  = 0.0002;   
 initialmomentum  = 0.5;
 finalmomentum    = 0.9;
@@ -64,7 +64,7 @@ for epoch = epoch:maxepoch,
 %%%%%%%%% START POSITIVE PHASE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   data0 = batchdata(:,:,batch);
 %  rand('state',0);
-  data = (rand(size(data0)) > 0.5) .* data0; %Ï¡ÊèÐÔ
+  data = (rand(size(data0)) > 0.5) .* data0; %Ï¡ï¿½ï¿½ï¿½ï¿½
  % data = 0.5 * randn(size(data0)) + data0;
   
   poshidprobs = 1./(1 + exp(-(data./Fstd)*vishid - repmat(hidbiases,numcases,1)));    

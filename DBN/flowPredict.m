@@ -24,7 +24,7 @@ close all
 % diary on;
 t1 = clock; %��ʼ��ʱ
 maxepoch=20;
-numhid=256; numpen=256; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
+numhid=1024; numpen=1024; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
 fprintf(1,'Pretraining a deep autoencoder. \n');
 
 gmakebatches_my;

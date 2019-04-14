@@ -30,7 +30,9 @@ class Train:
         self.x_train, self.y_train, self.vmax = get_xy(data_dir, True, dg, df, bs, ts)
         self.x_valid, self.y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts)
         print('x_train batch shape', self.x_train.shape, 'y_train batch shape', self.y_train.shape)
+        print('x_train min =', np.min(self.x_train), 'x_train max =', np.max(self.x_train))
         print('x_valid batch shape', self.x_valid.shape, 'y_valid batch shape', self.y_valid.shape)
+        print('x_valid min =', np.min(self.x_train), 'x_valid max =', np.max(self.x_train))
 
 
     def _build_graph(self):
@@ -141,22 +143,29 @@ class Train:
             localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
             print(localtime)
 
+            y_predict = output.eval({_inputs:self.x_valid})
+            station_mape=np.mean(abs(y_predict-self.y_valid)/self.y_valid, axis=0).round(6)
+            station_sort = station_mape.argsort()
+            fileout = os.path.join(params.model_dir, 'results')
+
             with open(os.path.join(params.model_dir,'record.txt'), 'w') as f:
-                f.write('{0} {1}\r\n{2} {3}\r\n{4} {5}\r\n{6} {7}\r\n\r\n{8}\r\n'.format(
+                f.write('{0} {1}\r\n{2} {3}\r\n{4} {5}\r\n{6} {7}\r\n\r\n{8}\r\n{9}\r\n{10}\r\n{11}\r\n\r\n{12}\r\n'.format(
                     'epoch:',epoch+1,
                     "valid_mape:",costs['mape'][-1],
                     "valid_mae:",costs['mae'][-1],
-                    "valid_rmse:", costs['rmse'][-1],
-                    self.config))
-           
-            y_predict = output.eval({_inputs:self.x_valid})
-            fileout = os.path.join(params.model_dir, 'results')
+                    "valid_rmse:",costs['rmse'][-1],
+                    'station_mape:',station_mape,
+                    'station_sort:',station_sort,
+                    self.config))           
+
             sio.savemat(fileout, 
                         {'y_target':self.y_valid,
                          'y_predict':y_predict, 
                          'mape':costs['mape'], 
                          'mae':costs['mae'], 
                          'rmse':costs['rmse'], 
+                         'station_mape':station_mape,
+                         'station_sort':station_sort,
                          'vmax':vmax})
 
         else:

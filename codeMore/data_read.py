@@ -26,7 +26,8 @@ def shuffle(x, y):
 
 def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_step, interval):
     dataset = load_data(data_dir, data_gaussian, is_training)
-    x = dataset['traffic_flow'] 
+    x = dataset['traffic_flow']
+    print("data read, traffic flow min =", np.min(x))
     if data_gaussian:
         dataset = load_data(data_dir, False, is_training)
         x_mm = dataset['traffic_flow'] 
@@ -64,6 +65,8 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
         _x = _x.reshape(-1, bs, ts, n_station)
         _y = _y.reshape(-1, bs, n_station)
     vmax = dataset['vmax']
+    print("data read, traffic flow _x min =", np.min(_x), "max =", np.max(_x))
+    print("data read, traffic flow _y min =", np.min(_y), "max =", np.max(_y))
     return _x, _y, vmax
 
 
