@@ -24,7 +24,7 @@ close all
 % diary on;
 t1 = clock; %��ʼ��ʱ
 maxepoch=20;
-numhid=1024; numpen=1024; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
+numhid=256; numpen=256; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
 fprintf(1,'Pretraining a deep autoencoder. \n');
 
 gmakebatches_my;
@@ -38,14 +38,14 @@ hidrecbiases=hidbiases;
 restruct_error1 = restruct_error;
 save mnistvhclassify vishid hidrecbiases visbiases restruct_error1;
 
-fprintf(1,'\nPretraining Layer 2 with RBM: %d-%d \n',numhid,numpen);
-batchdata=batchposhidprobs;
-numhid=numpen;
-restart=1;
-rbm;
-hidpen=vishid; penrecbiases=hidbiases; hidgenbiases=visbiases;
-restruct_error2 = restruct_error;
-save mnisthpclassify hidpen penrecbiases hidgenbiases restruct_error2;
+% fprintf(1,'\nPretraining Layer 2 with RBM: %d-%d \n',numhid,numpen);
+% batchdata=batchposhidprobs;
+% numhid=numpen;
+% restart=1;
+% rbm;
+% hidpen=vishid; penrecbiases=hidbiases; hidgenbiases=visbiases;
+% restruct_error2 = restruct_error;
+% save mnisthpclassify hidpen penrecbiases hidgenbiases restruct_error2;
  
 % fprintf(1,'\nPretraining Layer 3 with RBM: %d-%d \n',numpen,numpen2);
 % batchdata=batchposhidprobs;
@@ -83,7 +83,7 @@ save mnisthpclassify hidpen penrecbiases hidgenbiases restruct_error2;
 % restruct_error6 = restruct_error;
 % save mnisthp5classify hidpen5 penrecbiases5 hidgenbiases5 restruct_error6;
 
-backpropclassify2L; 
+backpropclassify1L; 
 time_tol = etime(clock, t1); %������ʱ
 fprintf(1,'Total time: %f\n', time_tol);
 % imageshow;

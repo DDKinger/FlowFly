@@ -17,7 +17,7 @@
 % and trainig and test reconstruction errors in mnist_error.mat
 % You can also set maxepoch, default value is 200 as in our paper.  
 
-maxepoch=1000;
+maxepoch=200;
 fprintf(1,'\nFine Tune model. \n');
 % fprintf(1,'60 batches of 1000 cases each. \n');
 
