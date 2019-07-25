@@ -48,20 +48,14 @@ def get_xy(data_dir, is_training, data_gaussian, data_shuffle, batch_size, time_
     _y = np.asarray(_y, dtype=np.float32)
     print("_x.shape:", _x.shape)
     print("_y.shape:", _y.shape)
-    _x = _x.transpose(2,0,1).reshape((-1, ts, 1))
-    _y = _y.transpose().reshape((-1, 1))
- 
-    if data_shuffle:
-        _x, _y = shuffle(_x, _y)
-        
-    n_station = _y.shape[-1]
-    _x = _x[:len(_x)-len(_x)%bs]
-    _y = _y[:len(_y)-len(_y)%bs]
-    _x = _x.reshape(-1, bs, ts, 1)
-    _y = _y.reshape(-1, bs, 1)
-
-    print("x shape:", _x.shape)
-    print("y shape:", _y.shape)
+    if is_training: 
+        if data_shuffle:
+            _x, _y = shuffle(_x, _y)
+        n_station = _y.shape[-1]
+        _x = _x[:len(_x)-len(_x)%bs]
+        _y = _y[:len(_y)-len(_y)%bs]
+        _x = _x.reshape(-1, bs, ts, n_station)
+        _y = _y.reshape(-1, bs, n_station)
     vmax = dataset['vmax']
     print("data read, traffic flow _x min =", np.min(_x), "max =", np.max(_x))
     print("data read, traffic flow _y min =", np.min(_y), "max =", np.max(_y))

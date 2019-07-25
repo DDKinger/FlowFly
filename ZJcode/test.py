@@ -23,12 +23,13 @@ class Train:
 
     def _load_data(self):
         data_dir = self.params.data_dir
+        data_name = self.params.data_name
         dg = self.params.data_gaussian
         df = self.params.data_shuffle
         bs = self.config.batch_size
         ts = self.config.time_step
-        self.x_train, self.y_train, self.vmax = get_xy(data_dir, True, dg, df, bs, ts)
-        self.x_valid, self.y_valid, _ = get_xy(data_dir, False, dg, df, bs, ts)
+        tl = self.config.time_len
+        self.x_train, self.y_train, self.x_valid, self.y_valid, self.vmax = get_xy(data_dir, data_name, True, dg, df, bs, ts, tl)
         print('x_train batch shape', self.x_train.shape, 'y_train batch shape', self.y_train.shape)
         print('x_train min =', np.min(self.x_train), 'x_train max =', np.max(self.x_train))
         print('x_valid batch shape', self.x_valid.shape, 'y_valid batch shape', self.y_valid.shape)
@@ -63,17 +64,17 @@ class Train:
             model_path = os.path.join(params.model_dir, params.save_model_name) + ".cmf." + str(epoch)
             return model_path
 
-        if params.continue_training:
-            load_model = os.path.join(params.load_model_dir, params.load_model_name)
-            if os.path.exists(load_model):   
-                last_epoch = int(params.load_model_name.split(".")[-1])
-                output.restore(load_model)
-                print("[INFO] Restore from %s at Epoch %d" % (params.load_model_name, last_epoch))
-            else:
-                raise ValueError("'load model path' can't be found")
+
+        load_model = os.path.join(params.load_model_dir, params.load_model_name)
+        if os.path.exists(load_model):   
+            last_epoch = int(params.load_model_name.split(".")[-1])
+            output.restore(load_model)
+            print("[INFO] Restore from %s at Epoch %d" % (params.load_model_name, last_epoch))
+        else:
+            raise ValueError("'load model path' can't be found")
 
         print()
-        print("_____________Starting training______________")
+        print("_____________Starting testing______________")
         cntk.logging.log_number_of_parameters(output)
         print(output.parameters)
         print()
@@ -84,97 +85,42 @@ class Train:
         #     gradient_clipping_threshold_per_sample = config.grad_clip,
         #     gradient_clipping_with_truncation = True
         # )
-        learner = cntk.learners.adagrad(
-            output.parameters,
-            lr = cntk.learners.learning_parameter_schedule_per_sample([lr]*200+[lr/2]*300+[lr/4], epoch_size=self.config.batch_size),
-            gradient_clipping_threshold_per_sample = config.grad_clip,
-            gradient_clipping_with_truncation = True
-        )
-        # learner = cntk.learners.rmsprop(
-        #     output.parameters,
-        #     lr = cntk.learners.learning_parameter_schedule_per_sample([lr]*20+[lr/2]*30+[lr/4], epoch_size=self.config.train_epoch),
-        #     gamma = 0.95,
-        #     inc = ,
-        #     dec = 0.9,
-        #     max =,
-        #     min =,
-        #     gradient_clipping_threshold_per_sample = config.grad_clip,
-        #     gradient_clipping_with_truncation = True
-        # )
-        progress_log_file = os.path.join(params.model_dir, params.save_model_name) + ".txt"
-        progress_writer = cntk.logging.ProgressPrinter(tag='Training', log_to_file=progress_log_file)
-        tensorboard_writer = cntk.logging.TensorBoardProgressWriter(freq=1000, log_dir=params.model_dir, model=output)
-        trainer = cntk.Trainer(None, loss, learner, progress_writers=tensorboard_writer)
+       
         start_time = time.time()
         localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
         print(localtime)
 
-        if last_epoch < config.train_epoch:
-            for epoch in range(last_epoch, config.train_epoch): 
-                # print("epoch ", epoch+1, " start")   
-                for step, (x, y) in enumerate(zip(self.x_train, self.y_train)):
-                    trainer.train_minibatch({_inputs: x, _target: y})
-                    progress_writer.update_with_trainer(trainer)
-                progress_writer.epoch_summary()
-                if (epoch+1) % params.save_rate == 0 or epoch+1 == config.train_epoch:
-                    output.save(model_path(epoch+1))
-                    print("Saving model to '%s'" % model_path(epoch+1))
+        _costs = cost.eval({_inputs:self.x_valid, _target:self.y_valid})
+        for key in _costs:
+            if key.name == 'mape':
+                costs[key.name].append(float(_costs[key]))   
+            else:
+                costs[key.name].append(_costs[key]*vmax)                   
+        print("---------------------------------")   
+        print("epoch", last_epoch)      
+        print("valid_mape:", costs['mape'][-1])
+        print("valid_mae:", costs['mae'][-1])
+        print("valid_rmse:", costs['rmse'][-1])         
                 
-                _costs = {'mape':0, 'mae':0, 'rmse':0}
-                for vstep, (vx, vy) in enumerate(zip(self.x_valid, self.y_valid)):
-                    tmp_costs = cost.eval({_inputs:vx, _target:vy})
-                    for key in tmp_costs:
-                        _costs[key.name] += tmp_costs[key]
-                for key in _costs.keys():
-                    _costs[key] /= vstep+1
-                    if key == 'mape':
-                        costs[key].append(_costs[key])   
-                    else:
-                        costs[key].append(_costs[key]*vmax)   
-                tensorboard_writer.write_value("valid/mape", costs['mape'][-1], epoch+1)
-                tensorboard_writer.write_value("valid/mae", costs['mae'][-1], epoch+1)
-                tensorboard_writer.write_value("valid/rmse", costs['rmse'][-1], epoch+1)
+        y_predict = output.eval({_inputs:self.x_valid})
+        station_mape=np.mean(abs(y_predict-self.y_valid)/self.y_valid, axis=0).round(6)
+        station_sort = station_mape.argsort()
+        fileout = os.path.join(params.model_dir, 'results')         
 
-                if (epoch+1) % 5 == 0 or epoch==config.train_epoch-1: 
-                    print("---------------------------------")   
-                    print("epoch", epoch+1)      
-                    print("valid_mape:", costs['mape'][-1])
-                    print("valid_mae:", costs['mae'][-1])
-                    print("valid_rmse:", costs['rmse'][-1])
-                
-                
-            print()
-            print("train time:", time.time()-start_time)
-            localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
-            print(localtime)
+        sio.savemat(fileout, 
+                    {'y_target':self.y_valid,
+                        'y_predict':y_predict, 
+                        'mape':costs['mape'], 
+                        'mae':costs['mae'], 
+                        'rmse':costs['rmse'], 
+                        'station_mape':station_mape,
+                        'station_sort':station_sort,
+                        'vmax':vmax})
 
-            y_predict = output.eval({_inputs:self.x_valid})
-            station_mape=np.mean(abs(y_predict-self.y_valid)/self.y_valid, axis=0).round(6)
-            station_sort = station_mape.argsort()
-            fileout = os.path.join(params.model_dir, 'results')
-
-            with open(os.path.join(params.model_dir,'record.txt'), 'w') as f:
-                f.write('{0} {1}\r\n{2} {3}\r\n{4} {5}\r\n{6} {7}\r\n\r\n{8}\r\n{9}\r\n{10}\r\n{11}\r\n\r\n{12}\r\n'.format(
-                    'epoch:',epoch+1,
-                    "valid_mape:",costs['mape'][-1],
-                    "valid_mae:",costs['mae'][-1],
-                    "valid_rmse:",costs['rmse'][-1],
-                    'station_mape:',station_mape,
-                    'station_sort:',station_sort,
-                    self.config))           
-
-            sio.savemat(fileout, 
-                        {'y_target':self.y_valid,
-                         'y_predict':y_predict, 
-                         'mape':costs['mape'], 
-                         'mae':costs['mae'], 
-                         'rmse':costs['rmse'], 
-                         'station_mape':station_mape,
-                         'station_sort':station_sort,
-                         'vmax':vmax})
-
-        else:
-            print("the loaded model has been trained equal to or more than max_max_epoch")
+        print()
+        print("test time:", time.time()-start_time)
+        localtime = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(time.time()))
+        print(localtime)
 
 
 
@@ -186,8 +132,9 @@ class Train:
 @click.option('--load_model_dir', default=None, type=str)
 @click.option('--load_model_name', default=None, type=str)
 @click.option('--data_dir', default=None, type=str, help="Where the training/test data is stored.")
+@click.option('--data_name', default=None, type=str, help="dataset name.")
 @click.option('--log_dir', default=None, type=str, help="Where is the TensorBoard log data")
-@click.option('--continue_training', default=False, type=bool, help="Continue training where it stopped")
+@click.option('--continue_training', default=True, type=bool, help="Continue training where it stopped")
 @click.option('--data_gaussian', default=False, type=bool)
 @click.option('--data_shuffle', default=True, type=bool)
 @click.option('--save_rate', default=100, type=int, help="How many epochs everytime the model is saved")
@@ -204,8 +151,9 @@ class Train:
 @click.option('--keep_prob', default=0.7, type=float, help="Dropout keep probability")
 @click.option('--grad_clip', default=2.3, type=float)
 @click.option('--train_epoch', default=8, type=int, help="training epoch")
-@click.option('--batch_size', default=144, type=int)
-@click.option('--time_step', default=8, type=int)
+@click.option('--batch_size', default=128, type=int)
+@click.option('--time_step', default=6, type=int)
+@click.option('--time_len', type=int, required=True)
 @click.option('--num_layers', default=2, type=int)
 @click.option('--hidden_size', default=128, type=int)
 @click.option('--output_size', default=69, type=int)
@@ -213,16 +161,17 @@ class Train:
 
 def main( 
           model_dir, save_model_name, load_model_dir, load_model_name, save_rate,
-          data_dir, log_dir, continue_training, data_gaussian, data_shuffle,
+          data_dir, data_name, log_dir, continue_training, data_gaussian, data_shuffle,
           use_dropout, use_residual, use_peephole, res_weight, use_embedding,
           learning_rate, lr_decay, keep_prob, grad_clip, train_epoch, embedding_size,
-          batch_size, time_step, num_layers, hidden_size, output_size, cell):
+          batch_size, time_step, time_len, num_layers, hidden_size, output_size, cell):
   params = {}
   params["model_dir"] = model_dir
   params["save_model_name"] = save_model_name
   params["load_model_dir"] = load_model_dir
   params["load_model_name"] = load_model_name
   params["data_dir"] = data_dir
+  params["data_name"] = data_name
   params["log_dir"] = log_dir
   params["continue_training"] = continue_training
   params["data_gaussian"] = data_gaussian
@@ -242,6 +191,7 @@ def main(
   configs["train_epoch"] = train_epoch
   configs["batch_size"] = batch_size
   configs["time_step"] = time_step
+  configs["time_len"] = time_len
   configs["num_layers"] = num_layers
   configs["hidden_size"] = hidden_size
   configs["output_size"] = output_size

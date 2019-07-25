@@ -1,0 +1,48 @@
+./models\ZJflow_prediction.txt
+CNTKCommandTrainInfo: train : 300
+CNTKCommandTrainInfo: CNTKNoMoreCommands_Total : 300
+CNTKCommandTrainBegin: train
+Finished Epoch[1]: [Training] loss = 0.580182 * 1152 2.995s (384.7 samples/s);
+Finished Epoch[2]: [Training] loss = 0.365012 * 1152 2.388s (482.5 samples/s);
+Finished Epoch[3]: [Training] loss = 0.261971 * 1152 2.334s (493.6 samples/s);
+Finished Epoch[4]: [Training] loss = 0.145323 * 1152 2.411s (477.9 samples/s);
+Finished Epoch[5]: [Training] loss = 0.111001 * 1152 2.455s (469.2 samples/s);
+Finished Epoch[6]: [Training] loss = 0.102191 * 1152 2.385s (483.1 samples/s);
+Finished Epoch[7]: [Training] loss = 0.096448 * 1152 2.381s (483.9 samples/s);
+Finished Epoch[8]: [Training] loss = 0.091283 * 1152 2.421s (475.9 samples/s);
+Finished Epoch[9]: [Training] loss = 0.088271 * 1152 2.853s (403.7 samples/s);
+Finished Epoch[10]: [Training] loss = 0.083531 * 1152 2.810s (409.9 samples/s);
+Finished Epoch[11]: [Training] loss = 0.081046 * 1152 2.816s (409.0 samples/s);
+Finished Epoch[12]: [Training] loss = 0.077456 * 1152 2.791s (412.8 samples/s);
+Finished Epoch[13]: [Training] loss = 0.074957 * 1152 2.855s (403.5 samples/s);
+Finished Epoch[14]: [Training] loss = 0.072795 * 1152 2.810s (409.9 samples/s);
+Finished Epoch[15]: [Training] loss = 0.071134 * 1152 2.804s (410.9 samples/s);
+Finished Epoch[16]: [Training] loss = 0.068825 * 1152 2.825s (407.7 samples/s);
+Finished Epoch[17]: [Training] loss = 0.066261 * 1152 2.874s (400.8 samples/s);
+Finished Epoch[18]: [Training] loss = 0.064362 * 1152 2.851s (404.0 samples/s);
+Finished Epoch[19]: [Training] loss = 0.061977 * 1152 2.867s (401.8 samples/s);
+Finished Epoch[20]: [Training] loss = 0.062870 * 1152 2.845s (404.9 samples/s);
+Finished Epoch[21]: [Training] loss = 0.059576 * 1152 2.831s (406.9 samples/s);
+Finished Epoch[22]: [Training] loss = 0.055768 * 1152 2.809s (410.0 samples/s);
+Finished Epoch[23]: [Training] loss = 0.049418 * 1152 2.861s (402.6 samples/s);
+Finished Epoch[24]: [Training] loss = 0.047553 * 1152 2.825s (407.7 samples/s);
+Finished Epoch[25]: [Training] loss = 0.046468 * 1152 2.826s (407.6 samples/s);
+Finished Epoch[26]: [Training] loss = 0.045604 * 1152 2.774s (415.3 samples/s);
+Finished Epoch[27]: [Training] loss = 0.045134 * 1152 2.817s (408.9 samples/s);
+Finished Epoch[28]: [Training] loss = 0.044568 * 1152 2.932s (392.9 samples/s);
+Finished Epoch[29]: [Training] loss = 0.043236 * 1152 2.918s (394.8 samples/s);
+Finished Epoch[30]: [Training] loss = 0.042784 * 1152 2.815s (409.2 samples/s);
+Finished Epoch[31]: [Training] loss = 0.042610 * 1152 2.867s (401.8 samples/s);
+Finished Epoch[32]: [Training] loss = 0.041280 * 1152 2.802s (411.2 samples/s);
+Finished Epoch[33]: [Training] loss = 0.041039 * 1152 2.810s (409.9 samples/s);
+Finished Epoch[34]: [Training] loss = 0.040730 * 1152 2.757s (417.9 samples/s);
+Finished Epoch[35]: [Training] loss = 0.040682 * 1152 2.749s (419.1 samples/s);
+Finished Epoch[36]: [Training] loss = 0.040216 * 1152 2.867s (401.8 samples/s);
+Finished Epoch[37]: [Training] loss = 0.039691 * 1152 2.785s (413.7 samples/s);
+Finished Epoch[38]: [Training] loss = 0.040085 * 1152 2.832s (406.7 samples/s);
+Finished Epoch[39]: [Training] loss = 0.039322 * 1152 3.062s (376.2 samples/s);
+Finished Epoch[40]: [Training] loss = 0.038904 * 1152 3.039s (379.1 samples/s);
+Finished Epoch[41]: [Training] loss = 0.039105 * 1152 2.800s (411.5 samples/s);
+Finished Epoch[42]: [Training] loss = 0.038887 * 1152 2.803s (411.1 samples/s);
+Finished Epoch[43]: [Training] loss = 0.039391 * 1152 2.744s (419.9 samples/s);
+Finished Epoch[44]: [Training] loss = 0.038688 * 1152 2.794s (412.4 samples/s);

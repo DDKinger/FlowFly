@@ -120,22 +120,17 @@ class Train:
                     output.save(model_path(epoch+1))
                     print("Saving model to '%s'" % model_path(epoch+1))
                 
-                _costs = {'mape':0, 'mae':0, 'rmse':0}
-                for vstep, (vx, vy) in enumerate(zip(self.x_valid, self.y_valid)):
-                    tmp_costs = cost.eval({_inputs:vx, _target:vy})
-                    for key in tmp_costs:
-                        _costs[key.name] += tmp_costs[key]
-                for key in _costs.keys():
-                    _costs[key] /= vstep+1
-                    if key == 'mape':
-                        costs[key].append(_costs[key])   
+                _costs = cost.eval({_inputs:self.x_valid, _target:self.y_valid})
+                for key in _costs:
+                    if key.name == 'mape':
+                        costs[key.name].append(float(_costs[key]))   
                     else:
-                        costs[key].append(_costs[key]*vmax)   
+                        costs[key.name].append(_costs[key]*vmax)   
                 tensorboard_writer.write_value("valid/mape", costs['mape'][-1], epoch+1)
                 tensorboard_writer.write_value("valid/mae", costs['mae'][-1], epoch+1)
                 tensorboard_writer.write_value("valid/rmse", costs['rmse'][-1], epoch+1)
 
-                if (epoch+1) % 5 == 0 or epoch==config.train_epoch-1: 
+                if (epoch+1) % 100 == 0 or epoch==config.train_epoch-1: 
                     print("---------------------------------")   
                     print("epoch", epoch+1)      
                     print("valid_mape:", costs['mape'][-1])

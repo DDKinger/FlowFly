@@ -1,0 +1,43 @@
+#container {
+  width: 800px;
+  height: 800px;
+}
+
+.title {
+  width: 800px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.legends {
+  width: 800px;
+  display: flex;
+  margin: 30px;
+  justify-content: space-evenly;
+}
+
+.item {
+  border-radius: 40px;
+  padding: 20px 30px;
+}
+
+.l0 {
+  background-color: rgb(3, 105, 3);
+}
+.l1 {
+  background-color: rgb(4, 204, 30);
+}
+.l2 {
+  background-color: yellow;
+}
+.l3 {
+  background-color: rgb(255, 187, 0);
+}
+.l4 {
+  background-color: rgb(202, 124, 5);
+}
+.l5 {
+  background-color: red;
+}
