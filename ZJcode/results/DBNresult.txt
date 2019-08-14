@@ -1,0 +1,57 @@
+5T_25P
+pre=20, l=2, numhid=512, ep1000
+MAPE_train:3.732911e+01, MAPE_test:3.625203e+01
+MAE_train:3.859544e+00, MAE_test:4.163299e+00
+RMSE_train:5.671657e+00, RMSE_test:6.151911e+00
+Total time: 660.850000
+
+5T_16P
+pre=20, l=2, numhid=512, ep1000
+MAPE_train:3.127575e+01, MAPE_test:3.113485e+01
+MAE_train:4.821794e+00, MAE_test:4.987840e+00
+RMSE_train:6.734862e+00, RMSE_test:6.953553e+00
+Total time: 646.153000
+MAPE_train:3.141455e+01, MAPE_test:3.127391e+01
+MAE_train:4.819968e+00, MAE_test:4.988915e+00
+RMSE_train:6.733454e+00, RMSE_test:6.963480e+00
+Total time: 623.525000
+
+
+k2_5T_16P
+pre=20, l=2, numhid=256, ep1000
+MAPE_train:3.219382e+01, MAPE_test:3.193091e+01
+MAE_train:4.804638e+00, MAE_test:4.944751e+00
+RMSE_train:6.681275e+00, RMSE_test:6.877595e+00
+Total time: 348.241000
+
+
+k2_10T_16P
+pre=20, l=2, numhid=256, ep1000
+MAPE_train:2.712993e+01, MAPE_test:2.612187e+01
+MAE_train:7.257336e+00, MAE_test:7.575296e+00
+RMSE_train:1.006642e+01, RMSE_test:1.061351e+01
+Total time: 249.640000
+
+
+k2_15T_16P
+pre=20, l=2, numhid=512, ep1000
+MAPE_train:2.208587e+01, MAPE_test:1.999236e+01
+MAE_train:9.398484e+00, MAE_test:9.836621e+00
+RMSE_train:1.300139e+01, RMSE_test:1.403392e+01
+Total time: 620.842000
+pre=20, l=2, numhid=256, ep1000
+MAPE_train:2.195336e+01, MAPE_test:2.017326e+01
+MAE_train:9.059786e+00, MAE_test:9.783043e+00
+RMSE_train:1.242602e+01, RMSE_test:1.382832e+01
+Total time: 240.793000
+
+k2_20T_16P
+pre=20, l=2, numhid=256, ep1000
+MAPE_train:2.056125e+01, MAPE_test:1.803318e+01
+MAE_train:1.117432e+01, MAE_test:1.201664e+01
+RMSE_train:1.540702e+01, RMSE_test:1.730157e+01
+Total time: 232.368000
+MAPE_train:1.956098e+01, MAPE_test:1.772897e+01
+MAE_train:1.075874e+01, MAE_test:1.181876e+01
+RMSE_train:1.473575e+01, RMSE_test:1.674428e+01
+Total time: 96.803000

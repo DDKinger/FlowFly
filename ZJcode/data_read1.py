@@ -61,6 +61,7 @@ def get_xy(data_dir, data_name, is_training, data_gaussian, data_shuffle, batch_
     x_test = _x[train_number:]
     y_test = _y[train_number:]
 
+    # for one output
     x_train = x_train.transpose(2,0,1).reshape((-1, ts, 1))
     y_train = y_train.transpose().reshape((-1, 1))
     x_test = x_test.transpose(2,0,1).reshape((-1, ts, 1))

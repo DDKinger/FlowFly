@@ -1,6 +1,6 @@
 #container {
   width: 800px;
-  height: 800px;
+  height: 900px;
 }
 
 .title {
@@ -10,11 +10,13 @@
   align-items: center;
   justify-content: center;
   margin: 30px;
+  font-size: 20px;
 }
 .legends {
   width: 800px;
   display: flex;
   margin: 30px;
+  /* font-size: 100px; */
   justify-content: space-evenly;
 }
 

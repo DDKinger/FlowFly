@@ -21,7 +21,7 @@
 % numhid    -- number of hidden units 
 % batchdata -- the data that is divided into batches (numcases numdims numbatches)
 % restart   -- set to 1 if learning starts from beginning 
-
+%
 epsilonw      = 0.001;   % Learning rate for weights 
 epsilonvb     = 0.001;   % Learning rate for biases of visible units 
 epsilonhb     = 0.001;   % Learning rate for biases of hidden units 
@@ -29,6 +29,14 @@ epsilonfstd   = 0.0001;   % Learning rate for sigma
 weightcost  = 0.0002;   
 initialmomentum  = 0.5;
 finalmomentum    = 0.9;
+
+% epsilonw      = 0.01;   % Learning rate for weights 
+% epsilonvb     = 0.01;   % Learning rate for biases of visible units 
+% epsilonhb     = 0.01;   % Learning rate for biases of hidden units 
+% epsilonfstd   = 0.001;   % Learning rate for sigma
+% weightcost  = 0.002;   
+% initialmomentum  = 0.5;
+% finalmomentum    = 0.9;
 
 [numcases numdims numbatches]=size(batchdata);
 
@@ -64,7 +72,7 @@ for epoch = epoch:maxepoch,
 %%%%%%%%% START POSITIVE PHASE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   data0 = batchdata(:,:,batch);
 %  rand('state',0);
-  data = (rand(size(data0)) > 0.5) .* data0; %ϡ����
+  data = (rand(size(data0)) > 0.5) .* data0; %
  % data = 0.5 * randn(size(data0)) + data0;
   
   poshidprobs = 1./(1 + exp(-(data./Fstd)*vishid - repmat(hidbiases,numcases,1)));    
@@ -86,8 +94,8 @@ for epoch = epoch:maxepoch,
   negvisact = sum(negdata)./(fstd.^2); 
 
 %%%%%%%%% END OF NEGATIVE PHASE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %err= sum(sum( (data0-negdata).^2 ));
-  err = -sum(sum(data0.*log(negdata) + (1-data0).*log(1-negdata)));
+  err= sum(sum( (data0-negdata).^2 ));
+%   err = -sum(sum(data0.*log(negdata) + (1-data0).*log(1-negdata)));
   errsum = err + errsum;
 
    if epoch>5,

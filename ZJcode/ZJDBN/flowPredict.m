@@ -22,9 +22,9 @@ close all
 
 % diary('G:\MachineLearning\Traffic Flow Prediction2\prd log.txt');
 % diary on;
-t1 = clock; %��ʼ��ʱ
+t1 = clock; %
 maxepoch=20;
-numhid=512; numpen=512; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
+numhid=256; numpen=256; %numpen2=256; numpen3=256; numpen4=256; numpen5=256; 
 fprintf(1,'Pretraining a deep autoencoder. \n');
 
 gmakebatches_my;
@@ -84,7 +84,9 @@ save mnisthpclassify hidpen penrecbiases hidgenbiases restruct_error2;
 % save mnisthp5classify hidpen5 penrecbiases5 hidgenbiases5 restruct_error6;
 
 backpropclassify2L; 
-time_tol = etime(clock, t1); %������ʱ
+time_tol = etime(clock, t1); %
 fprintf(1,'Total time: %f\n', time_tol);
 % imageshow;
 % diary off;
+
+% save ZJ_DBN_TrafficFlow_5T_16P norm Y_test Y_predict MAE_test MAPE_test RMSE_test;

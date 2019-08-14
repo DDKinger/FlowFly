@@ -26,12 +26,12 @@ const POINTS = [
 
 // 请补全此处的道路定义， ROADS是记录道路的数组。数组中每个元素是长度为2的，代表路段开始结束点的数组。
 const ROADS = [
-  { road: [POINTS[0], POINTS[1]], value: 1 },
-  { road: [POINTS[1], POINTS[2]], value: 1 },
-  { road: [POINTS[2], POINTS[3]], value: 3 },
-  { road: [POINTS[3], POINTS[4]], value: 3 },
-  { road: [POINTS[6], POINTS[5]], value: 4 },
-  { road: [POINTS[7], POINTS[6]], value: 5 },
+  { road: [POINTS[0], POINTS[1]], value: 0 },
+  { road: [POINTS[1], POINTS[2]], value: 0 },
+  { road: [POINTS[2], POINTS[3]], value: 0 },
+  { road: [POINTS[3], POINTS[4]], value: 0 },
+  { road: [POINTS[6], POINTS[5]], value: 0 },
+  { road: [POINTS[7], POINTS[6]], value: 0 },
 ];
 
 const MAP = new AMap.Map('container', {
@@ -114,22 +114,25 @@ function drawDrivingColorPaths(origin, destination, color) {
 }
 
 function color(value) {
-  if (value == 0) {
+  if (value == 1) {
     return 'rgb(3, 105, 3)'
   }
-  if (value == 1) {
+  if (value == 2) {
     return 'rgb(4, 204, 30)'
   }
-  if (value == 2) {
+  if (value == 3) {
     return 'rgb(255, 255, 0)'
   }
-  if (value == 3) {
+  if (value == 4) {
     return 'rgb(255, 187, 0)'
   }
-  if (value == 4) {
+  if (value == 5) {
     return 'rgb(202, 124, 5)'
   }
-  return 'red'
+  if (value == 6) {
+    return 'red'
+  }
+  return 'rgba(0,0,0,0)'
 }
 
 ROADS.forEach((r) =>
